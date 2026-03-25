@@ -1,0 +1,797 @@
+/* =============================================================================
+   ibarron.dev — Design System
+   css/style.css
+   Single file. No frameworks. No build step.
+   University of Rochester brand: navy #001E5F · yellow #FFD82B
+   ============================================================================= */
+
+
+/* =============================================================================
+   1. Font Face — Inter Variable (self-hosted)
+   ============================================================================= */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/inter-variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =============================================================================
+   2. Custom Properties — Design Tokens in :root
+   ============================================================================= */
+
+:root {
+  /* --- Colors --- */
+  --color-navy: #001E5F;
+  --color-yellow: #FFD82B;
+  --color-meliora-blue: #0045A0;
+  --color-white: #FFFFFF;
+  --color-dark-gray: #707070;
+  --color-border: #E8E8E8;
+  --color-butter: #FFFBF0;
+
+  /* --- Spacing (multiples of 4px) --- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* --- Typography — 4 size tokens, 2 weights (400 regular, 700 bold) --- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-size-heading: clamp(1.5rem, 3vw, 3.5rem);
+  --font-size-subheading: clamp(1.125rem, 2vw, 1.5rem);
+  --font-size-body: clamp(1rem, 2vw, 1.125rem);
+  --font-size-label: 0.875rem;
+
+  /* --- Breakpoints (reference values — not usable in var() for @media) --- */
+  --breakpoint-mobile: 640px;
+  --breakpoint-nav: 768px;
+  --breakpoint-desktop: 1024px;
+}
+
+
+/* =============================================================================
+   3. CSS Reset / Base Styles
+   ============================================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+/* =============================================================================
+   4. Skip Link (accessibility — first element on page)
+   ============================================================================= */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--spacing-md);
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-label);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 4px;
+  z-index: 999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--spacing-md);
+}
+
+
+/* =============================================================================
+   5. Typography Base Styles
+   ============================================================================= */
+
+/* H1 and H2 — Georgia serif, bold, fluid heading size */
+h1,
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--font-size-heading);
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+/* H3, H4, H5 — Inter sans-serif, bold, fluid subheading size */
+h3,
+h4,
+h5 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-subheading);
+  line-height: 1.3;
+  color: var(--color-navy);
+}
+
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-label);
+  line-height: 1.4;
+  color: var(--color-navy);
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--font-size-body);
+  line-height: 1.7;
+  color: inherit;
+}
+
+/* Eyebrow label — section headings, muted uppercase */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-dark-gray);
+  line-height: 1.4;
+}
+
+
+/* =============================================================================
+   6. Layout Utilities
+   ============================================================================= */
+
+/* Centered container with consistent max-width and horizontal padding */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Two-column grid (desktop) */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+/* Three-column grid (desktop) */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* Section vertical rhythm */
+.section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+/* Section with butter background */
+.section--butter {
+  background-color: var(--color-butter);
+}
+
+/* Section with navy background */
+.section--navy {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* Section with navy background — override heading/paragraph colors */
+.section--navy h1,
+.section--navy h2,
+.section--navy h3,
+.section--navy h4,
+.section--navy h5,
+.section--navy p {
+  color: var(--color-white);
+}
+
+
+/* =============================================================================
+   7. Navigation Component
+   ============================================================================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Brand / site name */
+.nav__brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--font-size-subheading);
+  color: var(--color-navy);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__brand:hover {
+  color: var(--color-meliora-blue);
+  transition: color 0.2s ease;
+}
+
+/* Nav links list (desktop) */
+.nav__menu {
+  display: flex;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-navy);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--color-meliora-blue);
+}
+
+/* Active page indicator */
+.nav__link[aria-current="page"] {
+  color: var(--color-yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Hamburger button — hidden on desktop, shown on mobile */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-navy);
+}
+
+.nav__hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-navy);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hamburger open state — becomes × */
+.nav--open .nav__hamburger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.nav--open .nav__hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav--open .nav__hamburger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* =============================================================================
+   8. Footer Component
+   ============================================================================= */
+
+.footer {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--spacing-xl) 0;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+.footer__text {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.7;
+}
+
+.footer__year {
+  /* Populated by JS: new Date().getFullYear() */
+}
+
+.footer a {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--color-yellow);
+}
+
+
+/* =============================================================================
+   9. Button Components
+   ============================================================================= */
+
+/* Base button — shared styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-body);
+  padding: 0.75rem 1.75rem; /* 12px 28px — TYP-05 */
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 44px; /* RESP-06 touch target */
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Primary button — navy fill */
+.btn--primary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-meliora-blue);
+  border-color: var(--color-meliora-blue);
+}
+
+/* Outline button — navy border on light background */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+/* Outline white button — white border on navy background */
+.btn--outline--white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn--outline--white:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  border-color: var(--color-white);
+}
+
+
+/* =============================================================================
+   10. Card Components
+   ============================================================================= */
+
+/* Base card */
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-lg); /* 24px — TYP-08: 1.5rem */
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlighted card — yellow top border accent */
+.card--highlighted {
+  border-top: 4px solid var(--color-yellow);
+}
+
+/* Publication card — yellow left border */
+.card--publication {
+  border-left: 4px solid var(--color-yellow);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Funded card — includes eyebrow label styling */
+.card--funded {
+  position: relative;
+}
+
+.card--funded .eyebrow {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+
+/* =============================================================================
+   11. Tag Pills and Badges
+   ============================================================================= */
+
+/* Research interest tag */
+.tag-pill {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: 100px;
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Year badge (compact) */
+.badge--year {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: 100px;
+  padding: var(--spacing-xs) var(--spacing-md); /* 4px 12px */
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Semester badge (same as year) */
+.badge--semester {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: 100px;
+  padding: var(--spacing-xs) var(--spacing-md); /* 4px 12px */
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+/* =============================================================================
+   12. Profile Photo Placeholder (CSS-only, ASSET-04)
+   ============================================================================= */
+
+.profile-placeholder {
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.profile-placeholder__initials {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--color-yellow);
+  user-select: none;
+  line-height: 1;
+}
+
+
+/* =============================================================================
+   13. Tab Component (Phase 4 use — ARIA tab pattern)
+   ============================================================================= */
+
+.tabs {
+  width: 100%;
+}
+
+.tabs__list {
+  display: flex;
+  border-bottom: 2px solid var(--color-border);
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs__tab {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-navy);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  margin-bottom: -2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tabs__tab:hover {
+  color: var(--color-meliora-blue);
+}
+
+/* Active tab state — ANIM-05: yellow text on navy indicator */
+.tabs__tab[aria-selected="true"] {
+  color: var(--color-yellow);
+  border-bottom-color: var(--color-yellow);
+  background-color: var(--color-navy);
+  border-radius: 4px 4px 0 0;
+}
+
+.tabs__panel {
+  padding-top: var(--spacing-lg);
+}
+
+.tabs__panel[hidden] {
+  display: none;
+}
+
+
+/* =============================================================================
+   14. Focus Indicators (A11Y-01, NAV-05)
+   ============================================================================= */
+
+/* Global focus indicator — yellow outline */
+:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+}
+
+/* Focus on dark/navy backgrounds — white outline instead */
+.nav__hamburger:focus-visible,
+.footer :focus-visible,
+.section--navy :focus-visible,
+.btn--primary:focus-visible,
+.btn--outline--white:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+
+/* =============================================================================
+   15. Animation Keyframes (ANIM-01, ANIM-02)
+   All animations MUST be wrapped in prefers-reduced-motion
+   ============================================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Page-load fade-in + slide up */
+  .animate-on-load {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  /* Stagger delays per nth-child */
+  .animate-on-load:nth-child(1) { animation-delay: 0s; }
+  .animate-on-load:nth-child(2) { animation-delay: 0.1s; }
+  .animate-on-load:nth-child(3) { animation-delay: 0.2s; }
+  .animate-on-load:nth-child(4) { animation-delay: 0.3s; }
+  .animate-on-load:nth-child(5) { animation-delay: 0.4s; }
+  .animate-on-load:nth-child(6) { animation-delay: 0.5s; }
+}
+
+/* Hover/Focus transitions — intentionally NOT wrapped in reduced-motion.
+   These are immediate interactive responses, not gratuitous animations. */
+.btn,
+.card,
+.nav__link,
+.nav__brand,
+.tabs__tab {
+  /* Transition declarations are already set on each component above.
+     Listed here for reference: all use 0.2s ease transitions (ANIM-03). */
+}
+
+
+/* =============================================================================
+   16. Responsive Breakpoints
+   Mobile-first: starts single-column, expands at each breakpoint.
+   Organized by breakpoint (not by component).
+   ============================================================================= */
+
+/* --- Mobile overrides: < 640px --- */
+@media (max-width: 639px) {
+  /* Hamburger nav visible on mobile */
+  .nav__hamburger {
+    display: flex;
+  }
+
+  /* Mobile menu hidden by default */
+  .nav__menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    z-index: 99;
+  }
+
+  /* Mobile menu open state (toggled by JS via .nav--open on .nav) */
+  .nav--open .nav__menu {
+    display: block;
+  }
+
+  .nav--open .nav__links {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  /* Stack all grids on mobile */
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Narrower section padding on mobile */
+  .section {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  /* Profile placeholder — smaller on mobile */
+  .profile-placeholder {
+    width: 140px;
+  }
+}
+
+/* --- Tablet: 640px and above --- */
+@media (min-width: 640px) {
+  /* Two-column grid activates */
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer becomes two-column */
+  .footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Nav breakpoint: 768px and above --- */
+@media (min-width: 768px) {
+  /* Show nav links, hide hamburger */
+  .nav__menu {
+    display: flex;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  /* Reset nav links direction */
+  .nav__links {
+    flex-direction: row;
+  }
+}
+
+/* --- Desktop: 1024px and above --- */
+@media (min-width: 1024px) {
+  /* Three-column grid activates */
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Container padding increase */
+  .container {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+
+  /* Profile placeholder — larger on desktop */
+  .profile-placeholder {
+    width: 240px;
+  }
+}
