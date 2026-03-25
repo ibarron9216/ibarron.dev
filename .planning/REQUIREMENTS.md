@@ -212,27 +212,120 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 through FOUND-06 | Phase 1 | Pending |
-| NAV-01 through NAV-05 | Phase 1 | Pending |
-| LAYOUT-01 through LAYOUT-02 | Phase 1 | Pending |
-| TYP-01 through TYP-08 | Phase 1 | Pending |
-| ANIM-01 through ANIM-05 | Phase 1 | Pending |
-| A11Y-01 through A11Y-08 | All phases | Pending |
-| ASSET-01 through ASSET-04 | Phase 1 | Pending |
-| HOME-01 through HOME-11 | Phase 2 | Pending |
-| LINK-01 through LINK-05 | All phases | Pending |
-| RES-01 through RES-13 | Phase 3 | Pending |
-| TEACH-01 through TEACH-08 | Phase 3 | Pending |
-| CONT-01 through CONT-08 | Phase 3 | Pending |
-| STU-01 through STU-12 | Phase 4 | Pending |
-| PERF-01 through PERF-07 | Phase 1 | Pending |
-| RESP-01 through RESP-06 | All phases | Pending |
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Pending |
+| FOUND-06 | Phase 1 | Pending |
+| NAV-01 | Phase 1 | Pending |
+| NAV-02 | Phase 1 | Pending |
+| NAV-03 | Phase 1 | Pending |
+| NAV-04 | Phase 1 | Pending |
+| NAV-05 | Phase 1 | Pending |
+| LAYOUT-01 | Phase 1 | Pending |
+| LAYOUT-02 | Phase 1 | Pending |
+| TYP-01 | Phase 1 | Pending |
+| TYP-02 | Phase 1 | Pending |
+| TYP-03 | Phase 1 | Pending |
+| TYP-04 | Phase 1 | Pending |
+| TYP-05 | Phase 1 | Pending |
+| TYP-06 | Phase 1 | Pending |
+| TYP-07 | Phase 1 | Pending |
+| TYP-08 | Phase 1 | Pending |
+| ANIM-01 | Phase 1 | Pending |
+| ANIM-02 | Phase 1 | Pending |
+| ANIM-03 | Phase 1 | Pending |
+| ANIM-04 | Phase 1 | Pending |
+| ANIM-05 | Phase 1 | Pending |
+| ASSET-01 | Phase 1 | Pending |
+| ASSET-02 | Phase 1 | Pending |
+| ASSET-03 | Phase 1 | Pending |
+| ASSET-04 | Phase 1 | Pending |
+| PERF-01 | Phase 1 | Pending |
+| PERF-02 | Phase 1 | Pending |
+| PERF-03 | Phase 1 | Pending |
+| PERF-04 | Phase 1 | Pending |
+| HOME-01 | Phase 2 | Pending |
+| HOME-02 | Phase 2 | Pending |
+| HOME-03 | Phase 2 | Pending |
+| HOME-04 | Phase 2 | Pending |
+| HOME-05 | Phase 2 | Pending |
+| HOME-06 | Phase 2 | Pending |
+| HOME-07 | Phase 2 | Pending |
+| HOME-08 | Phase 2 | Pending |
+| HOME-09 | Phase 2 | Pending |
+| HOME-10 | Phase 2 | Pending |
+| HOME-11 | Phase 2 | Pending |
+| RES-01 | Phase 3 | Pending |
+| RES-02 | Phase 3 | Pending |
+| RES-03 | Phase 3 | Pending |
+| RES-04 | Phase 3 | Pending |
+| RES-05 | Phase 3 | Pending |
+| RES-06 | Phase 3 | Pending |
+| RES-07 | Phase 3 | Pending |
+| RES-08 | Phase 3 | Pending |
+| RES-09 | Phase 3 | Pending |
+| RES-10 | Phase 3 | Pending |
+| RES-11 | Phase 3 | Pending |
+| RES-12 | Phase 3 | Pending |
+| RES-13 | Phase 3 | Pending |
+| TEACH-01 | Phase 3 | Pending |
+| TEACH-02 | Phase 3 | Pending |
+| TEACH-03 | Phase 3 | Pending |
+| TEACH-04 | Phase 3 | Pending |
+| TEACH-05 | Phase 3 | Pending |
+| TEACH-06 | Phase 3 | Pending |
+| TEACH-07 | Phase 3 | Pending |
+| TEACH-08 | Phase 3 | Pending |
+| CONT-01 | Phase 3 | Pending |
+| CONT-02 | Phase 3 | Pending |
+| CONT-03 | Phase 3 | Pending |
+| CONT-04 | Phase 3 | Pending |
+| CONT-05 | Phase 3 | Pending |
+| CONT-06 | Phase 3 | Pending |
+| CONT-07 | Phase 3 | Pending |
+| CONT-08 | Phase 3 | Pending |
+| STU-01 | Phase 4 | Pending |
+| STU-02 | Phase 4 | Pending |
+| STU-03 | Phase 4 | Pending |
+| STU-04 | Phase 4 | Pending |
+| STU-05 | Phase 4 | Pending |
+| STU-06 | Phase 4 | Pending |
+| STU-07 | Phase 4 | Pending |
+| STU-08 | Phase 4 | Pending |
+| STU-09 | Phase 4 | Pending |
+| STU-10 | Phase 4 | Pending |
+| STU-11 | Phase 4 | Pending |
+| STU-12 | Phase 4 | Pending |
+| A11Y-01 | Phase 5 | Pending |
+| A11Y-02 | Phase 5 | Pending |
+| A11Y-03 | Phase 5 | Pending |
+| A11Y-04 | Phase 5 | Pending |
+| A11Y-05 | Phase 5 | Pending |
+| A11Y-06 | Phase 5 | Pending |
+| A11Y-07 | Phase 5 | Pending |
+| A11Y-08 | Phase 5 | Pending |
+| LINK-01 | Phase 5 | Pending |
+| LINK-02 | Phase 5 | Pending |
+| LINK-03 | Phase 5 | Pending |
+| LINK-04 | Phase 5 | Pending |
+| LINK-05 | Phase 5 | Pending |
+| RESP-01 | Phase 5 | Pending |
+| RESP-02 | Phase 5 | Pending |
+| RESP-03 | Phase 5 | Pending |
+| RESP-04 | Phase 5 | Pending |
+| RESP-05 | Phase 5 | Pending |
+| RESP-06 | Phase 5 | Pending |
+| PERF-05 | Phase 5 | Pending |
+| PERF-06 | Phase 5 | Pending |
+| PERF-07 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 133 total
-- Mapped to phases: 133
+- v1 requirements: 110 total
+- Mapped to phases: 110
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-25*
-*Last updated: 2026-03-25 after research completion*
+*Last updated: 2026-03-25 after roadmap creation*
