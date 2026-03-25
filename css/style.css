@@ -624,6 +624,52 @@ p {
   display: none;
 }
 
+/* ARIA role-based tab selectors (ANIM-05 requirement — attribute selectors) */
+[role="tablist"] {
+  display: flex;
+  gap: var(--spacing-md);
+  border-bottom: 2px solid var(--color-border);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+[role="tab"] {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: none;
+  color: var(--color-dark-gray);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-label);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+[role="tab"]:hover {
+  color: var(--color-navy);
+}
+
+[role="tab"]:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+}
+
+/* Active tab state — ANIM-05 requirement */
+[role="tab"][aria-selected="true"] {
+  color: var(--color-yellow);
+  border-bottom-color: var(--color-yellow);
+}
+
+[role="tabpanel"] {
+  padding: var(--spacing-lg) 0;
+}
+
+[role="tabpanel"][hidden] {
+  display: none;
+}
+
 
 /* =============================================================================
    14. Focus Indicators (A11Y-01, NAV-05)
