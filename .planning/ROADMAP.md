@@ -30,7 +30,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The footer displays the current year dynamically and switches between two-column (desktop) and stacked (mobile) layout
   4. All button, card, and tag-pill components render with correct University of Rochester brand colors (navy, Dandelion Yellow) and typography (Georgia headings, Inter body)
   5. Animations are absent when prefers-reduced-motion is set, and fade in smoothly otherwise
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 01-01-PLAN.md — CSS design system, typography, components, animations, asset setup
+- [ ] 01-02-PLAN.md — HTML nav/footer scaffold, hamburger JS, footer year initialization
+- [ ] 01-03-PLAN.md — HTML validation, responsive testing, accessibility checkpoint
 
 ### Phase 2: Home Page
 **Goal**: A visitor can read Dr. Barron's identity, affiliation, bio, and navigate to the three main sections from the home page
@@ -85,7 +88,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Planning complete | 2026-03-25 |
 | 2. Home Page | 0/TBD | Not started | - |
 | 3. Content Pages | 0/TBD | Not started | - |
 | 4. Students Hub | 0/TBD | Not started | - |
