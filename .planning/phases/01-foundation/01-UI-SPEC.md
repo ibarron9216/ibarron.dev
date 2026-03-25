@@ -54,22 +54,30 @@ Source: REQUIREMENTS.md TYP-05, RESP-06. Scale defaults applied for tokens not e
 
 ## Typography
 
-All `font-size` values use `clamp()` for fluid scaling. Declared values are the base (minimum) sizes.
+All `font-size` values use `clamp()` for fluid scaling where applicable. Declared values are the base (minimum) sizes.
 
-| Role | CSS Custom Property | Base Size | Weight | Line Height | Font Family | Usage |
-|------|---------------------|-----------|--------|-------------|-------------|-------|
-| Display / H1 | `--font-size-h1` | clamp(2rem, 5vw, 3.5rem) | 700 (bold) | 1.2 | Georgia, serif | Page H1s |
-| Heading / H2 | `--font-size-h2` | clamp(1.5rem, 3vw, 2.25rem) | 700 (bold) | 1.2 | Georgia, serif | Section H2s |
-| Subheading / H3–H5 | `--font-size-h3` | clamp(1.125rem, 2vw, 1.5rem) | 600 (semibold) | 1.3 | Inter Variable, sans-serif | Card titles, sub-sections |
-| Body | `--font-size-body` | clamp(1rem, 2vw, 1.125rem) | 400 (regular) | 1.7 | Inter Variable, sans-serif | All body paragraphs |
-| Eyebrow | `--font-size-eyebrow` | 0.875rem (fixed) | 600 (semibold) | 1.4 | Inter Variable, sans-serif | Section eyebrows, labels |
-| Button | `--font-size-button` | 1.125rem (fixed) | 600 (semibold) | 1.0 | Inter Variable, sans-serif | All button labels |
+**Exactly 4 size tokens. Exactly 2 weight values.**
 
-**Declared weights: 400 (regular) and 600 (semibold).** Georgia headings use 700 (bold) which is a third distinct weight — justified by the two-font system (serif headings vs. sans-serif body).
+| Role | CSS Custom Property | Size | Weight | Line Height | Font Family | Usage |
+|------|---------------------|------|--------|-------------|-------------|-------|
+| Heading / Display | `--font-size-heading` | `clamp(1.5rem, 3vw, 3.5rem)` | 700 (bold) | 1.2 | Georgia, serif | H1 and H2 headings |
+| Subheading | `--font-size-subheading` | `clamp(1.125rem, 2vw, 1.5rem)` | 700 (bold) | 1.3 | Inter Variable, sans-serif | H3–H5, card titles, sub-sections |
+| Body | `--font-size-body` | `clamp(1rem, 2vw, 1.125rem)` | 400 (regular) | 1.7 | Inter Variable, sans-serif | Body paragraphs, button labels, footer text |
+| Label | `--font-size-label` | `0.875rem` (fixed) | 700 (bold) | 1.4 | Inter Variable, sans-serif | Section eyebrows, badge text, nav links |
 
-Eyebrow styling (TYP-04): `text-transform: uppercase; letter-spacing: 0.1em;` in addition to size/weight above.
+**Weight assignments:**
+- 700 (bold): H1, H2, H3, H4, H5, eyebrow labels, button labels, nav links, badge text
+- 400 (regular): body paragraphs, footer text, card body copy
 
-Source: REQUIREMENTS.md TYP-01 through TYP-08, RESEARCH.md Phase Requirements table.
+**Removed tokens (consolidated):**
+- `--font-size-button` (was 1.125rem) — merged into `--font-size-body` (clamp 1rem–1.125rem); button labels use `--font-size-body` at weight 700
+- `--font-size-eyebrow` (was 0.875rem standalone) — renamed to `--font-size-label`; same value, cleaner name covers all label/badge/eyebrow roles
+- `--font-size-h1` and `--font-size-h2` (were separate) — merged into `--font-size-heading`; H1 uses the full clamp range, H2 is contextually the same token
+- 600 (semibold) weight — removed; all previously semibold elements reassigned to 700 (bold)
+
+Eyebrow styling (TYP-04): `text-transform: uppercase; letter-spacing: 0.1em;` applied via class, in addition to `--font-size-label` and weight 700.
+
+Source: REQUIREMENTS.md TYP-01 through TYP-08, RESEARCH.md Phase Requirements table. Consolidated per checker revision 2026-03-25.
 
 ---
 
@@ -123,6 +131,8 @@ Button hover states:
 - `.btn--outline` hover: background-color fills navy, text turns white, 0.2s ease transition
 - All buttons: `transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease`
 
+Button typography: `--font-size-body` at weight 700.
+
 ### Cards
 
 | Class | Visual | Usage |
@@ -150,7 +160,7 @@ Note: RESEARCH.md flags that `role="menubar"` (specified in CONTEXT.md) is inapp
 |---------|-----------|----------------|--------|
 | Nav container | `.nav` | `role="navigation"` | White background, `position: sticky; top: 0`, box-shadow on scroll |
 | Brand name | `.nav__brand` | — | Left-aligned, Georgia bold, navy text |
-| Nav links | `.nav__links` | `role="list"` | Right-aligned, flex row, Inter 600 |
+| Nav links | `.nav__links` | `role="list"` | Right-aligned, flex row, `--font-size-label` weight 700 |
 | Active link | `.nav__link[aria-current]` | `aria-current="page"` | Yellow text (#FFD82B), yellow underline |
 | Hamburger button | `.nav__hamburger` | `aria-expanded`, `aria-controls="nav-menu"`, `aria-label="Toggle navigation"` | 3-line icon, visible only at <768px |
 | Mobile menu | `.nav__menu` | `id="nav-menu"` | Hidden by default, full-width dropdown |
@@ -162,7 +172,7 @@ Two-column CSS Grid on desktop (≥640px), single column on mobile.
 | Element | CSS class | Content |
 |---------|-----------|---------|
 | Footer container | `.footer` | Navy background (#001E5F) |
-| Footer text | `.footer__text` | White text, Inter 400 |
+| Footer text | `.footer__text` | White text, `--font-size-body` weight 400 |
 | Year placeholder | `.footer__year` | Populated by JS: `new Date().getFullYear()` |
 
 ### Profile Photo Placeholder
@@ -256,15 +266,13 @@ Organization order (top to bottom):
   --spacing-2xl: 48px;
   --spacing-3xl: 64px;
 
-  /* Typography */
+  /* Typography — 4 size tokens, 2 weights (400 regular, 700 bold) */
   --font-sans: 'Inter Variable', system-ui, -apple-system, sans-serif;
   --font-serif: Georgia, 'Times New Roman', serif;
-  --font-size-h1: clamp(2rem, 5vw, 3.5rem);
-  --font-size-h2: clamp(1.5rem, 3vw, 2.25rem);
-  --font-size-h3: clamp(1.125rem, 2vw, 1.5rem);
+  --font-size-heading: clamp(1.5rem, 3vw, 3.5rem);
+  --font-size-subheading: clamp(1.125rem, 2vw, 1.5rem);
   --font-size-body: clamp(1rem, 2vw, 1.125rem);
-  --font-size-eyebrow: 0.875rem;
-  --font-size-button: 1.125rem;
+  --font-size-label: 0.875rem;
 
   /* Breakpoints (reference only — used in @media queries, not var()) */
   --breakpoint-mobile: 640px;
@@ -340,4 +348,5 @@ Minimum supported width: 320px (RESP-01).
 
 *Phase: 01-foundation*
 *UI-SPEC created: 2026-03-25*
+*UI-SPEC revised: 2026-03-25 — typography consolidated per checker: 4 size tokens, 2 weights*
 *Sources: CONTEXT.md (8 decisions), REQUIREMENTS.md (TYP-01–08, FOUND-01–06, NAV-01–05, ANIM-01–05, A11Y-01–08), RESEARCH.md (Standard Stack, color contrast verification)*
