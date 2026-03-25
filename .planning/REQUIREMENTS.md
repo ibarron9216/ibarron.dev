@@ -10,11 +10,11 @@ Requirements for launch. Each maps to roadmap phases.
 ### Foundation & Setup
 
 - [ ] **FOUND-01**: Create HTML5 semantic structure for all 5 pages (header, nav, main, sections, footer)
-- [ ] **FOUND-02**: Implement University of Rochester brand color palette as CSS custom properties
+- [x] **FOUND-02**: Implement University of Rochester brand color palette as CSS custom properties
 - [ ] **FOUND-03**: Implement responsive layout system (mobile <640px, tablet 640-1024px, desktop >1024px)
-- [ ] **FOUND-04**: Self-host Inter Variable font as `.woff2` file with fallbacks
-- [ ] **FOUND-05**: Implement CSS custom properties for all spacing, sizing, and typography values
-- [ ] **FOUND-06**: Verify WCAG AA color contrast on all text (navy/dark gray on white, white on navy)
+- [x] **FOUND-04**: Self-host Inter Variable font as `.woff2` file with fallbacks
+- [x] **FOUND-05**: Implement CSS custom properties for all spacing, sizing, and typography values
+- [x] **FOUND-06**: Verify WCAG AA color contrast on all text (navy/dark gray on white, white on navy)
 
 ### Navigation & Layout
 
@@ -95,20 +95,20 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Typography & Styling
 
-- [ ] **TYP-01**: H1 and H2 use Georgia serif font, bold weight, proper clamp() sizing
-- [ ] **TYP-02**: H3, H4, H5 use Inter semibold (600), proper clamp() sizing
-- [ ] **TYP-03**: Body text uses Inter regular (400), 1.7 line height, proper clamp() sizing
-- [ ] **TYP-04**: Eyebrow labels: Inter 600, 0.875rem, 0.1em letter-spacing, uppercase, muted gray color
-- [ ] **TYP-05**: All buttons consistent: Inter 600, 1.125rem, 0.75rem vertical padding, 1.75rem horizontal padding
-- [ ] **TYP-06**: Primary button: navy background, white text, hover to Meliora Blue, 0.2s transition
-- [ ] **TYP-07**: Outline button: transparent background, navy border, navy text, hover to navy bg + white text
-- [ ] **TYP-08**: Card styling: white background, 1px border (#E8E8E8), 4px yellow top border, 1.5rem padding, 8px border-radius
+- [x] **TYP-01**: H1 and H2 use Georgia serif font, bold weight, proper clamp() sizing
+- [x] **TYP-02**: H3, H4, H5 use Inter semibold (600), proper clamp() sizing
+- [x] **TYP-03**: Body text uses Inter regular (400), 1.7 line height, proper clamp() sizing
+- [x] **TYP-04**: Eyebrow labels: Inter 600, 0.875rem, 0.1em letter-spacing, uppercase, muted gray color
+- [x] **TYP-05**: All buttons consistent: Inter 600, 1.125rem, 0.75rem vertical padding, 1.75rem horizontal padding
+- [x] **TYP-06**: Primary button: navy background, white text, hover to Meliora Blue, 0.2s transition
+- [x] **TYP-07**: Outline button: transparent background, navy border, navy text, hover to navy bg + white text
+- [x] **TYP-08**: Card styling: white background, 1px border (#E8E8E8), 4px yellow top border, 1.5rem padding, 8px border-radius
 
 ### Animations & Interactions
 
-- [ ] **ANIM-01**: Implement fade-in + translate up animation on all major sections (0.5s duration, 0.1s stagger)
-- [ ] **ANIM-02**: Wrap all animations in @media (prefers-reduced-motion: no-preference) block
-- [ ] **ANIM-03**: Hover states on buttons, cards, links (0.2s transition)
+- [x] **ANIM-01**: Implement fade-in + translate up animation on all major sections (0.5s duration, 0.1s stagger)
+- [x] **ANIM-02**: Wrap all animations in @media (prefers-reduced-motion: no-preference) block
+- [x] **ANIM-03**: Hover states on buttons, cards, links (0.2s transition)
 - [ ] **ANIM-04**: Hamburger icon changes visual state when nav is open
 - [ ] **ANIM-05**: Tab active state visual feedback (yellow text on navy background)
 
@@ -133,10 +133,10 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Assets & Files
 
-- [ ] **ASSET-01**: CV placeholder file at assets/cv.pdf (user will replace with their own)
-- [ ] **ASSET-02**: Inter Variable font file (inter-variable.woff2) self-hosted in project
-- [ ] **ASSET-03**: All CSS in single css/style.css file
-- [ ] **ASSET-04**: Profile photo placeholder is CSS-only (no image file needed until replaced)
+- [x] **ASSET-01**: CV placeholder file at assets/cv.pdf (user will replace with their own)
+- [x] **ASSET-02**: Inter Variable font file (inter-variable.woff2) self-hosted in project
+- [x] **ASSET-03**: All CSS in single css/style.css file
+- [x] **ASSET-04**: Profile photo placeholder is CSS-only (no image file needed until replaced)
 
 ### Responsiveness
 
@@ -149,9 +149,9 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Browser & Performance
 
-- [ ] **PERF-01**: Site loads without external npm dependencies
-- [ ] **PERF-02**: No webpack, build tools, or development server needed — files work as-is
-- [ ] **PERF-03**: Single CSS file loads in one request
+- [x] **PERF-01**: Site loads without external npm dependencies
+- [x] **PERF-02**: No webpack, build tools, or development server needed — files work as-is
+- [x] **PERF-03**: Single CSS file loads in one request
 - [ ] **PERF-04**: JavaScript is <200 lines total (hamburger, tabs, year)
 - [ ] **PERF-05**: All images are optimized (JPG for photos, PNG for diagrams)
 - [ ] **PERF-06**: Site works in all modern browsers (Chrome, Firefox, Safari, Edge 2017+)
@@ -213,11 +213,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Pending |
-| FOUND-02 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
-| FOUND-05 | Phase 1 | Pending |
-| FOUND-06 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Complete |
+| FOUND-05 | Phase 1 | Complete |
+| FOUND-06 | Phase 1 | Complete |
 | NAV-01 | Phase 1 | Pending |
 | NAV-02 | Phase 1 | Pending |
 | NAV-03 | Phase 1 | Pending |
@@ -225,26 +225,26 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NAV-05 | Phase 1 | Pending |
 | LAYOUT-01 | Phase 1 | Pending |
 | LAYOUT-02 | Phase 1 | Pending |
-| TYP-01 | Phase 1 | Pending |
-| TYP-02 | Phase 1 | Pending |
-| TYP-03 | Phase 1 | Pending |
-| TYP-04 | Phase 1 | Pending |
-| TYP-05 | Phase 1 | Pending |
-| TYP-06 | Phase 1 | Pending |
-| TYP-07 | Phase 1 | Pending |
-| TYP-08 | Phase 1 | Pending |
-| ANIM-01 | Phase 1 | Pending |
-| ANIM-02 | Phase 1 | Pending |
-| ANIM-03 | Phase 1 | Pending |
+| TYP-01 | Phase 1 | Complete |
+| TYP-02 | Phase 1 | Complete |
+| TYP-03 | Phase 1 | Complete |
+| TYP-04 | Phase 1 | Complete |
+| TYP-05 | Phase 1 | Complete |
+| TYP-06 | Phase 1 | Complete |
+| TYP-07 | Phase 1 | Complete |
+| TYP-08 | Phase 1 | Complete |
+| ANIM-01 | Phase 1 | Complete |
+| ANIM-02 | Phase 1 | Complete |
+| ANIM-03 | Phase 1 | Complete |
 | ANIM-04 | Phase 1 | Pending |
 | ANIM-05 | Phase 1 | Pending |
-| ASSET-01 | Phase 1 | Pending |
-| ASSET-02 | Phase 1 | Pending |
-| ASSET-03 | Phase 1 | Pending |
-| ASSET-04 | Phase 1 | Pending |
-| PERF-01 | Phase 1 | Pending |
-| PERF-02 | Phase 1 | Pending |
-| PERF-03 | Phase 1 | Pending |
+| ASSET-01 | Phase 1 | Complete |
+| ASSET-02 | Phase 1 | Complete |
+| ASSET-03 | Phase 1 | Complete |
+| ASSET-04 | Phase 1 | Complete |
+| PERF-01 | Phase 1 | Complete |
+| PERF-02 | Phase 1 | Complete |
+| PERF-03 | Phase 1 | Complete |
 | PERF-04 | Phase 1 | Pending |
 | HOME-01 | Phase 2 | Pending |
 | HOME-02 | Phase 2 | Pending |
