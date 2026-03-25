@@ -9,22 +9,22 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Foundation & Setup
 
-- [ ] **FOUND-01**: Create HTML5 semantic structure for all 5 pages (header, nav, main, sections, footer)
+- [x] **FOUND-01**: Create HTML5 semantic structure for all 5 pages (header, nav, main, sections, footer)
 - [x] **FOUND-02**: Implement University of Rochester brand color palette as CSS custom properties
-- [ ] **FOUND-03**: Implement responsive layout system (mobile <640px, tablet 640-1024px, desktop >1024px)
+- [x] **FOUND-03**: Implement responsive layout system (mobile <640px, tablet 640-1024px, desktop >1024px)
 - [x] **FOUND-04**: Self-host Inter Variable font as `.woff2` file with fallbacks
 - [x] **FOUND-05**: Implement CSS custom properties for all spacing, sizing, and typography values
 - [x] **FOUND-06**: Verify WCAG AA color contrast on all text (navy/dark gray on white, white on navy)
 
 ### Navigation & Layout
 
-- [ ] **NAV-01**: Create sticky navigation bar with brand name (left) and menu links (right)
-- [ ] **NAV-02**: Implement hamburger menu button for mobile (<768px) with aria-label and aria-expanded
-- [ ] **NAV-03**: Show/hide mobile nav with JavaScript toggle (no external library)
-- [ ] **NAV-04**: Apply active page indicator (yellow text and underline) on current nav link
-- [ ] **NAV-05**: Make hamburger button keyboard accessible (focus indicator visible)
-- [ ] **LAYOUT-01**: Create footer with two-column layout (desktop) and stacked layout (mobile)
-- [ ] **LAYOUT-02**: Implement footer with dynamic year generation via JavaScript
+- [x] **NAV-01**: Create sticky navigation bar with brand name (left) and menu links (right)
+- [x] **NAV-02**: Implement hamburger menu button for mobile (<768px) with aria-label and aria-expanded
+- [x] **NAV-03**: Show/hide mobile nav with JavaScript toggle (no external library)
+- [x] **NAV-04**: Apply active page indicator (yellow text and underline) on current nav link
+- [x] **NAV-05**: Make hamburger button keyboard accessible (focus indicator visible)
+- [x] **LAYOUT-01**: Create footer with two-column layout (desktop) and stacked layout (mobile)
+- [x] **LAYOUT-02**: Implement footer with dynamic year generation via JavaScript
 
 ### Pages: Home (index.html)
 
@@ -109,8 +109,8 @@ Requirements for launch. Each maps to roadmap phases.
 - [x] **ANIM-01**: Implement fade-in + translate up animation on all major sections (0.5s duration, 0.1s stagger)
 - [x] **ANIM-02**: Wrap all animations in @media (prefers-reduced-motion: no-preference) block
 - [x] **ANIM-03**: Hover states on buttons, cards, links (0.2s transition)
-- [ ] **ANIM-04**: Hamburger icon changes visual state when nav is open
-- [ ] **ANIM-05**: Tab active state visual feedback (yellow text on navy background)
+- [x] **ANIM-04**: Hamburger icon changes visual state when nav is open
+- [x] **ANIM-05**: Tab active state visual feedback (yellow text on navy background)
 
 ### Accessibility
 
@@ -152,7 +152,7 @@ Requirements for launch. Each maps to roadmap phases.
 - [x] **PERF-01**: Site loads without external npm dependencies
 - [x] **PERF-02**: No webpack, build tools, or development server needed — files work as-is
 - [x] **PERF-03**: Single CSS file loads in one request
-- [ ] **PERF-04**: JavaScript is <200 lines total (hamburger, tabs, year)
+- [x] **PERF-04**: JavaScript is <200 lines total (hamburger, tabs, year)
 - [ ] **PERF-05**: All images are optimized (JPG for photos, PNG for diagrams)
 - [ ] **PERF-06**: Site works in all modern browsers (Chrome, Firefox, Safari, Edge 2017+)
 - [ ] **PERF-07**: Site is HTTPS-ready (no mixed content warnings)
@@ -212,19 +212,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Complete |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Complete |
 | FOUND-05 | Phase 1 | Complete |
 | FOUND-06 | Phase 1 | Complete |
-| NAV-01 | Phase 1 | Pending |
-| NAV-02 | Phase 1 | Pending |
-| NAV-03 | Phase 1 | Pending |
-| NAV-04 | Phase 1 | Pending |
-| NAV-05 | Phase 1 | Pending |
-| LAYOUT-01 | Phase 1 | Pending |
-| LAYOUT-02 | Phase 1 | Pending |
+| NAV-01 | Phase 1 | Complete |
+| NAV-02 | Phase 1 | Complete |
+| NAV-03 | Phase 1 | Complete |
+| NAV-04 | Phase 1 | Complete |
+| NAV-05 | Phase 1 | Complete |
+| LAYOUT-01 | Phase 1 | Complete |
+| LAYOUT-02 | Phase 1 | Complete |
 | TYP-01 | Phase 1 | Complete |
 | TYP-02 | Phase 1 | Complete |
 | TYP-03 | Phase 1 | Complete |
@@ -236,8 +236,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ANIM-01 | Phase 1 | Complete |
 | ANIM-02 | Phase 1 | Complete |
 | ANIM-03 | Phase 1 | Complete |
-| ANIM-04 | Phase 1 | Pending |
-| ANIM-05 | Phase 1 | Pending |
+| ANIM-04 | Phase 1 | Complete |
+| ANIM-05 | Phase 1 | Complete |
 | ASSET-01 | Phase 1 | Complete |
 | ASSET-02 | Phase 1 | Complete |
 | ASSET-03 | Phase 1 | Complete |
@@ -245,7 +245,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERF-01 | Phase 1 | Complete |
 | PERF-02 | Phase 1 | Complete |
 | PERF-03 | Phase 1 | Complete |
-| PERF-04 | Phase 1 | Pending |
+| PERF-04 | Phase 1 | Complete |
 | HOME-01 | Phase 2 | Pending |
 | HOME-02 | Phase 2 | Pending |
 | HOME-03 | Phase 2 | Pending |
