@@ -44,9 +44,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The profile photo placeholder appears as a navy rectangle with yellow "IB" initials in the hero (right column on desktop, above text on mobile)
   3. The About Me section shows a biographical paragraph and a "Download CV (PDF)" button that links to assets/cv.pdf
   4. Three highlight cards (Research, Teaching, Students) appear below the About section, each with a colored top border and a working "Learn more" link to the correct page
-**Plans**: 2 plans
-- [ ] 02-01-PLAN.md — CSS design system extensions and full index.html home page content
-- [ ] 02-02-PLAN.md — W3C HTML validation and visual verification checkpoint
+**Plans**: 3 plans
+- [x] 02-01-PLAN.md — CSS design system extensions and full index.html home page content
+- [x] 02-02-PLAN.md — Content refinements (heading hierarchy fix, bio and copy edits)
+- [x] 02-03-PLAN.md — W3C HTML validation and visual verification checkpoint (gap closure)
 
 ### Phase 3: Content Pages
 **Goal**: A visitor can explore Dr. Barron's research, teaching, and contact information across three fully built pages
@@ -91,7 +92,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-26 |
-| 2. Home Page | 1/2 | In Progress|  |
+| 2. Home Page | 3/3 | Complete   | 2026-03-26 |
 | 3. Content Pages | 0/TBD | Not started | - |
 | 4. Students Hub | 0/TBD | Not started | - |
 | 5. Polish & Verification | 0/TBD | Not started | - |
