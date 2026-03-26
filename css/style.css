@@ -874,6 +874,18 @@ p {
   }
 }
 
+/* =============================================================================
+   17. Hero Component (Phase 2 — Home Page)
+   ============================================================================= */
+
+/* Hero grid — single column mobile/tablet, two-column at 1024px desktop */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
 /* --- Desktop: 1024px and above --- */
 @media (min-width: 1024px) {
   /* Three-column grid activates */
@@ -891,19 +903,6 @@ p {
   .hero__grid {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-
-/* =============================================================================
-   17. Hero Component (Phase 2 — Home Page)
-   ============================================================================= */
-
-/* Hero grid — single column mobile/tablet, two-column desktop */
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-xl);
-  align-items: center;
 }
 
 /* Hero text column */
