@@ -13,7 +13,7 @@ Build a professional five-page faculty website using plain HTML/CSS/JS only. The
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - CSS design system, shared nav/footer, JS utilities, asset setup (completed 2026-03-26)
-- [ ] **Phase 2: Home Page** - Complete index.html establishing the page template pattern
+- [x] **Phase 2: Home Page** - Complete index.html establishing the page template pattern (completed 2026-03-26)
 - [ ] **Phase 3: Content Pages** - Research, Teaching, and Contact pages (informational, minimal JS)
 - [ ] **Phase 4: Students Hub** - Students page with full ARIA tab interface and JS tab switching
 - [ ] **Phase 5: Polish & Verification** - Cross-cutting accessibility audit, link verification, browser testing, performance check
@@ -31,9 +31,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. All button, card, and tag-pill components render with correct University of Rochester brand colors (navy, Dandelion Yellow) and typography (Georgia headings, Inter body)
   5. Animations are absent when prefers-reduced-motion is set, and fade in smoothly otherwise
 **Plans**: 3 plans
-- [ ] 01-01-PLAN.md — CSS design system, typography, components, animations, asset setup
-- [ ] 01-02-PLAN.md — HTML nav/footer scaffold, hamburger JS, footer year initialization
-- [ ] 01-03-PLAN.md — HTML validation, responsive testing, accessibility checkpoint
+- [x] 01-01-PLAN.md — CSS design system, typography, components, animations, asset setup
+- [x] 01-02-PLAN.md — HTML nav/footer scaffold, hamburger JS, footer year initialization
+- [x] 01-03-PLAN.md — HTML validation, responsive testing, accessibility checkpoint
 
 ### Phase 2: Home Page
 **Goal**: A visitor can read Dr. Barron's identity, affiliation, bio, and navigate to the three main sections from the home page
@@ -58,7 +58,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The Teaching page shows a navy header, teaching philosophy statement, and three course cards (ECE 241, ECE 245/445, ECE 487) each with semester badge, level badge, and full description
   3. The Contact page shows a navy header, a two-column layout (desktop) with office/email details on the left and three external profile links on the right, and the italic note about no contact form
   4. The email address on the Contact page is a working mailto: link and all external links open in a new tab
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 03-01-PLAN.md — Phase 3 CSS additions and complete Research page (research.html)
+- [ ] 03-02-PLAN.md — Teaching page (teaching.html) and Contact page (contact.html)
+- [ ] 03-03-PLAN.md — W3C HTML validation and visual verification checkpoint
 
 ### Phase 4: Students Hub
 **Goal**: Students can navigate between three resource sections (Current, Prior, Prospective) using a fully accessible tab interface
@@ -93,6 +96,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-26 |
 | 2. Home Page | 3/3 | Complete   | 2026-03-26 |
-| 3. Content Pages | 0/TBD | Not started | - |
+| 3. Content Pages | 0/3 | Planning complete | - |
 | 4. Students Hub | 0/TBD | Not started | - |
 | 5. Polish & Verification | 0/TBD | Not started | - |
