@@ -42,19 +42,19 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Pages: Research (research.html)
 
-- [ ] **RES-01**: Create page header section with navy background, white H1 "Research"
-- [ ] **RES-02**: Add lead text "Digital image processing · Security · Privacy-preserving communication" in white
-- [ ] **RES-03**: Create "Research Overview" section on butter background with two-paragraph plain-English summary
-- [ ] **RES-04**: Create research interests section with tag pills (navy bg, white text, rounded)
-- [ ] **RES-05**: Each tag pill: "Digital Image Processing", "Digital Forensics", "Information Security", "Barcode Technologies", "Privacy-Preserving Communication", "Signal Processing", "Computer Vision"
-- [ ] **RES-06**: Create NSF project highlight card with "Funded Research" eyebrow
-- [ ] **RES-07**: NSF card includes project title, funding info ("National Science Foundation · $50,000 · with Prof. Gaurav Sharma"), and description
-- [ ] **RES-08**: Create publications section with "Selected Publications" eyebrow and H2
-- [ ] **RES-09**: Add italic note below publications heading linking to ResearchGate
-- [ ] **RES-10**: Create publication cards (one per publication) with left yellow border
-- [ ] **RES-11**: Each publication card includes authors, title, venue, year badge (navy pill, right-aligned)
-- [ ] **RES-12**: Bold author name "I. R. Barron" or "Irving Barron" in each publication listing
-- [ ] **RES-13**: Include 4 publications: "Quashing Quishing...", "Optimized Modulation...", "Proximally Secure...", "Toward CanvasChain..." with correct venues and years
+- [x] **RES-01**: Create page header section with navy background, white H1 "Research"
+- [x] **RES-02**: Add lead text "Digital image processing · Security · Privacy-preserving communication" in white
+- [x] **RES-03**: Create "Research Overview" section on butter background with two-paragraph plain-English summary
+- [x] **RES-04**: Create research interests section with tag pills (navy bg, white text, rounded)
+- [x] **RES-05**: Each tag pill: "Digital Image Processing", "Digital Forensics", "Information Security", "Barcode Technologies", "Privacy-Preserving Communication", "Signal Processing", "Computer Vision"
+- [x] **RES-06**: Create NSF project highlight card with "Funded Research" eyebrow
+- [x] **RES-07**: NSF card includes project title, funding info ("National Science Foundation · $50,000 · with Prof. Gaurav Sharma"), and description
+- [x] **RES-08**: Create publications section with "Selected Publications" eyebrow and H2
+- [x] **RES-09**: Add italic note below publications heading linking to ResearchGate
+- [x] **RES-10**: Create publication cards (one per publication) with left yellow border
+- [x] **RES-11**: Each publication card includes authors, title, venue, year badge (navy pill, right-aligned)
+- [x] **RES-12**: Bold author name "I. R. Barron" or "Irving Barron" in each publication listing
+- [x] **RES-13**: Include 4 publications: "Quashing Quishing...", "Optimized Modulation...", "Proximally Secure...", "Toward CanvasChain..." with correct venues and years
 
 ### Pages: Teaching (teaching.html)
 
@@ -257,19 +257,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HOME-09 | Phase 2 | Complete |
 | HOME-10 | Phase 2 | Complete |
 | HOME-11 | Phase 2 | Complete |
-| RES-01 | Phase 3 | Pending |
-| RES-02 | Phase 3 | Pending |
-| RES-03 | Phase 3 | Pending |
-| RES-04 | Phase 3 | Pending |
-| RES-05 | Phase 3 | Pending |
-| RES-06 | Phase 3 | Pending |
-| RES-07 | Phase 3 | Pending |
-| RES-08 | Phase 3 | Pending |
-| RES-09 | Phase 3 | Pending |
-| RES-10 | Phase 3 | Pending |
-| RES-11 | Phase 3 | Pending |
-| RES-12 | Phase 3 | Pending |
-| RES-13 | Phase 3 | Pending |
+| RES-01 | Phase 3 | Complete |
+| RES-02 | Phase 3 | Complete |
+| RES-03 | Phase 3 | Complete |
+| RES-04 | Phase 3 | Complete |
+| RES-05 | Phase 3 | Complete |
+| RES-06 | Phase 3 | Complete |
+| RES-07 | Phase 3 | Complete |
+| RES-08 | Phase 3 | Complete |
+| RES-09 | Phase 3 | Complete |
+| RES-10 | Phase 3 | Complete |
+| RES-11 | Phase 3 | Complete |
+| RES-12 | Phase 3 | Complete |
+| RES-13 | Phase 3 | Complete |
 | TEACH-01 | Phase 3 | Pending |
 | TEACH-02 | Phase 3 | Pending |
 | TEACH-03 | Phase 3 | Pending |
