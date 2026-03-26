@@ -495,15 +495,23 @@ p {
 
 /* Base card */
 .card {
-  background-color: var(--color-white);
+  background-color: #B7D3FF; /* Wondrous Sky — UofR brand light blue */
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: var(--spacing-lg); /* 24px — TYP-08: 1.5rem */
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, border-top-color 0.2s ease;
 }
 
 .card:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Clickable card (link-based card) — remove link styling */
+.card--clickable {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 /* Card links — visible underline so they don't blend with paragraph text */
@@ -518,14 +526,13 @@ p {
   color: var(--color-meliora-blue);
 }
 
-/* Highlighted card — yellow top border accent */
+/* Highlighted card — yellow top border, changes to navy on hover */
 .card--highlighted {
   border-top: 4px solid var(--color-yellow);
 }
 
-/* Navy highlighted card — Students card variant (HOME-11) */
-.card--highlighted--navy {
-  border-top: 4px solid var(--color-navy);
+.card--highlighted:hover {
+  border-top-color: var(--color-navy);
 }
 
 /* Publication card — yellow left border */
