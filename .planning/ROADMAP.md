@@ -96,6 +96,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-26 |
 | 2. Home Page | 3/3 | Complete   | 2026-03-26 |
-| 3. Content Pages | 1/3 | In Progress|  |
+| 3. Content Pages | 2/3 | In Progress|  |
 | 4. Students Hub | 0/TBD | Not started | - |
 | 5. Polish & Verification | 0/TBD | Not started | - |

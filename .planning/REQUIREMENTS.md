@@ -58,14 +58,14 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Pages: Teaching (teaching.html)
 
-- [ ] **TEACH-01**: Create page header section with navy background, white H1 "Teaching"
-- [ ] **TEACH-02**: Add lead text "University of Rochester · ECE Department" in white
-- [ ] **TEACH-03**: Create "Teaching Philosophy" section on butter background with philosophy statement
-- [ ] **TEACH-04**: Create "Courses I Teach" section with H2 and eyebrow
-- [ ] **TEACH-05**: Create three course cards (ECE 241, ECE 245/445, ECE 487) stacked vertically
-- [ ] **TEACH-06**: Each course card has left yellow border, semester badge (navy pill, right-aligned), level badge
-- [ ] **TEACH-07**: Each course card includes H3 title (with course number), and full description
-- [ ] **TEACH-08**: Add note below courses linking to Students Hub page
+- [x] **TEACH-01**: Create page header section with navy background, white H1 "Teaching"
+- [x] **TEACH-02**: Add lead text "University of Rochester · ECE Department" in white
+- [x] **TEACH-03**: Create "Teaching Philosophy" section on butter background with philosophy statement
+- [x] **TEACH-04**: Create "Courses I Teach" section with H2 and eyebrow
+- [x] **TEACH-05**: Create three course cards (ECE 241, ECE 245/445, ECE 487) stacked vertically
+- [x] **TEACH-06**: Each course card has left yellow border, semester badge (navy pill, right-aligned), level badge
+- [x] **TEACH-07**: Each course card includes H3 title (with course number), and full description
+- [x] **TEACH-08**: Add note below courses linking to Students Hub page
 
 ### Pages: Students (students.html)
 
@@ -84,14 +84,14 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Pages: Contact (contact.html)
 
-- [ ] **CONT-01**: Create page header section with navy background, white H1 "Contact"
-- [ ] **CONT-02**: Create two-column grid (desktop), stacked (mobile)
-- [ ] **CONT-03**: Left column: "Get in Touch" card with intro text
-- [ ] **CONT-04**: Contact details: Email, Office, Address, Office Hours (all with navy square bullets)
-- [ ] **CONT-05**: Email is a mailto: link (ibarron@ur.rochester.edu)
-- [ ] **CONT-06**: Right column: "Profiles & Links" card with H3
-- [ ] **CONT-07**: External links: UofR ECE Dept, ResearchGate, University Faculty Page (all target="_blank")
-- [ ] **CONT-08**: Add italic note: "No contact form — please reach out directly by email."
+- [x] **CONT-01**: Create page header section with navy background, white H1 "Contact"
+- [x] **CONT-02**: Create two-column grid (desktop), stacked (mobile)
+- [x] **CONT-03**: Left column: "Get in Touch" card with intro text
+- [x] **CONT-04**: Contact details: Email, Office, Address, Office Hours (all with navy square bullets)
+- [x] **CONT-05**: Email is a mailto: link (ibarron@ur.rochester.edu)
+- [x] **CONT-06**: Right column: "Profiles & Links" card with H3
+- [x] **CONT-07**: External links: UofR ECE Dept, ResearchGate, University Faculty Page (all target="_blank")
+- [x] **CONT-08**: Add italic note: "No contact form — please reach out directly by email."
 
 ### Typography & Styling
 
@@ -270,22 +270,22 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RES-11 | Phase 3 | Complete |
 | RES-12 | Phase 3 | Complete |
 | RES-13 | Phase 3 | Complete |
-| TEACH-01 | Phase 3 | Pending |
-| TEACH-02 | Phase 3 | Pending |
-| TEACH-03 | Phase 3 | Pending |
-| TEACH-04 | Phase 3 | Pending |
-| TEACH-05 | Phase 3 | Pending |
-| TEACH-06 | Phase 3 | Pending |
-| TEACH-07 | Phase 3 | Pending |
-| TEACH-08 | Phase 3 | Pending |
-| CONT-01 | Phase 3 | Pending |
-| CONT-02 | Phase 3 | Pending |
-| CONT-03 | Phase 3 | Pending |
-| CONT-04 | Phase 3 | Pending |
-| CONT-05 | Phase 3 | Pending |
-| CONT-06 | Phase 3 | Pending |
-| CONT-07 | Phase 3 | Pending |
-| CONT-08 | Phase 3 | Pending |
+| TEACH-01 | Phase 3 | Complete |
+| TEACH-02 | Phase 3 | Complete |
+| TEACH-03 | Phase 3 | Complete |
+| TEACH-04 | Phase 3 | Complete |
+| TEACH-05 | Phase 3 | Complete |
+| TEACH-06 | Phase 3 | Complete |
+| TEACH-07 | Phase 3 | Complete |
+| TEACH-08 | Phase 3 | Complete |
+| CONT-01 | Phase 3 | Complete |
+| CONT-02 | Phase 3 | Complete |
+| CONT-03 | Phase 3 | Complete |
+| CONT-04 | Phase 3 | Complete |
+| CONT-05 | Phase 3 | Complete |
+| CONT-06 | Phase 3 | Complete |
+| CONT-07 | Phase 3 | Complete |
+| CONT-08 | Phase 3 | Complete |
 | STU-01 | Phase 4 | Pending |
 | STU-02 | Phase 4 | Pending |
 | STU-03 | Phase 4 | Pending |
