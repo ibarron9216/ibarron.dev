@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact information for Dr. Irving Barron, University of Rochester ECE">
+  <title>Contact — Dr. Irving Barron</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav__inner">
+
+        <!-- Brand / site name — left side -->
+        <a class="nav__brand" href="index.html">Dr. Irving Barron</a>
+
+        <!-- Hamburger button — visible only on mobile (<768px) -->
+        <button
+          class="nav__hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+        </button>
+
+        <!-- Navigation links — hidden on mobile until toggled -->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__links" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="research.html">Research</a></li>
+            <li><a class="nav__link" href="teaching.html">Teaching</a></li>
+            <li><a class="nav__link" href="students.html">Students</a></li>
+            <li><a class="nav__link" href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="main-content">
+
+    <!-- PAGE HEADER SECTION (CONT-01) -->
+    <section class="section section--navy" style="min-height: 35vh;">
+      <div class="container">
+        <div class="page-header__grid">
+
+          <!-- Text column -->
+          <div class="page-header__text animate-on-load">
+            <h1>Contact</h1>
+          </div>
+
+          <!-- Decorative icon column — envelope line art -->
+          <div class="page-header__icon animate-on-load">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Envelope body -->
+              <rect x="30" y="65" width="140" height="90" rx="4" />
+              <!-- Envelope flap (V shape / open letter) -->
+              <polyline points="30,65 100,120 170,65" />
+              <!-- Bottom-left fold line -->
+              <line x1="30" y1="155" x2="80" y2="110" />
+              <!-- Bottom-right fold line -->
+              <line x1="170" y1="155" x2="120" y2="110" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS SECTION (CONT-02 through CONT-08) -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+
+          <!-- Left Column: Get in Touch -->
+          <div class="card card--highlighted animate-on-load">
+            <h3>Get in Touch</h3>
+            <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+              I welcome inquiries from students, collaborators, and colleagues. The best way to reach me is by email.
+            </p>
+
+            <dl class="contact-details">
+              <dt>Email</dt>
+              <dd><a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a></dd>
+
+              <dt>Office</dt>
+              <dd>Hopeman Engineering Building, Room 203</dd>
+
+              <dt>Address</dt>
+              <dd>University of Rochester, Rochester, NY 14627</dd>
+
+              <dt>Office Hours</dt>
+              <dd>By appointment &mdash; email to schedule</dd>
+            </dl>
+
+            <p class="contact-note"><em>No contact form — please reach out directly by email.</em></p>
+          </div>
+
+          <!-- Right Column: Profiles & Links -->
+          <div class="card card--highlighted animate-on-load">
+            <h3>Profiles &amp; Links</h3>
+            <ul class="profile-links">
+              <li><a href="https://www.hajim.rochester.edu/ece/" target="_blank">University of Rochester ECE Department</a></li>
+              <li><a href="https://www.linkedin.com/in/irvingbarron/" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">
+        &copy; <span class="footer__year"></span> Dr. Irving Barron. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+</body>
+</html>
