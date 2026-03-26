@@ -28,17 +28,17 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Pages: Home (index.html)
 
-- [ ] **HOME-01**: Create hero section with two-column layout (text left, profile photo right on desktop)
-- [ ] **HOME-02**: Add "University of Rochester · Hajim School..." eyebrow above H1
-- [ ] **HOME-03**: Add H1 "Dr. Irving Barron" in serif font, white on navy background
-- [ ] **HOME-04**: Add lead text "Assistant Professor of Instruction, Electrical & Computer Engineering" in white
-- [ ] **HOME-05**: Create two buttons: "View My Research" (primary, white on navy) and "For Students" (outline, white border)
-- [ ] **HOME-06**: Implement profile photo placeholder (CSS-only navy box with yellow "IB" initials) in serif font
-- [ ] **HOME-07**: Create "About Me" section with eyebrow, H2, and biographical paragraph
-- [ ] **HOME-08**: Add "Download CV (PDF)" button (primary style) pointing to assets/cv.pdf
-- [ ] **HOME-09**: Create three highlight cards (Research, Teaching, Students) with yellow top border
-- [ ] **HOME-10**: Each highlight card has H4 title, description, and "Learn more →" or "Visit hub →" link
-- [ ] **HOME-11**: Research and Teaching cards have yellow border-top; Students card has navy border-top
+- [x] **HOME-01**: Create hero section with two-column layout (text left, profile photo right on desktop)
+- [x] **HOME-02**: Add "University of Rochester · Hajim School..." eyebrow above H1
+- [x] **HOME-03**: Add H1 "Dr. Irving Barron" in serif font, white on navy background
+- [x] **HOME-04**: Add lead text "Assistant Professor of Instruction, Electrical & Computer Engineering" in white
+- [x] **HOME-05**: Create two buttons: "View My Research" (primary, white on navy) and "For Students" (outline, white border)
+- [x] **HOME-06**: Implement profile photo placeholder (CSS-only navy box with yellow "IB" initials) in serif font
+- [x] **HOME-07**: Create "About Me" section with eyebrow, H2, and biographical paragraph
+- [x] **HOME-08**: Add "Download CV (PDF)" button (primary style) pointing to assets/cv.pdf
+- [x] **HOME-09**: Create three highlight cards (Research, Teaching, Students) with yellow top border
+- [x] **HOME-10**: Each highlight card has H4 title, description, and "Learn more →" or "Visit hub →" link
+- [x] **HOME-11**: Research and Teaching cards have yellow border-top; Students card has navy border-top
 
 ### Pages: Research (research.html)
 
@@ -246,17 +246,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERF-02 | Phase 1 | Complete |
 | PERF-03 | Phase 1 | Complete |
 | PERF-04 | Phase 1 | Complete |
-| HOME-01 | Phase 2 | Pending |
-| HOME-02 | Phase 2 | Pending |
-| HOME-03 | Phase 2 | Pending |
-| HOME-04 | Phase 2 | Pending |
-| HOME-05 | Phase 2 | Pending |
-| HOME-06 | Phase 2 | Pending |
-| HOME-07 | Phase 2 | Pending |
-| HOME-08 | Phase 2 | Pending |
-| HOME-09 | Phase 2 | Pending |
-| HOME-10 | Phase 2 | Pending |
-| HOME-11 | Phase 2 | Pending |
+| HOME-01 | Phase 2 | Complete |
+| HOME-02 | Phase 2 | Complete |
+| HOME-03 | Phase 2 | Complete |
+| HOME-04 | Phase 2 | Complete |
+| HOME-05 | Phase 2 | Complete |
+| HOME-06 | Phase 2 | Complete |
+| HOME-07 | Phase 2 | Complete |
+| HOME-08 | Phase 2 | Complete |
+| HOME-09 | Phase 2 | Complete |
+| HOME-10 | Phase 2 | Complete |
+| HOME-11 | Phase 2 | Complete |
 | RES-01 | Phase 3 | Pending |
 | RES-02 | Phase 3 | Pending |
 | RES-03 | Phase 3 | Pending |
