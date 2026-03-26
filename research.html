@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Research interests and publications of Dr. Irving Barron, University of Rochester">
+  <title>Research — Dr. Irving Barron</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav__inner">
+
+        <!-- Brand / site name — left side -->
+        <a class="nav__brand" href="index.html">Dr. Irving Barron</a>
+
+        <!-- Hamburger button — visible only on mobile (<768px) -->
+        <button
+          class="nav__hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+        </button>
+
+        <!-- Navigation links — hidden on mobile until toggled -->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__links" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="research.html" aria-current="page">Research</a></li>
+            <li><a class="nav__link" href="teaching.html">Teaching</a></li>
+            <li><a class="nav__link" href="students.html">Students</a></li>
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="main-content">
+
+    <!-- PAGE HEADER SECTION (RES-01, RES-02) -->
+    <section class="section section--navy" style="min-height: 35vh;">
+      <div class="container">
+        <div class="page-header__grid">
+
+          <!-- Text column -->
+          <div class="page-header__text animate-on-load">
+            <p class="eyebrow">Digital image processing &middot; Security &middot; Privacy-preserving communication</p>
+            <h1>Research</h1>
+          </div>
+
+          <!-- Decorative icon column — microscope line art -->
+          <div class="page-header__icon animate-on-load">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Microscope eyepiece -->
+              <rect x="82" y="20" width="36" height="22" rx="4" />
+              <!-- Ocular tube -->
+              <rect x="90" y="42" width="20" height="28" rx="2" />
+              <!-- Arm connecting to body -->
+              <path d="M100 70 L100 110" />
+              <!-- Objective lens body -->
+              <rect x="80" y="94" width="40" height="32" rx="4" />
+              <!-- Objective lens tip -->
+              <circle cx="100" cy="135" r="8" />
+              <!-- Stage platform -->
+              <rect x="62" y="144" width="76" height="8" rx="2" />
+              <!-- Left leg -->
+              <line x1="72" y1="152" x2="58" y2="172" />
+              <!-- Right leg -->
+              <line x1="128" y1="152" x2="142" y2="172" />
+              <!-- Base -->
+              <line x1="50" y1="172" x2="150" y2="172" />
+              <!-- Light beam / condenser indicator -->
+              <line x1="100" y1="142" x2="100" y2="152" stroke-dasharray="3,3" />
+              <!-- Coarse focus knob -->
+              <circle cx="68" cy="102" r="8" />
+              <line x1="60" y1="102" x2="76" y2="102" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH OVERVIEW SECTION (RES-03) -->
+    <section class="section section--butter">
+      <div class="container animate-on-load">
+        <p class="eyebrow">Research Overview</p>
+        <h2>What I Study</h2>
+        <p style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg); max-width: 720px;">
+          My research lies at the intersection of signal processing, security, and privacy. I develop techniques for digital image forensics — detecting manipulated or forged images — and explore how visual data can be protected without sacrificing usability. This work has applications in law enforcement, journalism verification, and secure communication systems.
+        </p>
+        <p style="margin-bottom: var(--spacing-lg); max-width: 720px;">
+          I also investigate barcode technologies and privacy-preserving communication channels, designing systems that balance transparency with confidentiality. My goal is to create practical tools that make digital media more trustworthy and secure.
+        </p>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS SECTION (RES-04, RES-05) -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Areas of Focus</p>
+        <h2>Research Interests</h2>
+        <div class="research-interests animate-on-load">
+          <span class="tag-pill tag-pill--primary">Digital Image Processing</span>
+          <span class="tag-pill tag-pill--primary">Digital Forensics</span>
+          <span class="tag-pill tag-pill--primary">Privacy-Preserving Communication</span>
+          <span class="tag-pill">Information Security</span>
+          <span class="tag-pill">Barcode Technologies</span>
+          <span class="tag-pill">Signal Processing</span>
+          <span class="tag-pill">Computer Vision</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NSF FUNDED RESEARCH SECTION (RES-06, RES-07) -->
+    <section class="section section--butter">
+      <div class="container">
+        <div class="card card--highlighted card--funded animate-on-load">
+          <p class="eyebrow">Funded Research</p>
+          <h3>An I-Corps Approach to Developing a Commercial QR Code Scanning Solution</h3>
+          <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md); font-weight: 700;">
+            National Science Foundation &middot; $50,000 &middot; with Prof. Gaurav Sharma
+          </p>
+          <p>
+            This NSF-funded project explores the commercialization potential of secure QR code scanning technology. Through the I-Corps program, I worked to validate market needs and develop a pathway from academic research to a practical product that helps users identify malicious QR codes before they cause harm.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS SECTION (RES-08 through RES-13) -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Selected Publications</p>
+        <h2>Publications</h2>
+        <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-xl);"><em>For a complete list, visit my <a href="https://www.researchgate.net/profile/Irving-Barron" target="_blank">ResearchGate profile</a>.</em></p>
+
+        <!-- Publication 1 -->
+        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: var(--spacing-lg);">
+          <p class="publication__authors">
+            <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
+          </p>
+          <p class="publication__title">"Quashing Quishing: An Analysis of QR Code Exploitation and Proposals for Secure Scanning,"</p>
+          <p class="publication__details">
+            <em>IEEE Access</em>, 2024.
+          </p>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: var(--spacing-lg);">
+          <p class="publication__authors">
+            <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
+          </p>
+          <p class="publication__title">"Optimized Modulation for Interference Resistant Halftone QR Barcodes,"</p>
+          <p class="publication__details">
+            <em>IEEE Transactions on Image Processing</em>, vol. 32, pp. 4195&ndash;4210, 2023.
+          </p>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: var(--spacing-lg);">
+          <p class="publication__authors">
+            <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
+          </p>
+          <p class="publication__title">"Proximally Secure Communication via Halftone QR Barcodes,"</p>
+          <p class="publication__details">
+            <em>IS&amp;T International Symposium on Electronic Imaging</em>, 2021.
+          </p>
+        </div>
+
+        <!-- Publication 4 -->
+        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: 0;">
+          <p class="publication__authors">
+            <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
+          </p>
+          <p class="publication__title">"Toward CanvasChain: A Blockchain-based Approach for Verifiable Digital Image Provenance,"</p>
+          <p class="publication__details">
+            <em>IS&amp;T International Symposium on Electronic Imaging</em>, 2020.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">
+        &copy; <span class="footer__year"></span> Dr. Irving Barron. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+</body>
+</html>
