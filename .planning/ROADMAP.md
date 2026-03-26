@@ -12,7 +12,7 @@ Build a professional five-page faculty website using plain HTML/CSS/JS only. The
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - CSS design system, shared nav/footer, JS utilities, asset setup
+- [x] **Phase 1: Foundation** - CSS design system, shared nav/footer, JS utilities, asset setup (completed 2026-03-26)
 - [ ] **Phase 2: Home Page** - Complete index.html establishing the page template pattern
 - [ ] **Phase 3: Content Pages** - Research, Teaching, and Contact pages (informational, minimal JS)
 - [ ] **Phase 4: Students Hub** - Students page with full ARIA tab interface and JS tab switching
@@ -88,7 +88,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete   | 2026-03-26 |
 | 2. Home Page | 0/TBD | Not started | - |
 | 3. Content Pages | 0/TBD | Not started | - |
 | 4. Students Hub | 0/TBD | Not started | - |
