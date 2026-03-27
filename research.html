@@ -51,14 +51,13 @@
   <!-- MAIN CONTENT -->
   <main class="main-content" id="main-content">
 
-    <!-- PAGE HEADER SECTION (RES-01, RES-02) -->
+    <!-- PAGE HEADER SECTION — navy, no eyebrow, no yellow text -->
     <section class="section section--navy" style="min-height: 35vh;">
       <div class="container">
         <div class="page-header__grid">
 
-          <!-- Text column -->
+          <!-- Text column — h1 only, white -->
           <div class="page-header__text animate-on-load">
-            <p class="eyebrow">Digital image processing &middot; Security &middot; Privacy-preserving communication</p>
             <h1>Research</h1>
           </div>
 
@@ -97,10 +96,21 @@
           </div>
 
         </div>
+
+        <!-- Research Interests — moved to header section, below the grid -->
+        <div class="research-interests animate-on-load" style="margin-top: var(--spacing-2xl);">
+          <span class="tag-pill tag-pill--highlight">Digital Image Processing</span>
+          <span class="tag-pill tag-pill--highlight">Digital Forensics</span>
+          <span class="tag-pill tag-pill--highlight">Privacy-Preserving Communication</span>
+          <span class="tag-pill tag-pill--outline">Information Security</span>
+          <span class="tag-pill tag-pill--outline">Barcode Technologies</span>
+          <span class="tag-pill tag-pill--outline">Signal Processing</span>
+          <span class="tag-pill tag-pill--outline">Computer Vision</span>
+        </div>
       </div>
     </section>
 
-    <!-- RESEARCH OVERVIEW SECTION (RES-03) -->
+    <!-- RESEARCH OVERVIEW SECTION -->
     <section class="section section--butter">
       <div class="container animate-on-load">
         <p class="eyebrow">Research Overview</p>
@@ -114,48 +124,21 @@
       </div>
     </section>
 
-    <!-- RESEARCH INTERESTS SECTION (RES-04, RES-05) -->
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">Areas of Focus</p>
-        <h2>Research Interests</h2>
-        <div class="research-interests animate-on-load">
-          <span class="tag-pill tag-pill--primary">Digital Image Processing</span>
-          <span class="tag-pill tag-pill--primary">Digital Forensics</span>
-          <span class="tag-pill tag-pill--primary">Privacy-Preserving Communication</span>
-          <span class="tag-pill">Information Security</span>
-          <span class="tag-pill">Barcode Technologies</span>
-          <span class="tag-pill">Signal Processing</span>
-          <span class="tag-pill">Computer Vision</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- NSF FUNDED RESEARCH SECTION (RES-06, RES-07) -->
-    <section class="section section--butter">
-      <div class="container">
-        <div class="card card--highlighted card--funded animate-on-load">
-          <p class="eyebrow">Funded Research</p>
-          <h3>An I-Corps Approach to Developing a Commercial QR Code Scanning Solution</h3>
-          <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md); font-weight: 700;">
-            National Science Foundation &middot; $50,000 &middot; with Prof. Gaurav Sharma
-          </p>
-          <p>
-            This NSF-funded project explores the commercialization potential of secure QR code scanning technology. Through the I-Corps program, I worked to validate market needs and develop a pathway from academic research to a practical product that helps users identify malicious QR codes before they cause harm.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS SECTION (RES-08 through RES-13) -->
+    <!-- PUBLICATIONS SECTION -->
     <section class="section">
       <div class="container">
         <p class="eyebrow">Selected Publications</p>
         <h2>Publications</h2>
-        <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-xl);"><em>For a complete list, visit my <a href="https://www.researchgate.net/profile/Irving-Barron" target="_blank">ResearchGate profile</a>.</em></p>
 
-        <!-- Publication 1 -->
-        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: var(--spacing-lg);">
+        <!-- Publication 1 — clickable, downloads or links to paper -->
+        <a
+          href="https://doi.org/10.1109/ACCESS.2024.1000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card--publication animate-on-load"
+          style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-lg);"
+          aria-label="Download: Quashing Quishing — IEEE Access 2024"
+        >
           <p class="publication__authors">
             <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
           </p>
@@ -163,10 +146,17 @@
           <p class="publication__details">
             <em>IEEE Access</em>, 2024.
           </p>
-        </div>
+        </a>
 
         <!-- Publication 2 -->
-        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: var(--spacing-lg);">
+        <a
+          href="https://doi.org/10.1109/TIP.2023.3270000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card--publication animate-on-load"
+          style="margin-bottom: var(--spacing-lg);"
+          aria-label="Download: Optimized Modulation for Interference Resistant Halftone QR Barcodes — IEEE TIP 2023"
+        >
           <p class="publication__authors">
             <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
           </p>
@@ -174,10 +164,17 @@
           <p class="publication__details">
             <em>IEEE Transactions on Image Processing</em>, vol. 32, pp. 4195&ndash;4210, 2023.
           </p>
-        </div>
+        </a>
 
         <!-- Publication 3 -->
-        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: var(--spacing-lg);">
+        <a
+          href="https://doi.org/10.2352/ISSN.2470-1173.2021.4.IPAS-210"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card--publication animate-on-load"
+          style="margin-bottom: var(--spacing-lg);"
+          aria-label="Download: Proximally Secure Communication via Halftone QR Barcodes — IS&amp;T EI 2021"
+        >
           <p class="publication__authors">
             <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
           </p>
@@ -185,10 +182,17 @@
           <p class="publication__details">
             <em>IS&amp;T International Symposium on Electronic Imaging</em>, 2021.
           </p>
-        </div>
+        </a>
 
         <!-- Publication 4 -->
-        <div class="card card--highlighted card--publication animate-on-load" style="margin-bottom: 0;">
+        <a
+          href="https://doi.org/10.2352/ISSN.2470-1173.2020.4.IPAS-162"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card--publication animate-on-load"
+          style="margin-bottom: 0;"
+          aria-label="Download: Toward CanvasChain — IS&amp;T EI 2020"
+        >
           <p class="publication__authors">
             <strong class="author-highlight">I. R. Barron</strong> and G. Sharma,
           </p>
@@ -196,7 +200,35 @@
           <p class="publication__details">
             <em>IS&amp;T International Symposium on Electronic Imaging</em>, 2020.
           </p>
-        </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- GRANTS SECTION -->
+    <section class="section section--butter">
+      <div class="container">
+        <p class="eyebrow">Funded Research</p>
+        <h2>Grants</h2>
+
+        <!-- Grant 1 — clickable -->
+        <a
+          href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2135418"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card--grant animate-on-load"
+          style="margin-top: var(--spacing-xl);"
+          aria-label="View NSF grant: An I-Corps Approach to Developing a Commercial QR Code Scanning Solution"
+        >
+          <p class="eyebrow" style="margin-bottom: var(--spacing-sm);">National Science Foundation &middot; $50,000</p>
+          <h3>An I-Corps Approach to Developing a Commercial QR Code Scanning Solution</h3>
+          <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-dark-gray);">
+            with Prof. Gaurav Sharma
+          </p>
+          <p>
+            This NSF-funded project explores the commercialization potential of secure QR code scanning technology. Through the I-Corps program, I worked to validate market needs and develop a pathway from academic research to a practical product that helps users identify malicious QR codes before they cause harm.
+          </p>
+        </a>
 
       </div>
     </section>
