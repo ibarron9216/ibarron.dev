@@ -1163,7 +1163,7 @@ a.card--grant {
 
 .contact-details dd {
   margin: 0;
-  color: var(--color-dark-gray);
+  color: var(--color-navy);
 }
 
 .contact-details a {
@@ -1182,7 +1182,7 @@ a.card--grant {
   padding-top: var(--spacing-lg);
   border-top: 1px solid var(--color-border);
   font-size: var(--font-size-body);
-  color: var(--color-dark-gray);
+  color: var(--color-navy);
 }
 
 .profile-links {
