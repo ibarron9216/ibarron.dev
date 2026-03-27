@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - CSS design system, shared nav/footer, JS utilities, asset setup (completed 2026-03-26)
 - [x] **Phase 2: Home Page** - Complete index.html establishing the page template pattern (completed 2026-03-26)
-- [ ] **Phase 3: Content Pages** - Research, Teaching, and Contact pages (informational, minimal JS)
+- [x] **Phase 3: Content Pages** - Research, Teaching, and Contact pages (informational, minimal JS) (completed 2026-03-27)
 - [ ] **Phase 4: Students Hub** - Students page with full ARIA tab interface and JS tab switching
 - [ ] **Phase 5: Polish & Verification** - Cross-cutting accessibility audit, link verification, browser testing, performance check
 
@@ -96,6 +96,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-26 |
 | 2. Home Page | 3/3 | Complete   | 2026-03-26 |
-| 3. Content Pages | 2/3 | In Progress|  |
+| 3. Content Pages | 3/3 | Complete   | 2026-03-27 |
 | 4. Students Hub | 0/TBD | Not started | - |
 | 5. Polish & Verification | 0/TBD | Not started | - |
