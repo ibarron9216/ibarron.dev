@@ -61,269 +61,133 @@
       </div>
     </section>
 
-    <!-- LAYOUT TOGGLE SECTION -->
+    <!-- STUDENTS CONTENT SECTION -->
     <section class="section">
       <div class="container">
 
-        <!-- Layout comparison toggle -->
-        <div class="layout-toggle">
-          <span class="layout-toggle__label-text" id="layout-toggle-label">View layout:</span>
-          <button
-            type="button"
-            class="layout-toggle__btn"
-            role="switch"
-            aria-checked="true"
-            aria-labelledby="layout-toggle-label"
-          >
-            <span class="layout-toggle__option" aria-hidden="true">Sidebar</span>
-            <span class="layout-toggle__option" aria-hidden="true">Cards</span>
-          </button>
-        </div>
+        <!-- Sidebar navigation layout -->
+        <div class="layout-1__wrapper">
 
-        <!-- Students content wrapper — data-layout controls visibility -->
-        <div class="students-content" data-layout="2">
+          <!-- Mobile select dropdown (visible < 768px) -->
+          <div class="layout-1__mobile-select-wrapper">
+            <label for="topic-select" class="layout-1__select-label">Jump to topic:</label>
+            <select id="topic-select" class="layout-1__select">
+              <option value="get-started">Get Started</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="recommendations">Professional Recommendations</option>
+              <option value="outcomes">Student Impact &amp; Outcomes</option>
+            </select>
+          </div>
 
-          <!-- LAYOUT 1: SIDEBAR NAVIGATION -->
-          <div class="students-layout-1">
-            <div class="layout-1__wrapper">
+          <!-- Sidebar navigation (visible >= 768px) -->
+          <nav class="layout-1__sidebar" aria-label="Topic navigation">
+            <ul role="list" class="sidebar-nav__list">
+              <li>
+                <button type="button" class="sidebar-nav__item" aria-selected="true" data-controls="layout1-get-started">Get Started</button>
+              </li>
+              <li>
+                <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-collaboration">Collaboration</button>
+              </li>
+              <li>
+                <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-recommendations">Professional Recommendations</button>
+              </li>
+              <li>
+                <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-outcomes">Student Impact &amp; Outcomes</button>
+              </li>
+            </ul>
+          </nav>
 
-              <!-- Mobile select dropdown (visible < 768px) -->
-              <div class="layout-1__mobile-select-wrapper">
-                <label for="topic-select" class="layout-1__select-label">Jump to topic:</label>
-                <select id="topic-select" class="layout-1__select">
-                  <option value="get-started">Get Started</option>
-                  <option value="collaboration">Collaboration</option>
-                  <option value="recommendations">Professional Recommendations</option>
-                  <option value="outcomes">Student Impact &amp; Outcomes</option>
-                </select>
-              </div>
+          <!-- Content panels (one visible at a time) -->
+          <div class="layout-1__content">
 
-              <!-- Sidebar navigation (visible >= 768px) -->
-              <nav class="layout-1__sidebar" aria-label="Topic navigation">
-                <ul role="list" class="sidebar-nav__list">
-                  <li>
-                    <button type="button" class="sidebar-nav__item" aria-selected="true" data-controls="layout1-get-started">Get Started</button>
-                  </li>
-                  <li>
-                    <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-collaboration">Collaboration</button>
-                  </li>
-                  <li>
-                    <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-recommendations">Professional Recommendations</button>
-                  </li>
-                  <li>
-                    <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-outcomes">Student Impact &amp; Outcomes</button>
-                  </li>
-                </ul>
-              </nav>
+            <!-- Panel: Get Started -->
+            <div id="layout1-get-started" class="layout-1__panel">
 
-              <!-- Content panels (one visible at a time) -->
-              <div class="layout-1__content">
+              <h2>Get Started</h2>
 
-                <!-- Panel: Get Started -->
-                <div id="layout1-get-started" class="layout-1__panel">
+              <h3>Welcome</h3>
+              <p>I enjoy working with students at all stages of their academic journey. Whether you are exploring your first research experience or considering graduate school, I am happy to talk. This page outlines how to connect with me and what to expect.</p>
 
-                  <h2>Get Started</h2>
+              <h3>Office and Hours</h3>
+              <p>My office is in Hopeman Hall at the University of Rochester. I hold regular office hours during the fall and spring semesters. Check the course syllabus or Blackboard for the current schedule. Outside of posted hours, I am available by appointment.</p>
 
-                  <h3>Welcome</h3>
-                  <p>I enjoy working with students at all stages of their academic journey. Whether you are exploring your first research experience or considering graduate school, I am happy to talk. This page outlines how to connect with me and what to expect.</p>
+              <h3>How to Reach Out</h3>
+              <p>The best way to contact me is by email at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>. I typically respond within 24 to 48 hours on business days. When emailing for the first time, please include:</p>
+              <ul>
+                <li>Your name and year (e.g., sophomore, senior, recent graduate)</li>
+                <li>A brief description of your interests or what you would like to discuss</li>
+                <li>Your resume or CV, if relevant</li>
+              </ul>
 
-                  <h3>Office and Hours</h3>
-                  <p>My office is in Hopeman Hall at the University of Rochester. I hold regular office hours during the fall and spring semesters. Check the course syllabus or Blackboard for the current schedule. Outside of posted hours, I am available by appointment.</p>
+              <h3>Mentorship Approach</h3>
+              <p>I believe in building strong working relationships with students. My mentorship style emphasizes regular check-ins, clear expectations, and open communication. I work with each student to define goals and create a plan that fits their schedule and ambitions.</p>
 
-                  <h3>How to Reach Out</h3>
-                  <p>The best way to contact me is by email at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>. I typically respond within 24 to 48 hours on business days. When emailing for the first time, please include:</p>
-                  <ul>
-                    <li>Your name and year (e.g., sophomore, senior, recent graduate)</li>
-                    <li>A brief description of your interests or what you would like to discuss</li>
-                    <li>Your resume or CV, if relevant</li>
-                  </ul>
+              <h3>What I Provide</h3>
+              <p>Depending on the nature of our work together, I can offer research guidance, publication opportunities, conference presentation experience, recommendation letters, career advice, and connections to professionals in the field.</p>
 
-                  <h3>Mentorship Approach</h3>
-                  <p>I believe in building strong working relationships with students. My mentorship style emphasizes regular check-ins, clear expectations, and open communication. I work with each student to define goals and create a plan that fits their schedule and ambitions.</p>
+              <h3>Is It a Good Fit?</h3>
+              <p>I look for students who are curious, self-motivated, and willing to engage with challenging problems. Prior experience in signal processing or security is helpful but not required. What matters most is genuine interest in the work and a willingness to learn.</p>
 
-                  <h3>What I Provide</h3>
-                  <p>Depending on the nature of our work together, I can offer research guidance, publication opportunities, conference presentation experience, recommendation letters, career advice, and connections to professionals in the field.</p>
-
-                  <h3>Is It a Good Fit?</h3>
-                  <p>I look for students who are curious, self-motivated, and willing to engage with challenging problems. Prior experience in signal processing or security is helpful but not required. What matters most is genuine interest in the work and a willingness to learn.</p>
-
-                </div>
-
-                <!-- Panel: Collaboration -->
-                <div id="layout1-collaboration" class="layout-1__panel" hidden>
-
-                  <h2>Collaboration</h2>
-
-                  <h3>Research Opportunities</h3>
-                  <p>I work with motivated students on projects related to digital image processing, digital forensics, information security, and privacy-preserving communication. Research involvement can range from a single semester to multi-year commitments. I welcome both undergraduate and graduate students.</p>
-                  <p>If you are interested, email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Research Inquiry." Please include your resume and a short statement (1 to 2 paragraphs) about your background and interests.</p>
-
-                  <h3>Teaching Assistant Opportunities</h3>
-                  <p>I occasionally have TA openings in my courses, including ECE 241 (Fundamentals of Electrical Engineering), ECE 245/445 (Random Signals and Noise), and ECE 487 (Digital Image Processing). TA positions involve grading, office hours, and sometimes leading review sessions.</p>
-                  <p>If you are interested in TAing for one of my courses, contact me during the semester before the course runs. Strong performance in the course and good communication skills are the primary qualifications.</p>
-
-                  <h3>Curriculum Development</h3>
-                  <p>I have worked with students on curriculum projects, including developing new lab exercises for ECE 241 and creating supplementary materials for other courses. If you are interested in educational development as a professional experience, let me know.</p>
-
-                </div>
-
-                <!-- Panel: Professional Recommendations -->
-                <div id="layout1-recommendations" class="layout-1__panel" hidden>
-
-                  <h2>Professional Recommendations</h2>
-
-                  <h3>Recommendation Letters for Graduate School</h3>
-                  <p>I am happy to write recommendation letters for students when I can speak meaningfully to their work and abilities. Please review the following before reaching out:</p>
-                  <ul>
-                    <li>You completed coursework or research with me and earned a strong grade or made a notable contribution.</li>
-                    <li>Submit your request at least 3 weeks before the earliest deadline.</li>
-                    <li>Email me with context: the program or position you are applying for, the submission deadline, and any relevant details about your goals.</li>
-                    <li>Attach or link your current resume and any supporting materials (personal statement draft, program description, etc.).</li>
-                    <li>I can typically commit to 2 to 3 letters per application cycle. If I am unable to take on additional requests, I will let you know promptly.</li>
-                  </ul>
-                  <p>Email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Recommendation Request" to get started.</p>
-
-                  <h3>Job Application References</h3>
-                  <p>If you would like to list me as a professional reference for a job application, please let me know in advance. Send me the position title, the company or organization, and the expected timeline so I am prepared if contacted. I am glad to support students entering the workforce.</p>
-
-                </div>
-
-                <!-- Panel: Student Impact & Outcomes -->
-                <div id="layout1-outcomes" class="layout-1__panel" hidden>
-
-                  <h2>Student Impact &amp; Outcomes</h2>
-
-                  <h3>Student Success Stories</h3>
-                  <p>I am proud of the students I have worked with and the paths they have taken after our time together. Former students have gone on to graduate programs at top institutions, secured positions at leading technology companies, and launched research careers in signal processing, security, and related fields.</p>
-
-                  <h3>Research Presentations</h3>
-                  <p>Students I mentor regularly present their work at conferences and university symposia. Poster presentations and talks are an important part of the research experience, and I support students through the entire process, from abstract submission to presentation preparation.</p>
-
-                  <h3>Stay in Touch</h3>
-                  <p>I love hearing from former students. Whether you want to share an update, ask a question, or reconnect, please reach out at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>. Your achievements and updates are always welcome.</p>
-
-                </div>
-
-              </div><!-- /.layout-1__content -->
-
-            </div><!-- /.layout-1__wrapper -->
-          </div><!-- /.students-layout-1 -->
-
-          <!-- LAYOUT 2: EXPANDABLE CARDS -->
-          <div class="students-layout-2">
-
-            <!-- Card 1: Get Started -->
-            <div class="topic-card">
-              <h2 class="topic-card__heading">
-                <button type="button" class="topic-card__trigger" aria-expanded="true" aria-controls="topic-content-get-started" id="topic-btn-get-started">
-                  <span class="topic-card__title">Get Started</span>
-                  <span class="topic-card__icon" aria-hidden="true">+</span>
-                </button>
-              </h2>
-              <div id="topic-content-get-started" role="region" aria-labelledby="topic-btn-get-started" class="topic-card__content is-open">
-
-                <h3>Welcome</h3>
-                <p>I enjoy working with students at all stages of their academic journey. Whether you are exploring your first research experience or considering graduate school, I am happy to talk. This page outlines how to connect with me and what to expect.</p>
-
-                <h3>Office and Hours</h3>
-                <p>My office is in Hopeman Hall at the University of Rochester. I hold regular office hours during the fall and spring semesters. Check the course syllabus or Blackboard for the current schedule. Outside of posted hours, I am available by appointment.</p>
-
-                <h3>How to Reach Out</h3>
-                <p>The best way to contact me is by email at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>. I typically respond within 24 to 48 hours on business days. When emailing for the first time, please include:</p>
-                <ul>
-                  <li>Your name and year (e.g., sophomore, senior, recent graduate)</li>
-                  <li>A brief description of your interests or what you would like to discuss</li>
-                  <li>Your resume or CV, if relevant</li>
-                </ul>
-
-                <h3>Mentorship Approach</h3>
-                <p>I believe in building strong working relationships with students. My mentorship style emphasizes regular check-ins, clear expectations, and open communication. I work with each student to define goals and create a plan that fits their schedule and ambitions.</p>
-
-                <h3>What I Provide</h3>
-                <p>Depending on the nature of our work together, I can offer research guidance, publication opportunities, conference presentation experience, recommendation letters, career advice, and connections to professionals in the field.</p>
-
-                <h3>Is It a Good Fit?</h3>
-                <p>I look for students who are curious, self-motivated, and willing to engage with challenging problems. Prior experience in signal processing or security is helpful but not required. What matters most is genuine interest in the work and a willingness to learn.</p>
-
-              </div>
             </div>
 
-            <!-- Card 2: Collaboration -->
-            <div class="topic-card">
-              <h2 class="topic-card__heading">
-                <button type="button" class="topic-card__trigger" aria-expanded="false" aria-controls="topic-content-collaboration" id="topic-btn-collaboration">
-                  <span class="topic-card__title">Collaboration</span>
-                  <span class="topic-card__icon" aria-hidden="true">+</span>
-                </button>
-              </h2>
-              <div id="topic-content-collaboration" role="region" aria-labelledby="topic-btn-collaboration" class="topic-card__content" hidden>
+            <!-- Panel: Collaboration -->
+            <div id="layout1-collaboration" class="layout-1__panel" hidden>
 
-                <h3>Research Opportunities</h3>
-                <p>I work with motivated students on projects related to digital image processing, digital forensics, information security, and privacy-preserving communication. Research involvement can range from a single semester to multi-year commitments. I welcome both undergraduate and graduate students.</p>
-                <p>If you are interested, email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Research Inquiry." Please include your resume and a short statement (1 to 2 paragraphs) about your background and interests.</p>
+              <h2>Collaboration</h2>
 
-                <h3>Teaching Assistant Opportunities</h3>
-                <p>I occasionally have TA openings in my courses, including ECE 241 (Fundamentals of Electrical Engineering), ECE 245/445 (Random Signals and Noise), and ECE 487 (Digital Image Processing). TA positions involve grading, office hours, and sometimes leading review sessions.</p>
-                <p>If you are interested in TAing for one of my courses, contact me during the semester before the course runs. Strong performance in the course and good communication skills are the primary qualifications.</p>
+              <h3>Research Opportunities</h3>
+              <p>I work with motivated students on projects related to digital image processing, digital forensics, information security, and privacy-preserving communication. Research involvement can range from a single semester to multi-year commitments. I welcome both undergraduate and graduate students.</p>
+              <p>If you are interested, email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Research Inquiry." Please include your resume and a short statement (1 to 2 paragraphs) about your background and interests.</p>
 
-                <h3>Curriculum Development</h3>
-                <p>I have worked with students on curriculum projects, including developing new lab exercises for ECE 241 and creating supplementary materials for other courses. If you are interested in educational development as a professional experience, let me know.</p>
+              <h3>Teaching Assistant Opportunities</h3>
+              <p>I occasionally have TA openings in my courses, including ECE 241 (Fundamentals of Electrical Engineering), ECE 245/445 (Random Signals and Noise), and ECE 487 (Digital Image Processing). TA positions involve grading, office hours, and sometimes leading review sessions.</p>
+              <p>If you are interested in TAing for one of my courses, contact me during the semester before the course runs. Strong performance in the course and good communication skills are the primary qualifications.</p>
 
-              </div>
+              <h3>Curriculum Development</h3>
+              <p>I have worked with students on curriculum projects, including developing new lab exercises for ECE 241 and creating supplementary materials for other courses. If you are interested in educational development as a professional experience, let me know.</p>
+
             </div>
 
-            <!-- Card 3: Professional Recommendations -->
-            <div class="topic-card">
-              <h2 class="topic-card__heading">
-                <button type="button" class="topic-card__trigger" aria-expanded="false" aria-controls="topic-content-recommendations" id="topic-btn-recommendations">
-                  <span class="topic-card__title">Professional Recommendations</span>
-                  <span class="topic-card__icon" aria-hidden="true">+</span>
-                </button>
-              </h2>
-              <div id="topic-content-recommendations" role="region" aria-labelledby="topic-btn-recommendations" class="topic-card__content" hidden>
+            <!-- Panel: Professional Recommendations -->
+            <div id="layout1-recommendations" class="layout-1__panel" hidden>
 
-                <h3>Recommendation Letters for Graduate School</h3>
-                <p>I am happy to write recommendation letters for students when I can speak meaningfully to their work and abilities. Please review the following before reaching out:</p>
-                <ul>
-                  <li>You completed coursework or research with me and earned a strong grade or made a notable contribution.</li>
-                  <li>Submit your request at least 3 weeks before the earliest deadline.</li>
-                  <li>Email me with context: the program or position you are applying for, the submission deadline, and any relevant details about your goals.</li>
-                  <li>Attach or link your current resume and any supporting materials (personal statement draft, program description, etc.).</li>
-                  <li>I can typically commit to 2 to 3 letters per application cycle. If I am unable to take on additional requests, I will let you know promptly.</li>
-                </ul>
-                <p>Email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Recommendation Request" to get started.</p>
+              <h2>Professional Recommendations</h2>
 
-                <h3>Job Application References</h3>
-                <p>If you would like to list me as a professional reference for a job application, please let me know in advance. Send me the position title, the company or organization, and the expected timeline so I am prepared if contacted. I am glad to support students entering the workforce.</p>
+              <h3>Recommendation Letters for Graduate School</h3>
+              <p>I am happy to write recommendation letters for students when I can speak meaningfully to their work and abilities. Please review the following before reaching out:</p>
+              <ul>
+                <li>You completed coursework or research with me and earned a strong grade or made a notable contribution.</li>
+                <li>Submit your request at least 3 weeks before the earliest deadline.</li>
+                <li>Email me with context: the program or position you are applying for, the submission deadline, and any relevant details about your goals.</li>
+                <li>Attach or link your current resume and any supporting materials (personal statement draft, program description, etc.).</li>
+                <li>I can typically commit to 2 to 3 letters per application cycle. If I am unable to take on additional requests, I will let you know promptly.</li>
+              </ul>
+              <p>Email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Recommendation Request" to get started.</p>
 
-              </div>
+              <h3>Job Application References</h3>
+              <p>If you would like to list me as a professional reference for a job application, please let me know in advance. Send me the position title, the company or organization, and the expected timeline so I am prepared if contacted. I am glad to support students entering the workforce.</p>
+
             </div>
 
-            <!-- Card 4: Student Impact & Outcomes -->
-            <div class="topic-card">
-              <h2 class="topic-card__heading">
-                <button type="button" class="topic-card__trigger" aria-expanded="false" aria-controls="topic-content-outcomes" id="topic-btn-outcomes">
-                  <span class="topic-card__title">Student Impact &amp; Outcomes</span>
-                  <span class="topic-card__icon" aria-hidden="true">+</span>
-                </button>
-              </h2>
-              <div id="topic-content-outcomes" role="region" aria-labelledby="topic-btn-outcomes" class="topic-card__content" hidden>
+            <!-- Panel: Student Impact & Outcomes -->
+            <div id="layout1-outcomes" class="layout-1__panel" hidden>
 
-                <h3>Student Success Stories</h3>
-                <p>I am proud of the students I have worked with and the paths they have taken after our time together. Former students have gone on to graduate programs at top institutions, secured positions at leading technology companies, and launched research careers in signal processing, security, and related fields.</p>
+              <h2>Student Impact &amp; Outcomes</h2>
 
-                <h3>Research Presentations</h3>
-                <p>Students I mentor regularly present their work at conferences and university symposia. Poster presentations and talks are an important part of the research experience, and I support students through the entire process, from abstract submission to presentation preparation.</p>
+              <h3>Student Success Stories</h3>
+              <p>I am proud of the students I have worked with and the paths they have taken after our time together. Former students have gone on to graduate programs at top institutions, secured positions at leading technology companies, and launched research careers in signal processing, security, and related fields.</p>
 
-                <h3>Stay in Touch</h3>
-                <p>I love hearing from former students. Whether you want to share an update, ask a question, or reconnect, please reach out at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>. Your achievements and updates are always welcome.</p>
+              <h3>Research Presentations</h3>
+              <p>Students I mentor regularly present their work at conferences and university symposia. Poster presentations and talks are an important part of the research experience, and I support students through the entire process, from abstract submission to presentation preparation.</p>
 
-              </div>
+              <h3>Stay in Touch</h3>
+              <p>I love hearing from former students. Whether you want to share an update, ask a question, or reconnect, please reach out at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>. Your achievements and updates are always welcome.</p>
+
             </div>
 
-          </div><!-- /.students-layout-2 -->
+          </div><!-- /.layout-1__content -->
 
-        </div><!-- /.students-content -->
+        </div><!-- /.layout-1__wrapper -->
       </div><!-- /.container -->
     </section>
 
