@@ -107,7 +107,13 @@ Plans:
   3. All five pages load and display correctly at 320px wide, with navigation collapsed to hamburger and multi-column layouts stacked to single column
   4. All internal relative links navigate to the correct pages, and all external links open in a new tab with descriptive text
   5. Opening all five pages from the filesystem (no server) in Chrome, Firefox, and Safari shows no console errors and no missing assets
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — VoiceOver accessibility audit, identify and fix WCAG AA violations (focus, ARIA, contrast, heading hierarchy)
+- [ ] 05-02-PLAN.md — Link verification baseline, verify all internal/external links working with descriptive text
+- [ ] 05-03-PLAN.md — Responsive testing across breakpoints (320px, 375px, 768px, 1024px), verify layouts and touch targets
+- [ ] 05-04-PLAN.md — Cross-browser testing (Safari, Chrome, Firefox), offline functionality (file:// protocol), final verification sign-off
 
 ## Progress
 
@@ -121,4 +127,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5
 | 3. Content Pages | 3/3 | Complete   | 2026-03-27 |
 | 4. Students Hub | 1/3 | In Progress|  |
 | 4.1. Students Hub Restructure | 5/5 | Complete   | 2026-03-27 |
-| 5. Polish & Verification | 0/TBD | Not started | - |
+| 5. Polish & Verification | 0/4 | Planning complete | - |
