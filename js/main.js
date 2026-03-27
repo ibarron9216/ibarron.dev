@@ -40,34 +40,124 @@ function initFooterYear() {
 }
 
 // ==============================
-// 3. ARIA TABS (Phase 4 placeholder)
+// 3. ARIA TABS (Students Hub)
 // ==============================
 function initTabs() {
-  // Placeholder for Students page tab interface (Phase 4)
   const tablist = document.querySelector('[role="tablist"]');
   if (!tablist) return;
 
   const tabs = tablist.querySelectorAll('[role="tab"]');
   const panels = document.querySelectorAll('[role="tabpanel"]');
 
-  tabs.forEach((tab, index) => {
-    // Click to switch tab
-    tab.addEventListener('click', () => {
-      // Hide all panels
-      panels.forEach(p => { p.hidden = true; });
+  // ---- Helper: check reduced motion preference ----
+  function prefersReducedMotion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
 
-      // Deselect all tabs
-      tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+  // ---- Helper: fade out a panel, call onComplete when done ----
+  function fadeOutPanel(panel, onComplete) {
+    if (prefersReducedMotion()) {
+      onComplete();
+      return;
+    }
 
-      // Show selected panel and mark tab active
-      if (panels[index]) panels[index].hidden = false;
-      tab.setAttribute('aria-selected', 'true');
-      tab.focus();
+    // Apply fade-out data attribute (CSS handles the transition)
+    panel.setAttribute('data-fade', 'out');
+
+    const handleTransitionEnd = () => {
+      panel.removeEventListener('transitionend', handleTransitionEnd);
+      clearTimeout(timeoutId);
+      onComplete();
+    };
+
+    panel.addEventListener('transitionend', handleTransitionEnd);
+
+    // Fallback timeout: 0.2s transition + 100ms buffer
+    const timeoutId = setTimeout(() => {
+      panel.removeEventListener('transitionend', handleTransitionEnd);
+      onComplete();
+    }, 300);
+  }
+
+  // ---- Helper: fade in a panel ----
+  function fadeInPanel(panel) {
+    if (prefersReducedMotion()) {
+      panel.removeAttribute('data-fade');
+      return;
+    }
+
+    // Force reflow so browser registers opacity: 0 before transitioning to 1
+    void panel.offsetHeight;
+
+    // Apply fade-in data attribute (CSS handles the transition)
+    panel.setAttribute('data-fade', 'in');
+
+    const handleTransitionEnd = () => {
+      panel.removeEventListener('transitionend', handleTransitionEnd);
+      panel.removeAttribute('data-fade');
+    };
+
+    panel.addEventListener('transitionend', handleTransitionEnd);
+  }
+
+  // ---- Helper: switch to tab at targetIndex ----
+  function switchTab(targetIndex) {
+    const currentTab = tablist.querySelector('[aria-selected="true"]');
+    const currentPanel = document.getElementById(currentTab.getAttribute('aria-controls'));
+    const targetTab = tabs[targetIndex];
+    const targetPanel = document.getElementById(targetTab.getAttribute('aria-controls'));
+
+    // Do nothing if already on this tab
+    if (currentTab === targetTab) return;
+
+    // Fade out current panel, then hide it
+    fadeOutPanel(currentPanel, () => {
+      currentPanel.hidden = true;
+      currentPanel.removeAttribute('data-fade');
     });
 
-    // Arrow key navigation (left/right)
+    // Show new panel (start hidden at opacity:0 via data-fade="out" before fade-in)
+    targetPanel.setAttribute('data-fade', 'out');
+    targetPanel.hidden = false;
+    fadeInPanel(targetPanel);
+
+    // Update ARIA selected state
+    currentTab.setAttribute('aria-selected', 'false');
+    targetTab.setAttribute('aria-selected', 'true');
+
+    // Update tabindex: active tab = 0, inactive = -1
+    tabs.forEach((tab, idx) => {
+      tab.setAttribute('tabindex', idx === targetIndex ? '0' : '-1');
+    });
+
+    // Move keyboard focus to the newly active tab
+    targetTab.focus();
+  }
+
+  // ---- Step 1: Initialize tabindex values ----
+  tabs.forEach((tab) => {
+    const isActive = tab.getAttribute('aria-selected') === 'true';
+    tab.setAttribute('tabindex', isActive ? '0' : '-1');
+  });
+
+  // ---- Step 2: Initialize panel opacity ----
+  panels.forEach((panel) => {
+    if (!panel.hidden) {
+      panel.setAttribute('data-fade', 'in');
+    }
+  });
+
+  // ---- Step 3: Click handlers ----
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      switchTab(index);
+    });
+  });
+
+  // ---- Step 4: Arrow key handlers (left/right with wrapping) ----
+  tabs.forEach((tab, index) => {
     tab.addEventListener('keydown', (e) => {
-      let targetIndex = index;
+      let targetIndex;
 
       if (e.key === 'ArrowLeft') {
         targetIndex = index === 0 ? tabs.length - 1 : index - 1;
@@ -76,11 +166,10 @@ function initTabs() {
         targetIndex = index === tabs.length - 1 ? 0 : index + 1;
         e.preventDefault();
       } else {
-        return;
+        return; // Not an arrow key, let browser handle (Tab, Enter, etc.)
       }
 
-      tabs[targetIndex].click();
-      tabs[targetIndex].focus();
+      switchTab(targetIndex);
     });
   });
 }
