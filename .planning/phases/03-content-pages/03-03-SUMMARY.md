@@ -22,7 +22,7 @@ tech-stack:
   added: []
   patterns:
     - "HTML5 manual validation: check DOCTYPE, aria-current placement, heading hierarchy, external link target=_blank"
-    - "Visual redesign: section label approach — h1 heading in page-header, descriptive label below as plain text, content pills below"
+    - "Visual redesign: section label approach, h1 heading in page-header, descriptive label below as plain text, content pills below"
 
 key-files:
   created: []
@@ -35,7 +35,7 @@ key-decisions:
   - "User requested header redesign: research.html h1 changed from 'Research' to 'Research Interests' with pills moved directly below"
   - "teaching.html redesigned to match research.html header pattern: eyebrows removed, badges updated, Teaching Topics label added"
   - "contact.html redesigned: navy header removed, cards centered, text colors fixed, em-dashes removed"
-  - "All redesign changes applied as auto-fix deviations (Rule 1 and Rule 2) — user feedback triggered inline fixes during visual verification"
+  - "All redesign changes applied as auto-fix deviations (Rule 1 and Rule 2) based on user feedback during visual verification"
 
 requirements-completed:
   - RES-01
@@ -87,7 +87,7 @@ completed: 2026-03-26
 ## Accomplishments
 
 - All three content pages passed manual HTML5 validation: correct DOCTYPE, proper aria-current placement, valid heading hierarchy, external links with target="_blank", no broken internal links
-- research.html redesigned: H1 changed to "Research Interests", tag pills moved directly below, redundant section label removed
+- research.html redesigned: H1 changed to "Research Interests", tag pills moved directly below, redundant section label removed, all em-dashes removed
 - teaching.html redesigned: Applied matching header pattern from research.html, eyebrows removed, "Teaching Topics" label added, course badge text updated
 - contact.html redesigned: Navy header section removed, cards centered, text colors corrected, em-dashes removed from definition list
 - User visually approved all three pages after redesigns
@@ -102,17 +102,18 @@ completed: 2026-03-26
 | 1 (deviation) | Update research.html page header h1 | c096be8 | research.html |
 | 1 (deviation) | Apply research.html header pattern to teaching.html | e568803 | teaching.html |
 | 1 (deviation) | Redesign contact page per user feedback | 3691530 | contact.html |
-| 2 | User visual verification — approved | (checkpoint) | — |
+| 2 | User visual verification approved | (checkpoint) | |
+| 2 (post-approval) | Remove remaining em-dashes from research.html | 5106528 | research.html |
 
 ## Files Created/Modified
 
-- `/Volumes/SN8100_2TB_A/Git/Code/ibarron.dev/research.html` — H1 updated to "Research Interests", pills directly below header, section structure refined
-- `/Volumes/SN8100_2TB_A/Git/Code/ibarron.dev/teaching.html` — Header pattern aligned with research.html, eyebrows removed, Teaching Topics label added
-- `/Volumes/SN8100_2TB_A/Git/Code/ibarron.dev/contact.html` — Navy header removed, cards centered, text colors fixed, em-dashes removed
+- `/Volumes/SN8100_2TB_A/Git/Code/ibarron.dev/research.html` - H1 updated to "Research Interests", pills directly below header, section structure refined, all em-dashes removed
+- `/Volumes/SN8100_2TB_A/Git/Code/ibarron.dev/teaching.html` - Header pattern aligned with research.html, eyebrows removed, Teaching Topics label added
+- `/Volumes/SN8100_2TB_A/Git/Code/ibarron.dev/contact.html` - Navy header removed, cards centered, text colors fixed, em-dashes removed
 
 ## Decisions Made
 
-- All three page headers were redesigned to consistently present the section label (e.g., "Research Interests") as the primary H1 — this provides more descriptive page context than a generic "Research" / "Teaching" title
+- All three page headers were redesigned to consistently present the section label (e.g., "Research Interests") as the primary H1 for more descriptive page context
 - Contact page simplified: the navy hero-style header was replaced with a cleaner, centered card layout that matches the utility nature of a contact page
 
 ## Deviations from Plan
@@ -121,7 +122,7 @@ completed: 2026-03-26
 
 **1. [Rule 1 - Bug / Rule 2 - UX] research.html header and pill layout redesign**
 - **Found during:** Task 2 visual verification checkpoint
-- **Issue:** User found research.html header content and pill placement did not match their vision — H1 "Research" was too generic, pills were separated from the header
+- **Issue:** User found research.html header content and pill placement did not match their vision. H1 "Research" was too generic, pills were separated from the header
 - **Fix:** H1 changed to "Research Interests"; pills moved directly below H1 in the page-header; redundant "Research Interests" section label removed
 - **Files modified:** research.html
 - **Commits:** f76fab7, 229da4d, c096be8
@@ -129,7 +130,7 @@ completed: 2026-03-26
 **2. [Rule 1 - Bug] teaching.html header pattern alignment**
 - **Found during:** Task 2 visual verification (applying research.html pattern consistently)
 - **Issue:** teaching.html used a different header structure than the newly redesigned research.html
-- **Fix:** Applied matching header pattern — eyebrows removed, "Teaching Topics" label added below H1, badges updated
+- **Fix:** Applied matching header pattern, eyebrows removed, "Teaching Topics" label added below H1, badges updated
 - **Files modified:** teaching.html
 - **Commit:** e568803
 
@@ -139,6 +140,13 @@ completed: 2026-03-26
 - **Fix:** Navy header section removed; cards centered on page; text colors corrected; em-dashes removed from dt/dd pairs
 - **Files modified:** contact.html
 - **Commit:** 3691530
+
+**4. [Rule 1 - Bug] research.html em-dashes not fully removed**
+- **Found during:** Post-approval verification
+- **Issue:** research.html still contained em-dashes in the page title, HTML comments, body text, and aria-label attributes
+- **Fix:** Replaced all remaining em-dashes: title separator changed to hyphen, body text parenthetical rewritten with commas, aria-labels updated with commas, HTML comments updated with colons or commas
+- **Files modified:** research.html
+- **Commit:** 5106528
 
 ## Issues Encountered
 
@@ -156,9 +164,10 @@ None beyond the visual redesigns, which were applied inline.
 - FOUND: teaching.html
 - FOUND: contact.html
 - FOUND: .planning/phases/03-content-pages/03-03-SUMMARY.md
-- FOUND: commit 2e84e17 (Task 1 — HTML5 validation)
-- FOUND: commit f76fab7 (Task 1 deviation — research.html redesign)
-- FOUND: commit 3691530 (Task 1 deviation — contact.html redesign)
+- FOUND: commit 2e84e17 (Task 1 - HTML5 validation)
+- FOUND: commit f76fab7 (Task 1 deviation - research.html redesign)
+- FOUND: commit 3691530 (Task 1 deviation - contact.html redesign)
+- FOUND: commit 5106528 (post-approval - research.html em-dash removal)
 
 ---
 *Phase: 03-content-pages*
