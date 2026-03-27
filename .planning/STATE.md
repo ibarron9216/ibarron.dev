@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 04-02 Students Hub tab interface JavaScript
-last_updated: "2026-03-27T04:46:17.837Z"
+stopped_at: Completed 04.1-01 Students Hub dual layout CSS
+last_updated: "2026-03-27T07:32:26.166Z"
 last_activity: 2026-03-25 — Phase 01 plans created
 progress:
-  total_phases: 5
+  total_phases: 6
   completed_phases: 2
-  total_plans: 12
-  completed_plans: 10
+  total_plans: 16
+  completed_plans: 11
   percent: 17
 ---
 
@@ -71,6 +71,7 @@ Progress: [█████░░░░░] 17% (planning done, execution startin
 | Phase 03-content-pages P03 | 20min | 2 tasks | 3 files |
 | Phase 04 P01 | 3min | 2 tasks | 2 files |
 | Phase 04-students-hub P02 | 1min | 1 tasks | 1 files |
+| Phase 04.1-students-hub-restructure P01 | 5min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -109,6 +110,12 @@ Recent decisions affecting current work:
 - [Phase 04-students-hub]: Students Hub page header uses single-column layout (no decorative icon column)
 - [Phase 04-students-hub]: Used data-fade='out'|'in' attribute approach matching existing CSS architecture rather than inline opacity styles
 - [Phase 04-students-hub]: prefersReducedMotion() checked as function (not cached) to always reflect current OS setting
+- [Phase 04.1-students-hub-restructure]: Section 19 appended after existing Section 18 — preserves all existing styles intact
+- [Phase 04.1-students-hub-restructure]: Layout 2 display:flex rule in 19e overrides 19a display:none via specificity — both layout containers hidden by default, shown by data-layout attribute
+
+### Roadmap Evolution
+
+- Phase 4.1 inserted after Phase 4 (2026-03-27): Students Hub Restructure — restructure page information architecture with dual layout options before final verification (URGENT)
 
 ### Pending Todos
 
@@ -123,6 +130,6 @@ None — Phase 1 planning complete, all requirements addressed, ready for execut
 
 ## Session Continuity
 
-Last session: 2026-03-27T04:46:17.835Z
-Stopped at: Completed 04-02 Students Hub tab interface JavaScript
+Last session: 2026-03-27T07:32:26.163Z
+Stopped at: Completed 04.1-01 Students Hub dual layout CSS
 Resume file: None
