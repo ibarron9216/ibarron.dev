@@ -59,9 +59,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The Contact page shows a navy header, a two-column layout (desktop) with office/email details on the left and three external profile links on the right, and the italic note about no contact form
   4. The email address on the Contact page is a working mailto: link and all external links open in a new tab
 **Plans**: 3 plans
-- [ ] 03-01-PLAN.md — Phase 3 CSS additions and complete Research page (research.html)
-- [ ] 03-02-PLAN.md — Teaching page (teaching.html) and Contact page (contact.html)
-- [ ] 03-03-PLAN.md — W3C HTML validation and visual verification checkpoint
+- [x] 03-01-PLAN.md — Phase 3 CSS additions and complete Research page (research.html)
+- [x] 03-02-PLAN.md — Teaching page (teaching.html) and Contact page (contact.html)
+- [x] 03-03-PLAN.md — W3C HTML validation and visual verification checkpoint
 
 ### Phase 4: Students Hub
 **Goal**: Students can navigate between three resource sections (Current, Prior, Prospective) using a fully accessible tab interface
@@ -73,7 +73,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The Current Students tab shows office hours, a Blackboard link, email contact, and accommodations info
   4. The Prior Students tab shows a Stay in Touch section and a Recommendation Letters card with bulleted requirements
   5. The Prospective Students tab shows an Undergraduate Research card with application requirements and a Graduate Admissions link
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 04-01-PLAN.md — CSS tab interface styling and students.html page structure with header and three tab panels
+- [ ] 04-02-PLAN.md — Enhanced initTabs() JavaScript with tabindex management, fade animations, and full keyboard navigation
+- [ ] 04-03-PLAN.md — Visual verification checkpoint (tab interface styling, interaction, accessibility, responsiveness)
 
 ### Phase 5: Polish & Verification
 **Goal**: Every page passes WCAG AA accessibility, all links work, the site is fully responsive from 320px to desktop, and it runs correctly in all modern browsers with no external dependencies
@@ -97,5 +100,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 3/3 | Complete   | 2026-03-26 |
 | 2. Home Page | 3/3 | Complete   | 2026-03-26 |
 | 3. Content Pages | 3/3 | Complete   | 2026-03-27 |
-| 4. Students Hub | 0/TBD | Not started | - |
+| 4. Students Hub | 0/3 | Planning complete | - |
 | 5. Polish & Verification | 0/TBD | Not started | - |
