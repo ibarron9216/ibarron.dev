@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Students Hub — resources for current, prior, and prospective students of Dr. Irving Barron, University of Rochester ECE">
+  <title>Students Hub — Dr. Irving Barron</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav__inner">
+
+        <!-- Brand / site name — left side -->
+        <a class="nav__brand" href="index.html">Dr. Irving Barron</a>
+
+        <!-- Hamburger button — visible only on mobile (<768px) -->
+        <button
+          type="button"
+          class="nav__hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+        </button>
+
+        <!-- Navigation links — hidden on mobile until toggled -->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__links" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="research.html">Research</a></li>
+            <li><a class="nav__link" href="teaching.html">Teaching</a></li>
+            <li><a class="nav__link" href="students.html" aria-current="page">Students</a></li>
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="main-content">
+
+    <!-- PAGE HEADER SECTION (STU-01, STU-02) -->
+    <section class="section section--navy" style="min-height: 35vh;">
+      <div class="container">
+        <div class="animate-on-load">
+          <h1>Students Hub</h1>
+          <p class="eyebrow" style="margin-top: var(--spacing-md);">Resources for current, prior, and prospective students</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB INTERFACE SECTION (STU-03, STU-05) -->
+    <section class="section">
+      <div class="container">
+
+        <!-- TAB NAVIGATION -->
+        <div role="tablist" class="tabs" aria-label="Student resources">
+          <button
+            id="tab-current"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-current"
+          >Current Students</button>
+          <button
+            id="tab-prior"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-prior"
+          >Prior Students</button>
+          <button
+            id="tab-prospective"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-prospective"
+          >Prospective Students</button>
+        </div>
+
+        <!-- PANEL 1: CURRENT STUDENTS (STU-08, STU-09, STU-10) -->
+        <div
+          id="panel-current"
+          role="tabpanel"
+          aria-labelledby="tab-current"
+        >
+
+          <h2>Current Students</h2>
+
+          <!-- Office Hours -->
+          <h3>Office Hours</h3>
+          <p>I hold office hours during the semester and am happy to discuss coursework, research questions, or career advice. Please check the course syllabus or Blackboard for the current semester's schedule. Outside of posted hours, I am available by appointment.</p>
+
+          <!-- Course Materials -->
+          <h3>Course Materials</h3>
+          <p>All course materials, assignments, and announcements are posted on Blackboard. Please check there first for the most up-to-date information.</p>
+          <p><a href="https://learn.rochester.edu" target="_blank" rel="noopener noreferrer">Access course materials on Blackboard</a></p>
+
+          <!-- Contact -->
+          <h3>Reaching Me</h3>
+          <p>Email me directly at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>. I try to respond within 24 to 48 hours on business days. For time-sensitive matters, please note the deadline in the subject line.</p>
+
+          <!-- Accommodations -->
+          <h3>Accommodations</h3>
+          <p>I am committed to making my courses accessible to all students. If you require academic accommodations, please contact the <a href="https://www.rochester.edu/college/disability/" target="_blank" rel="noopener noreferrer">University of Rochester Disability Resources office</a> and provide me with the appropriate documentation early in the semester. I will work with you to ensure you have what you need to succeed.</p>
+
+        </div>
+
+        <!-- PANEL 2: PRIOR STUDENTS (STU-11) -->
+        <div
+          id="panel-prior"
+          role="tabpanel"
+          aria-labelledby="tab-prior"
+          hidden
+        >
+
+          <h2>Prior Students</h2>
+
+          <p>I love hearing from former students. Whether you want to share an update, ask a question, or just reconnect, please feel free to reach out at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a>.</p>
+
+          <!-- Recommendation Letters Card -->
+          <div class="card card--highlighted">
+            <h3>Recommendation Letters</h3>
+            <p>I am happy to write recommendation letters for former students when I can speak meaningfully to their work and abilities. Please review the following requirements before reaching out:</p>
+            <ul>
+              <li>You completed coursework or research with me and earned a strong grade or made a notable contribution.</li>
+              <li>Submit your request at least 3 weeks before the earliest deadline.</li>
+              <li>Email me with context: the program or position you are applying for, the submission deadline, and any relevant details about your goals.</li>
+              <li>Attach or link your current resume and any supporting materials (personal statement draft, program description, etc.).</li>
+              <li>I can typically commit to 2 to 3 letters per application cycle. If I am unable to take on additional requests, I will let you know promptly.</li>
+            </ul>
+            <p>Please email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Recommendation Request" to get started.</p>
+          </div>
+
+        </div>
+
+        <!-- PANEL 3: PROSPECTIVE STUDENTS (STU-12) -->
+        <div
+          id="panel-prospective"
+          role="tabpanel"
+          aria-labelledby="tab-prospective"
+          hidden
+        >
+
+          <h2>Prospective Students</h2>
+
+          <p>I welcome inquiries from students interested in joining my research group or taking my courses. Please review the information below before reaching out.</p>
+
+          <!-- Undergraduate Research Card -->
+          <div class="card card--highlighted">
+            <h3>Undergraduate Research Opportunities</h3>
+            <p>I work with motivated undergraduate students on research projects related to signal processing, security, and privacy. If you are interested in getting involved, please note the following:</p>
+            <ul>
+              <li>You are enrolled in the ECE program, or have relevant coursework and can join by permission.</li>
+              <li>A minimum GPA of 3.0 is expected, though I consider the full picture of your application.</li>
+              <li>You are available for a sustained commitment of at least one semester (summer, fall, or spring).</li>
+              <li>You have a genuine interest in signal processing, digital image forensics, security, or privacy applications.</li>
+            </ul>
+            <p>To apply, email me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with the subject line "Undergraduate Research Inquiry". Please attach your resume and a brief statement (1 to 2 paragraphs) describing your background and what interests you about my research.</p>
+          </div>
+
+          <!-- Graduate Admissions -->
+          <h3>Graduate Studies</h3>
+          <p>If you are interested in graduate studies in Electrical and Computer Engineering at the University of Rochester, I encourage you to explore the department's graduate programs. I am happy to discuss potential research directions and whether my group is a good fit for your interests.</p>
+          <p>For program information, visit the <a href="https://www.hajim.rochester.edu/ece/graduate/" target="_blank" rel="noopener noreferrer">ECE graduate admissions page</a>. Reach out to me at <a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a> with questions about research fit or the application process.</p>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">
+        &copy; <span class="footer__year"></span> Dr. Irving Barron. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+</body>
+</html>
