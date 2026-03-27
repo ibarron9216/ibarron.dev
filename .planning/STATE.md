@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 04.1-01 Students Hub dual layout CSS
-last_updated: "2026-03-27T07:32:26.166Z"
+stopped_at: Completed 04.1-02 Students Hub HTML dual-layout structure
+last_updated: "2026-03-27T07:33:35.611Z"
 last_activity: 2026-03-25 — Phase 01 plans created
 progress:
   total_phases: 6
   completed_phases: 2
   total_plans: 16
-  completed_plans: 11
+  completed_plans: 12
   percent: 17
 ---
 
@@ -72,6 +72,7 @@ Progress: [█████░░░░░] 17% (planning done, execution startin
 | Phase 04 P01 | 3min | 2 tasks | 2 files |
 | Phase 04-students-hub P02 | 1min | 1 tasks | 1 files |
 | Phase 04.1-students-hub-restructure P01 | 5min | 1 tasks | 1 files |
+| Phase 04.1-students-hub-restructure P02 | 7min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -112,6 +113,8 @@ Recent decisions affecting current work:
 - [Phase 04-students-hub]: prefersReducedMotion() checked as function (not cached) to always reflect current OS setting
 - [Phase 04.1-students-hub-restructure]: Section 19 appended after existing Section 18 — preserves all existing styles intact
 - [Phase 04.1-students-hub-restructure]: Layout 2 display:flex rule in 19e overrides 19a display:none via specificity — both layout containers hidden by default, shown by data-layout attribute
+- [Phase 04.1-students-hub-restructure]: data-layout=2 is HTML default (cards shown first per research); content duplicated across both layouts for progressive enhancement without JS
+- [Phase 04.1-students-hub-restructure]: aria-checked=true on toggle maps to Cards=second/active option; sidebar-nav__item buttons use aria-selected (not aria-expanded)
 
 ### Roadmap Evolution
 
@@ -130,6 +133,6 @@ None — Phase 1 planning complete, all requirements addressed, ready for execut
 
 ## Session Continuity
 
-Last session: 2026-03-27T07:32:26.163Z
-Stopped at: Completed 04.1-01 Students Hub dual layout CSS
+Last session: 2026-03-27T07:33:35.610Z
+Stopped at: Completed 04.1-02 Students Hub HTML dual-layout structure
 Resume file: None
