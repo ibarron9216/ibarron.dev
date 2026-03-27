@@ -175,33 +175,7 @@ function initTabs() {
 }
 
 // ==============================
-// 4. LAYOUT TOGGLE (Students Hub)
-// ==============================
-function initLayoutToggle() {
-  const toggle = document.querySelector('.layout-toggle__btn');
-  const content = document.querySelector('.students-content');
-  if (!toggle || !content) return;
-
-  // Restore from localStorage (default to '2' if not set — Layout 2 is default)
-  const saved = localStorage.getItem('ibarron:studentsLayout') || '2';
-  setLayout(saved);
-
-  toggle.addEventListener('click', () => {
-    const current = content.getAttribute('data-layout');
-    const next = current === '1' ? '2' : '1';
-    setLayout(next);
-    localStorage.setItem('ibarron:studentsLayout', next);
-  });
-
-  function setLayout(layoutNum) {
-    content.setAttribute('data-layout', layoutNum);
-    // aria-checked=false means Layout 1 (Sidebar), aria-checked=true means Layout 2 (Cards)
-    toggle.setAttribute('aria-checked', layoutNum === '2' ? 'true' : 'false');
-  }
-}
-
-// ==============================
-// 5. SIDEBAR NAVIGATION (Layout 1 — Students Hub)
+// 4. SIDEBAR NAVIGATION (Students Hub)
 // ==============================
 function initSidebarNav() {
   const sidebar = document.querySelector('.layout-1__sidebar');
@@ -251,66 +225,11 @@ function initSidebarNav() {
 }
 
 // ==============================
-// 6. EXPANDABLE CARDS (Layout 2 — Students Hub)
-// ==============================
-function initExpandableCards() {
-  var cards = document.querySelectorAll('.topic-card');
-  if (!cards.length) return;
-
-  // Helper: check reduced motion preference (reuse pattern from initTabs)
-  function prefersReducedMotion() {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  }
-
-  cards.forEach(function(card) {
-    var trigger = card.querySelector('.topic-card__trigger');
-    var panel = card.querySelector('.topic-card__content');
-    if (!trigger || !panel) return;
-
-    trigger.addEventListener('click', function() {
-      var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-      var willExpand = !isExpanded;
-
-      trigger.setAttribute('aria-expanded', String(willExpand));
-
-      if (willExpand) {
-        // Expand: remove hidden, add is-open class for max-height animation
-        panel.hidden = false;
-        // Force reflow before adding class so transition triggers
-        void panel.offsetHeight;
-        panel.classList.add('is-open');
-      } else {
-        // Collapse: remove is-open class, then hide after transition
-        panel.classList.remove('is-open');
-
-        if (!prefersReducedMotion()) {
-          panel.addEventListener('transitionend', function handler() {
-            panel.removeEventListener('transitionend', handler);
-            panel.hidden = true;
-          }, { once: true });
-
-          // Fallback timeout: 0.3s transition + 100ms buffer
-          setTimeout(function() {
-            if (!panel.hidden) {
-              panel.hidden = true;
-            }
-          }, 400);
-        } else {
-          panel.hidden = true;
-        }
-      }
-    });
-  });
-}
-
-// ==============================
-// 7. INITIALIZE ALL
+// 5. INITIALIZE ALL
 // ==============================
 document.addEventListener('DOMContentLoaded', () => {
   initNavToggle();
   initFooterYear();
   initTabs();
-  initLayoutToggle();
   initSidebarNav();
-  initExpandableCards();
 });
