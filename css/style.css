@@ -1282,3 +1282,327 @@ a.card--grant {
   color: var(--color-meliora-blue);
   text-decoration: underline;
 }
+
+
+/* =============================================================================
+   19. Phase 04.1 — Students Hub Dual Layout System
+   ============================================================================= */
+
+/* --- 19a. Layout visibility — data-layout attribute on wrapper --- */
+.students-layout-1,
+.students-layout-2 {
+  display: none;
+}
+
+[data-layout="1"] .students-layout-1 { display: block; }
+[data-layout="2"] .students-layout-2 { display: block; }
+
+
+/* --- 19b. Layout toggle switch --- */
+.layout-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.layout-toggle__label-text {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.layout-toggle__btn {
+  display: inline-flex;
+  border: 2px solid var(--color-navy);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  gap: 0;
+}
+
+.layout-toggle__option {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-navy);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  pointer-events: none;
+}
+
+/* aria-checked=false = Layout 1 active (Sidebar) */
+.layout-toggle__btn[aria-checked="false"] .layout-toggle__option:first-child {
+  background-color: var(--color-navy);
+  color: var(--color-white, #fff);
+}
+
+/* aria-checked=true = Layout 2 active (Cards) */
+.layout-toggle__btn[aria-checked="true"] .layout-toggle__option:last-child {
+  background-color: var(--color-navy);
+  color: var(--color-white, #fff);
+}
+
+.layout-toggle__btn:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: 2px;
+}
+
+
+/* --- 19c. Layout 1 — Sidebar Navigation --- */
+.layout-1__wrapper {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.layout-1__sidebar {
+  position: sticky;
+  top: calc(64px + var(--spacing-lg));
+}
+
+.sidebar-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.sidebar-nav__item {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-left: 3px solid transparent;
+  background: none;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-navy);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+.sidebar-nav__item:hover {
+  background-color: rgba(0, 30, 95, 0.05);
+}
+
+.sidebar-nav__item[aria-selected="true"] {
+  font-weight: 700;
+  border-left-color: var(--color-yellow);
+  background-color: rgba(0, 30, 95, 0.08);
+}
+
+.sidebar-nav__item:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: -2px;
+}
+
+/* Layout 1 panels (one visible at a time) */
+.layout-1__panel {
+  /* Panels are shown/hidden via hidden attribute in JS */
+}
+
+.layout-1__panel h2 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-heading);
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.layout-1__panel h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-subheading);
+  color: var(--color-navy);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.layout-1__panel p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.layout-1__panel ul {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-xl);
+}
+
+.layout-1__panel li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+
+/* --- 19d. Layout 1 — Mobile select --- */
+.layout-1__mobile-select-wrapper {
+  display: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+.layout-1__select-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-xs);
+}
+
+.layout-1__select {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
+  border-radius: 4px;
+  background-color: var(--color-white, #fff);
+  cursor: pointer;
+}
+
+.layout-1__select:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .layout-1__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .layout-1__sidebar {
+    display: none;
+  }
+  .layout-1__mobile-select-wrapper {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .layout-1__mobile-select-wrapper {
+    display: none;
+  }
+}
+
+
+/* --- 19e. Layout 2 — Expandable Cards --- */
+.students-layout-2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.topic-card {
+  border: 1px solid rgba(0, 30, 95, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.topic-card__heading {
+  margin: 0;
+}
+
+.topic-card__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-subheading);
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.topic-card__trigger:hover {
+  background-color: rgba(0, 30, 95, 0.03);
+}
+
+.topic-card__trigger:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: -3px;
+}
+
+.topic-card__icon {
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: var(--spacing-md);
+}
+
+.topic-card__trigger[aria-expanded="true"] .topic-card__icon {
+  transform: rotate(45deg);
+}
+
+.topic-card__content {
+  padding: 0 var(--spacing-xl) 0 var(--spacing-xl);
+  overflow: hidden;
+  max-height: 0;
+}
+
+.topic-card__content.is-open {
+  padding-bottom: var(--spacing-xl);
+  max-height: 800px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .topic-card__content {
+    transition: max-height 0.3s ease-out, padding-bottom 0.3s ease-out;
+  }
+  .topic-card__content.is-open {
+    transition: max-height 0.3s ease-in, padding-bottom 0.3s ease-in;
+  }
+}
+
+.topic-card__content h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-subheading);
+  color: var(--color-navy);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.topic-card__content h3:first-child {
+  margin-top: 0;
+}
+
+.topic-card__content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.topic-card__content ul {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-xl);
+}
+
+.topic-card__content li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+/* Layout 2 mobile adjustments */
+@media (max-width: 639px) {
+  .topic-card__trigger {
+    padding: var(--spacing-md) var(--spacing-lg);
+    min-height: 44px;
+  }
+  .topic-card__content.is-open {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+}
