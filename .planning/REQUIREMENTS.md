@@ -125,11 +125,11 @@ Requirements for launch. Each maps to roadmap phases.
 
 ### Links & Navigation
 
-- [ ] **LINK-01**: All internal links are relative (href="research.html", href="index.html")
-- [ ] **LINK-02**: All links verified working after final build
-- [ ] **LINK-03**: External links open in new tab (target="_blank") and have descriptive link text
-- [ ] **LINK-04**: Nav links highlight active page with yellow color and underline
-- [ ] **LINK-05**: Highlight card links navigate to correct pages (Research → research.html, etc.)
+- [x] **LINK-01**: All internal links are relative (href="research.html", href="index.html") — VERIFIED 2026-03-27
+- [x] **LINK-02**: All links verified working after final build — VERIFIED 2026-03-27
+- [x] **LINK-03**: External links open in new tab (target="_blank") and have descriptive link text — VERIFIED 2026-03-27
+- [x] **LINK-04**: Nav links highlight active page with yellow color and underline — VERIFIED 2026-03-27
+- [x] **LINK-05**: Highlight card links navigate to correct pages (Research → research.html, etc.) — VERIFIED 2026-03-27
 
 ### Assets & Files
 
@@ -306,11 +306,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | A11Y-06 | Phase 5 | Pending |
 | A11Y-07 | Phase 5 | Pending |
 | A11Y-08 | Phase 5 | Pending |
-| LINK-01 | Phase 5 | Pending |
-| LINK-02 | Phase 5 | Pending |
-| LINK-03 | Phase 5 | Pending |
-| LINK-04 | Phase 5 | Pending |
-| LINK-05 | Phase 5 | Pending |
+| LINK-01 | Phase 5 | Complete (05-02 baseline report) |
+| LINK-02 | Phase 5 | Complete (05-02 baseline report) |
+| LINK-03 | Phase 5 | Complete (05-02 baseline report) |
+| LINK-04 | Phase 5 | Complete (05-02 baseline report) |
+| LINK-05 | Phase 5 | Complete (05-02 baseline report) |
 | RESP-01 | Phase 5 | Pending |
 | RESP-02 | Phase 5 | Pending |
 | RESP-03 | Phase 5 | Pending |
