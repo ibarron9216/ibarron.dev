@@ -72,10 +72,10 @@ Requirements for launch. Each maps to roadmap phases.
 - [x] **STU-01**: Create page header section with navy background, white H1 "Students Hub"
 - [x] **STU-02**: Add lead text "Resources for current, prior, and prospective students" in white
 - [x] **STU-03**: Create tab navigation with three tabs: "Current Students", "Prior Students", "Prospective Students"
-- [ ] **STU-04**: Implement tab panel switching with JavaScript (click toggles visible panel, hides others)
+- [x] **STU-04**: Implement tab panel switching with JavaScript (click toggles visible panel, hides others)
 - [x] **STU-05**: Apply ARIA roles to tabs (role="tablist", role="tab", role="tabpanel")
-- [ ] **STU-06**: Implement arrow key navigation (left/right arrows switch between tabs)
-- [ ] **STU-07**: Update aria-selected attribute on tabs when switching
+- [x] **STU-06**: Implement arrow key navigation (left/right arrows switch between tabs)
+- [x] **STU-07**: Update aria-selected attribute on tabs when switching
 - [x] **STU-08**: Tab 1 (Current): Office Hours card, Course Materials (link to Blackboard), Reaching Me (email), Accommodations
 - [x] **STU-09**: Tab 2 (Prior): Stay in Touch section, Recommendation Letters card with bulleted requirements
 - [x] **STU-10**: Tab 3 (Prospective): Undergraduate Research card with bulleted application requirements, Graduate Admissions link
@@ -289,10 +289,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | STU-01 | Phase 4 | Complete |
 | STU-02 | Phase 4 | Complete |
 | STU-03 | Phase 4 | Complete |
-| STU-04 | Phase 4 | Pending |
+| STU-04 | Phase 4 | Complete |
 | STU-05 | Phase 4 | Complete |
-| STU-06 | Phase 4 | Pending |
-| STU-07 | Phase 4 | Pending |
+| STU-06 | Phase 4 | Complete |
+| STU-07 | Phase 4 | Complete |
 | STU-08 | Phase 4 | Complete |
 | STU-09 | Phase 4 | Complete |
 | STU-10 | Phase 4 | Complete |
