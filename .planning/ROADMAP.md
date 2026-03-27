@@ -120,5 +120,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5
 | 2. Home Page | 3/3 | Complete   | 2026-03-26 |
 | 3. Content Pages | 3/3 | Complete   | 2026-03-27 |
 | 4. Students Hub | 1/3 | In Progress|  |
-| 4.1. Students Hub Restructure | 0/4 | Not started | - |
+| 4.1. Students Hub Restructure | 4/4 | Complete   | 2026-03-27 |
 | 5. Polish & Verification | 0/TBD | Not started | - |
