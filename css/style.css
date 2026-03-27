@@ -1094,17 +1094,43 @@ a.card--grant {
 
 /* --- 18d. Research Interests --- */
 
+/* Wrapper constrained to the left column (50%) on desktop so pills don't
+   bleed into the right column where the page-header icon sits */
+.research-interests__wrapper {
+  max-width: 50%;
+}
+
+@media (max-width: 1023px) {
+  /* On mobile/tablet the header grid is single-column, so full width is fine */
+  .research-interests__wrapper {
+    max-width: 100%;
+  }
+}
+
+/* "Research Interests" label above the pills */
+.research-interests__label {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
 .research-interests {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-md);
-  margin: var(--spacing-lg) 0;
+  margin: 0;
 }
 
 /* Highlighted pill — yellow background, navy text (mirrors btn--primary--inverse) */
 .tag-pill--highlight {
   background-color: var(--color-yellow);
   color: var(--color-navy);
+  text-align: center;
 }
 
 /* Secondary pill — outline style, white border and text on navy background */
@@ -1112,6 +1138,7 @@ a.card--grant {
   background-color: transparent;
   color: var(--color-white);
   border: 2px solid var(--color-white);
+  text-align: center;
 }
 
 /* Legacy — kept for backward compat if used elsewhere */
