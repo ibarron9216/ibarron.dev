@@ -78,6 +78,25 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] 04-02-PLAN.md — Enhanced initTabs() JavaScript with tabindex management, fade animations, and full keyboard navigation
 - [ ] 04-03-PLAN.md — Visual verification checkpoint (tab interface styling, interaction, accessibility, responsiveness)
 
+### Phase 04.1: Students Hub Restructure: Build dual layout options (Relationship Pathways vs. Two-Column) with toggle for comparison before final selection (INSERTED)
+
+**Goal:** Both alternative layouts (sidebar navigation and expandable cards) are fully built and functional, with a toggle to compare them, so the user can test and select the best information architecture for the Students Hub
+**Requirements**: STU-01, STU-02, STU-03, STU-04, STU-05, STU-06, STU-07, STU-08, STU-09, STU-10, STU-11, STU-12
+**Depends on:** Phase 4
+**Success Criteria** (what must be TRUE):
+  1. Both layouts are fully built and render correctly with all 4 topics (Get Started, Collaboration, Professional Recommendations, Student Impact/Outcomes)
+  2. A toggle switch at the top of the page switches between Layout 1 (sidebar) and Layout 2 (cards), with the choice persisting via localStorage
+  3. Layout 1 shows a sticky sidebar on desktop and converts to a native select dropdown on mobile (< 768px)
+  4. Layout 2 shows expandable accordion cards with smooth max-height animation and correct ARIA attributes
+  5. All content uses first-person voice (I/my/me) with no em-dashes
+**Plans:** 4 plans
+
+Plans:
+- [ ] 04.1-01-PLAN.md — CSS Section 19: layout toggle, Layout 1 sidebar, Layout 2 accordion styles
+- [ ] 04.1-02-PLAN.md — Complete students.html rewrite with dual-layout HTML structure and all content
+- [ ] 04.1-03-PLAN.md — JavaScript: initLayoutToggle, initSidebarNav, initExpandableCards functions
+- [ ] 04.1-04-PLAN.md — Automated validation and visual verification checkpoint
+
 ### Phase 5: Polish & Verification
 **Goal**: Every page passes WCAG AA accessibility, all links work, the site is fully responsive from 320px to desktop, and it runs correctly in all modern browsers with no external dependencies
 **Depends on**: Phase 4
@@ -93,7 +112,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -101,4 +120,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Home Page | 3/3 | Complete   | 2026-03-26 |
 | 3. Content Pages | 3/3 | Complete   | 2026-03-27 |
 | 4. Students Hub | 1/3 | In Progress|  |
+| 4.1. Students Hub Restructure | 0/4 | Not started | - |
 | 5. Polish & Verification | 0/TBD | Not started | - |
