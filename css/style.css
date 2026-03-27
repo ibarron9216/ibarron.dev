@@ -655,13 +655,18 @@ a.card--grant {
 
 
 /* =============================================================================
-   13. Tab Component (Phase 4 use — ARIA tab pattern)
+   13. Tab Component (Phase 4 — Students Hub ARIA tab pattern, pill buttons)
    ============================================================================= */
 
+/* Tab container — flex row of pill buttons */
 .tabs {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
+/* Legacy sub-classes kept for backward compat */
 .tabs__list {
   display: flex;
   border-bottom: 2px solid var(--color-border);
@@ -689,7 +694,6 @@ a.card--grant {
   color: var(--color-meliora-blue);
 }
 
-/* Active tab state — ANIM-05: yellow text on navy indicator */
 .tabs__tab[aria-selected="true"] {
   color: var(--color-yellow);
   border-bottom-color: var(--color-yellow);
@@ -705,50 +709,116 @@ a.card--grant {
   display: none;
 }
 
-/* ARIA role-based tab selectors (ANIM-05 requirement — attribute selectors) */
+/* --- ARIA role-based tab selectors (pill button style, STU-03, RESP-06) --- */
+
+/* Tablist row — pill buttons, no underline separator */
 [role="tablist"] {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-md);
-  border-bottom: 2px solid var(--color-border);
   list-style: none;
   padding: 0;
   margin: 0 0 var(--spacing-lg) 0;
+  border-bottom: none;
 }
 
+/* Base tab button — pill shape, Inter bold, 44px min touch target */
 [role="tab"] {
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: transparent;
-  border: none;
-  color: var(--color-dark-gray);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  padding: 0.75rem 1.75rem; /* consistent with .btn sizing */
+  min-height: 44px;         /* RESP-06: touch target accessibility */
+  background-color: transparent;
+  color: var(--color-navy);
+  border: 2px solid transparent;
+  border-radius: 20px;      /* pill shape */
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: var(--font-size-label);
   cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
+/* Inactive tab hover — Meliora Blue text + matching border outline */
 [role="tab"]:hover {
-  color: var(--color-navy);
+  color: var(--color-meliora-blue);
+  border-color: var(--color-meliora-blue);
 }
 
+/* Active tab — navy fill, white text, pill shape */
+[role="tab"][aria-selected="true"] {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+/* Active tab hover — don't change active tab on hover */
+[role="tab"][aria-selected="true"]:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+/* Focus state — visible outline (overrides global :focus-visible for tabs) */
 [role="tab"]:focus-visible {
-  outline: 3px solid var(--color-yellow);
+  outline: 2px solid var(--color-meliora-blue);
   outline-offset: 2px;
 }
 
-/* Active tab state — ANIM-05 requirement */
-[role="tab"][aria-selected="true"] {
-  color: var(--color-yellow);
-  border-bottom-color: var(--color-yellow);
-}
-
+/* Tab panel — white background, generous vertical padding */
 [role="tabpanel"] {
-  padding: var(--spacing-lg) 0;
+  background-color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
 }
 
+/* Hidden panels removed from view (managed by hidden attribute + JS) */
 [role="tabpanel"][hidden] {
   display: none;
+}
+
+/* --- Panel fade animation (used by Plan 02 JS tab switching) --- */
+
+@media (prefers-reduced-motion: no-preference) {
+  [role="tabpanel"][data-fade="out"] {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  [role="tabpanel"][data-fade="in"] {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+  }
+}
+
+/* --- Students Hub panel content spacing --- */
+
+/* Heading inside panel */
+[role="tabpanel"] h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Paragraph spacing inside panels */
+[role="tabpanel"] p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* List styling inside panels */
+[role="tabpanel"] ul {
+  list-style: disc;
+  padding-left: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+[role="tabpanel"] ul li {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Card spacing inside panels */
+[role="tabpanel"] .card {
+  margin-bottom: var(--spacing-xl);
 }
 
 
