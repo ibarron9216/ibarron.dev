@@ -94,22 +94,18 @@
 
         </div>
 
-        <!-- Research Interests: constrained to left column below the grid -->
-        <div class="research-interests__wrapper animate-on-load" style="margin-top: var(--spacing-2xl);">
-          <div class="research-interests">
-            <span class="tag-pill tag-pill--highlight">QR Code Security</span>
-            <span class="tag-pill tag-pill--highlight">Privacy-Preserving Communication</span>
-            <span class="tag-pill tag-pill--highlight">Image Forensics</span>
-            <span class="tag-pill tag-pill--outline">Barcode Technologies</span>
-            <span class="tag-pill tag-pill--outline">Blockchain Authentication</span>
-            <span class="tag-pill tag-pill--outline">Digital Security</span>
-          </div>
-        </div>
+        <!-- Navigation buttons for page sections -->
+        <nav class="research-nav animate-on-load" style="margin-top: var(--spacing-2xl);">
+          <a href="#overview" class="btn btn--outline">Overview</a>
+          <a href="#publications" class="btn btn--outline">Publications</a>
+          <a href="#grants" class="btn btn--outline">Grants</a>
+          <a href="#media" class="btn btn--outline">Media</a>
+        </nav>
       </div>
     </section>
 
     <!-- RESEARCH OVERVIEW SECTION -->
-    <section class="section section--butter">
+    <section class="section section--butter" id="overview">
       <div class="container animate-on-load">
         <h2>What I Study</h2>
         <p style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg); max-width: 720px;">
@@ -122,7 +118,7 @@
     </section>
 
     <!-- PUBLICATIONS SECTION -->
-    <section class="section">
+    <section class="section" id="publications">
       <div class="container">
         <h2>Publications</h2>
 
@@ -220,7 +216,7 @@
     </section>
 
     <!-- GRANTS SECTION -->
-    <section class="section section--butter">
+    <section class="section section--butter" id="grants">
       <div class="container">
         <h2>Grants</h2>
 
@@ -242,6 +238,53 @@
             This NSF-funded project explores the commercialization potential of secure QR code scanning technology. Through the I-Corps program, I worked to validate market needs and develop a pathway from academic research to a practical product that helps users identify malicious QR codes before they cause harm.
           </p>
         </a>
+
+      </div>
+    </section>
+
+    <!-- MEDIA SECTION -->
+    <section class="section" id="media">
+      <div class="container">
+        <h2>Media & Talks</h2>
+
+        <!-- Media placeholder: NSF grant card as placeholder -->
+        <a
+          href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2135418"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card card--grant animate-on-load"
+          style="margin-top: var(--spacing-xl);"
+          aria-label="View NSF grant: An I-Corps Approach to Developing a Commercial QR Code Scanning Solution"
+        >
+          <p class="eyebrow" style="margin-bottom: var(--spacing-sm);">National Science Foundation &middot; $50,000</p>
+          <h3>An I-Corps Approach to Developing a Commercial QR Code Scanning Solution</h3>
+          <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-dark-gray);">
+            with Prof. Gaurav Sharma
+          </p>
+          <p>
+            This NSF-funded project explores the commercialization potential of secure QR code scanning technology. Through the I-Corps program, I worked to validate market needs and develop a pathway from academic research to a practical product that helps users identify malicious QR codes before they cause harm.
+          </p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS / MY RESEARCH WORK SECTION (at bottom) -->
+    <section class="section section--butter">
+      <div class="container">
+        <h2>My Research Work</h2>
+
+        <!-- Research Interests pills -->
+        <div class="research-interests__wrapper animate-on-load" style="margin-top: var(--spacing-lg);">
+          <div class="research-interests">
+            <span class="tag-pill tag-pill--highlight">QR Code Security</span>
+            <span class="tag-pill tag-pill--highlight">Privacy-Preserving Communication</span>
+            <span class="tag-pill tag-pill--highlight">Image Forensics</span>
+            <span class="tag-pill tag-pill--outline">Barcode Technologies</span>
+            <span class="tag-pill tag-pill--outline">Blockchain Authentication</span>
+            <span class="tag-pill tag-pill--outline">Digital Security</span>
+          </div>
+        </div>
 
       </div>
     </section>

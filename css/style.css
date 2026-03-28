@@ -1278,6 +1278,14 @@ a.card--grant {
   line-height: 1.4;
 }
 
+/* Research page navigation — buttons to jump to sections */
+.research-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin: 0;
+}
+
 .research-interests {
   display: flex;
   flex-wrap: wrap;
