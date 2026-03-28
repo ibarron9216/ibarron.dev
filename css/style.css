@@ -1574,6 +1574,7 @@ a.card--grant {
   align-items: start;
   margin-left: calc(-1 * var(--spacing-md));
   width: calc(100% + var(--spacing-md));
+  padding-left: 0;
 }
 
 .layout-1__sidebar {
