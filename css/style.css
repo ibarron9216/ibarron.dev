@@ -1592,7 +1592,7 @@ a.card--grant {
 .sidebar-nav__item {
   display: block;
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-sm);
   margin-left: 0;
   border: none;
   border-left: 3px solid transparent;
@@ -1617,7 +1617,7 @@ a.card--grant {
   background-color: var(--color-bright-lemon);
   color: var(--color-meliora-blue);
   margin-left: -4px;
-  padding-left: calc(var(--spacing-md) + 4px);
+  padding-left: calc(var(--spacing-sm) + 4px);
 }
 
 .sidebar-nav__item:focus-visible {
