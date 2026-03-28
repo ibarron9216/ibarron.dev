@@ -1569,7 +1569,7 @@ a.card--grant {
 /* --- 19c. Sidebar Navigation --- */
 .layout-1__wrapper {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: var(--spacing-2xl);
   align-items: start;
 }
