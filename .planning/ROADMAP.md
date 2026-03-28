@@ -126,18 +126,43 @@ Plans:
   4. The students page (students.html) has detailed office hours, real BlackBoard links, complete accommodation information, and full student resource descriptions
   5. The contact page (contact.html) has real office location, actual email address, and verified external profile links
   6. All pages include appropriate images, icons, or visual assets where relevant (profile photo, section icons, etc.)
-**Plans**: TBD
 
-Plans:
-- [ ] 06-01-PLAN.md — Content outline and image assets strategy
-- [ ] 06-02-PLAN.md — Home page and research page content updates
-- [ ] 06-03-PLAN.md — Teaching, students, and contact page content updates
-- [ ] 06-04-PLAN.md — Final review and polish checkpoint
+**Execution Order:** Mini-phases (6.1 → 6.2 → 6.3 → 6.4 → 6.5) execute in numeric order, each polishing one page. Students Hub (6.5) is last due to complexity.
+
+#### Phase 6.1: Home Page Content Polish
+**Goal**: Home page contains real biography, institution details, and imagery
+**Depends on**: Phase 5
+**Plans**: 1 plan
+- [ ] 06.1-01-PLAN.md — Update index.html with real bio, institution details, images
+
+#### Phase 6.2: Research Page Content Polish
+**Goal**: Research page contains real research descriptions, publications, and project details
+**Depends on**: Phase 6.1
+**Plans**: 1 plan
+- [ ] 06.2-01-PLAN.md — Update research.html with real publications, NSF project info, research descriptions, images
+
+#### Phase 6.3: Teaching Page Content Polish
+**Goal**: Teaching page contains real teaching philosophy and course information
+**Depends on**: Phase 6.2
+**Plans**: 1 plan
+- [ ] 06.3-01-PLAN.md — Update teaching.html with philosophy statement, course details, images
+
+#### Phase 6.4: Contact Page Content Polish
+**Goal**: Contact page contains real contact information and profile links
+**Depends on**: Phase 6.3
+**Plans**: 1 plan
+- [ ] 06.4-01-PLAN.md — Update contact.html with real contact details and external links
+
+#### Phase 6.5: Students Hub Content Polish
+**Goal**: Students page contains detailed resources, office hours, and complete student guidance (most complex)
+**Depends on**: Phase 6.4
+**Plans**: 1 plan
+- [ ] 06.5-01-PLAN.md — Update students.html with real office hours, resource details, student information
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5 → 6
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5 → 6.1 → 6.2 → 6.3 → 6.4 → 6.5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -147,4 +172,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5 → 6
 | 4. Students Hub | 3/3 | Complete   | 2026-03-27 |
 | 4.1. Students Hub Restructure | 4/4 | Complete   | 2026-03-27 |
 | 5. Polish & Verification | 4/4 | Complete   | 2026-03-27 |
-| 6. Content Polish | 0/4 | Pending   |  |
+| 6.1. Home Content Polish | 0/1 | Pending   |  |
+| 6.2. Research Content Polish | 0/1 | Pending   |  |
+| 6.3. Teaching Content Polish | 0/1 | Pending   |  |
+| 6.4. Contact Content Polish | 0/1 | Pending   |  |
+| 6.5. Students Hub Content Polish | 0/1 | Pending   |  |

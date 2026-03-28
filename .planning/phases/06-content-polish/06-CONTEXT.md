@@ -8,6 +8,15 @@
 
 Replace placeholder content with real information and add images/visual assets across all five pages. Bio, research descriptions, teaching philosophy, student resources, and contact information are complete and polished. Site moves from structural/technical baseline to content-complete faculty presence.
 
+**Execution Strategy:** Phase 6 is broken into five mini-phases (6.1–6.5), one per page:
+- **6.1**: Home page content polish
+- **6.2**: Research page content polish
+- **6.3**: Teaching page content polish
+- **6.4**: Contact page content polish
+- **6.5**: Students Hub content polish (last, due to complexity)
+
+Each mini-phase is a complete polish of its page with all real content and imagery for that page.
+
 </domain>
 
 <decisions>
