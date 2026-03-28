@@ -98,24 +98,67 @@ I have worked with students across a range of courses, from fundamental signal p
     <section class="section section--spacious" id="what-i-do">
       <div class="container">
         <h2 style="margin-bottom: var(--spacing-xl);">What I Do</h2>
-        <div class="grid-3">
+        <div class="card-grid card-grid--ur">
 
-          <!-- Research Card — yellow top border, changes to navy on hover -->
-          <a href="research.html" class="card card--highlighted card--clickable animate-on-load">
-            <h3>Research</h3>
-            <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md);">See and access my publications. Discover my specific research interests.</p>
+          <!-- Research Card -->
+          <a href="research.html" class="card-ur animate-on-load">
+            <div class="card-ur__icon">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Beaker -->
+                <path d="M60 40h80v60c0 20-10 40-20 50H80c-10-10-20-30-20-50V40z" fill="none" stroke="currentColor" stroke-width="3"/>
+                <!-- Beaker liquid -->
+                <path d="M65 120c0 15-8 35-15 50h80c-7-15-15-35-15-50" fill="currentColor" opacity="0.3"/>
+                <!-- Graduation cap top line -->
+                <line x1="40" y1="160" x2="160" y2="160" stroke="currentColor" stroke-width="2"/>
+                <!-- Graduation cap lines -->
+                <line x1="100" y1="160" x2="100" y2="180" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <p class="card-ur__label">Research</p>
+            <h3 class="card-ur__title">Research</h3>
+            <p class="card-ur__description">Discover my specific research interests and access my publications.</p>
+            <div class="card-ur__cta">Explore Research <span aria-hidden="true">→</span></div>
           </a>
 
-          <!-- Teaching Card — yellow top border, changes to navy on hover -->
-          <a href="teaching.html" class="card card--highlighted card--clickable animate-on-load">
-            <h3>Teaching</h3>
-            <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md);">Learn about my teaching philosophy and the courses I currently teach.</p>
+          <!-- Teaching Card -->
+          <a href="teaching.html" class="card-ur animate-on-load">
+            <div class="card-ur__icon">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Chalkboard -->
+                <rect x="30" y="35" width="140" height="110" fill="none" stroke="currentColor" stroke-width="3"/>
+                <!-- Chalk piece -->
+                <rect x="75" y="70" width="50" height="8" fill="currentColor" opacity="0.6" transform="rotate(-20 100 74)"/>
+                <!-- Text lines (writing) -->
+                <line x1="50" y1="95" x2="150" y2="95" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <line x1="50" y1="110" x2="130" y2="110" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                <!-- Chalk dust -->
+                <circle cx="140" cy="65" r="3" fill="currentColor" opacity="0.4"/>
+                <circle cx="145" cy="60" r="2" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <p class="card-ur__label">Teaching</p>
+            <h3 class="card-ur__title">Teaching</h3>
+            <p class="card-ur__description">Explore my courses, teaching philosophy, and student mentorship approach.</p>
+            <div class="card-ur__cta">View Teaching <span aria-hidden="true">→</span></div>
           </a>
 
-          <!-- Students Card — yellow top border, changes to navy on hover -->
-          <a href="students.html" class="card card--highlighted card--clickable animate-on-load">
-            <h3>Students</h3>
-            <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md);">Resources for current, prior, and prospective students. Find information on research and collaboration opportunities, requesting letters of recommendation, and scheduling meetings.</p>
+          <!-- Students Card -->
+          <a href="students.html" class="card-ur animate-on-load">
+            <div class="card-ur__icon">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Student silhouette -->
+                <circle cx="100" cy="60" r="20" fill="currentColor"/>
+                <!-- Student body -->
+                <path d="M100 85 L70 120 L100 125 L130 120 Z" fill="currentColor" opacity="0.8"/>
+                <!-- Book -->
+                <rect x="50" y="140" width="60" height="40" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="80" y1="140" x2="80" y2="180" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              </svg>
+            </div>
+            <p class="card-ur__label">Students</p>
+            <h3 class="card-ur__title">Students</h3>
+            <p class="card-ur__description">Find resources, advice on research collaboration, and support for your success.</p>
+            <div class="card-ur__cta">For Students <span aria-hidden="true">→</span></div>
           </a>
 
         </div>
