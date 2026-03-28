@@ -172,7 +172,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5 → 6.1 → 6
 | 4. Students Hub | 3/3 | Complete   | 2026-03-27 |
 | 4.1. Students Hub Restructure | 4/4 | Complete   | 2026-03-27 |
 | 5. Polish & Verification | 4/4 | Complete   | 2026-03-27 |
-| 6.1. Home Content Polish | 0/1 | Pending   |  |
+| 6.1. Home Content Polish | 1/1 | Complete   | 2026-03-28 |
 | 6.2. Research Content Polish | 0/1 | Pending   |  |
 | 6.3. Teaching Content Polish | 0/1 | Pending   |  |
 | 6.4. Contact Content Polish | 0/1 | Pending   |  |
