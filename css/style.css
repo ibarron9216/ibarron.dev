@@ -27,6 +27,7 @@
   /* --- Colors --- */
   --color-navy: #001E5F;
   --color-yellow: #FFD82B;
+  --color-bright-lemon: #FFF601;
   --color-meliora-blue: #0045A0;
   --color-white: #FFFFFF;
   --color-dark-gray: #707070;
@@ -596,6 +597,21 @@ a.card--grant {
   gap: var(--spacing-lg);
 }
 
+/* Contact page card grid — centered with max-width */
+.card-grid--ur-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+  .card-grid--ur-contact {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* UR-inspired Card */
 .card-ur {
   background-color: #f5f5f5;
@@ -681,6 +697,32 @@ a.card--grant {
 
 .card-ur:hover .card-ur__cta {
   background-color: var(--color-white);
+}
+
+/* Contact card variant — no hover effect */
+.card-ur--no-hover:hover {
+  background-color: #f5f5f5 !important;
+  color: inherit !important;
+}
+
+.card-ur--no-hover:hover .card-ur__icon {
+  color: var(--color-navy) !important;
+}
+
+.card-ur--no-hover:hover .card-ur__icon svg {
+  opacity: 0.8 !important;
+}
+
+.card-ur--no-hover:hover .card-ur__title {
+  color: var(--color-navy) !important;
+}
+
+.card-ur--no-hover:hover .card-ur__description {
+  color: var(--color-navy) !important;
+}
+
+.card-ur--no-hover:hover .card-ur__cta {
+  background-color: var(--color-meliora-blue) !important;
 }
 
 /* Responsive: 2 columns on tablet, 3 on desktop */
@@ -1286,7 +1328,111 @@ a.card--grant {
 }
 
 
-/* --- 18d. Research Interests --- */
+/* --- 18d. Course Media Card (side-by-side with media + yellow content) --- */
+
+.course-media-card {
+  display: flex;
+  gap: 0;
+  background-color: var(--color-white);
+  border-radius: 0;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.course-media-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Media container — left side, holds image/video or SVG placeholder */
+.course-media-card__media {
+  flex: 1;
+  min-height: 300px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.course-media-card__media img,
+.course-media-card__media video,
+.course-media-card__media svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-media-card__media svg {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Content container — right side, yellow background */
+.course-media-card__content {
+  flex: 1;
+  background-color: var(--color-yellow);
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.course-media-card__content h3 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: var(--font-size-subheading);
+}
+
+.course-media-card__content p {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: var(--font-size-body);
+}
+
+.course-media-card__cta {
+  color: var(--color-navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  width: fit-content;
+  transition: color 0.2s ease;
+  display: none; /* Hidden for now, will enable in future */
+}
+
+.course-media-card__cta:hover {
+  color: var(--color-meliora-blue);
+}
+
+/* Responsive: stack vertically on tablet and below */
+@media (max-width: 1023px) {
+  .course-media-card {
+    flex-direction: column;
+  }
+
+  .course-media-card__media {
+    min-height: 250px;
+  }
+
+  .course-media-card__content {
+    padding: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 767px) {
+  .course-media-card__media {
+    min-height: 200px;
+  }
+
+  .course-media-card__content {
+    padding: var(--spacing-lg);
+  }
+}
+
+
+/* --- 18e. Research Interests --- */
 
 /* Wrapper constrained to the left column (50%) on desktop so pills don't
    bleed into the right column where the page-header icon sits */
@@ -1382,7 +1528,7 @@ a.card--grant {
 .contact-note {
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-navy);
   font-size: var(--font-size-body);
   color: var(--color-navy);
 }
@@ -1446,6 +1592,7 @@ a.card--grant {
   display: block;
   width: 100%;
   padding: var(--spacing-sm) var(--spacing-md);
+  margin-left: 0;
   border: none;
   border-left: 3px solid transparent;
   background: none;
@@ -1455,7 +1602,7 @@ a.card--grant {
   color: var(--color-navy);
   text-align: left;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1465,8 +1612,11 @@ a.card--grant {
 
 .sidebar-nav__item[aria-selected="true"] {
   font-weight: 700;
-  border-left-color: var(--color-yellow);
-  background-color: rgba(0, 30, 95, 0.08);
+  border-left-color: transparent;
+  background-color: var(--color-bright-lemon);
+  color: var(--color-meliora-blue);
+  margin-left: -4px;
+  padding-left: calc(var(--spacing-md) + 4px);
 }
 
 .sidebar-nav__item:focus-visible {
