@@ -1648,6 +1648,10 @@ a.card--grant {
   margin-bottom: var(--spacing-sm);
 }
 
+.layout-1__panel h3:first-of-type {
+  margin-top: 0;
+}
+
 .layout-1__panel p {
   margin-bottom: var(--spacing-md);
   line-height: 1.6;
