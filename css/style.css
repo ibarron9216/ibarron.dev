@@ -517,23 +517,58 @@ p {
   border-top-color: var(--color-navy);
 }
 
-/* Publication card — plain card, no left border; color revealed on hover */
+/* Publication card — flex container with two zones (content + PDF download) */
 .card--publication {
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 0; /* Override base .card padding for flex layout */
+  display: flex;
+  transition: box-shadow 0.2s ease;
 }
 
 .card--publication:hover {
-  background-color: #B7D3FF; /* Wondrous Sky — UofR brand light blue */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Clickable publication card — pointer cursor, full-block link */
-a.card--publication {
+/* Publication info link — 75% of card width */
+.publication__link {
+  flex: 3;
+  padding: var(--spacing-lg);
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.publication__link:hover {
+  background-color: #B7D3FF; /* Wondrous Sky — UofR brand light blue */
+}
+
+/* PDF download button — 25% of card width */
+.publication__pdf-download {
+  flex: 1;
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-navy);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.publication__pdf-download svg {
+  width: 40px;
+  height: 40px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.publication__pdf-download:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
 }
 
 /* Grant card — same pattern as publication card */
