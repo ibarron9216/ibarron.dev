@@ -110,21 +110,41 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — VoiceOver accessibility audit, identify and fix WCAG AA violations (focus, ARIA, contrast, heading hierarchy)
+- [x] 05-01-PLAN.md — VoiceOver accessibility audit, identify and fix WCAG AA violations (focus, ARIA, contrast, heading hierarchy) (COMPLETE 2026-03-27)
 - [x] 05-02-PLAN.md — Link verification baseline, verify all internal/external links working with descriptive text (COMPLETE 2026-03-27)
 - [x] 05-03-PLAN.md — Responsive testing across breakpoints (320px, 375px, 768px, 1024px), verify layouts and touch targets (COMPLETE 2026-03-27)
-- [ ] 05-04-PLAN.md — Cross-browser testing (Safari, Chrome, Firefox), offline functionality (file:// protocol), final verification sign-off
+- [x] 05-04-PLAN.md — Cross-browser testing (Safari, Chrome, Firefox), offline functionality (file:// protocol), final verification sign-off (COMPLETE 2026-03-27)
+
+### Phase 6: Content Polish
+**Goal**: Every page contains real content and imagery — biography, research descriptions, teaching philosophy, student resources, and contact information are complete and polished
+**Depends on**: Phase 5
+**Requirements**: To be defined during context gathering
+**Success Criteria** (what must be TRUE):
+  1. The home page (index.html) has a complete biography replacing the placeholder text, real affiliation and institution details
+  2. The research page (research.html) has complete research interest descriptions, real publication details and links, and updated NSF project information
+  3. The teaching page (teaching.html) has a full teaching philosophy statement, complete course descriptions with real learning outcomes, and updated course information
+  4. The students page (students.html) has detailed office hours, real BlackBoard links, complete accommodation information, and full student resource descriptions
+  5. The contact page (contact.html) has real office location, actual email address, and verified external profile links
+  6. All pages include appropriate images, icons, or visual assets where relevant (profile photo, section icons, etc.)
+**Plans**: TBD
+
+Plans:
+- [ ] 06-01-PLAN.md — Content outline and image assets strategy
+- [ ] 06-02-PLAN.md — Home page and research page content updates
+- [ ] 06-03-PLAN.md — Teaching, students, and contact page content updates
+- [ ] 06-04-PLAN.md — Final review and polish checkpoint
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-26 |
 | 2. Home Page | 3/3 | Complete   | 2026-03-26 |
 | 3. Content Pages | 3/3 | Complete   | 2026-03-27 |
-| 4. Students Hub | 1/3 | In Progress|  |
-| 4.1. Students Hub Restructure | 5/5 | Complete   | 2026-03-27 |
-| 5. Polish & Verification | 2/4 | In Progress | 2026-03-27 (05-02, 05-03 complete) |
+| 4. Students Hub | 3/3 | Complete   | 2026-03-27 |
+| 4.1. Students Hub Restructure | 4/4 | Complete   | 2026-03-27 |
+| 5. Polish & Verification | 4/4 | Complete   | 2026-03-27 |
+| 6. Content Polish | 0/4 | Pending   |  |
