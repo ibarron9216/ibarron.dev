@@ -308,9 +308,11 @@ p {
 
 /* Active page indicator */
 .nav__link[aria-current="page"] {
-  color: var(--color-meliora-blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: var(--color-navy);
+  background-color: var(--color-yellow);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 /* Hamburger button — hidden on desktop, shown on mobile */
