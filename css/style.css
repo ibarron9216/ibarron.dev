@@ -1573,9 +1573,7 @@ a.card--grant {
   gap: var(--spacing-2xl);
   align-items: start;
   margin-left: calc(-1 * var(--spacing-md));
-  margin-right: calc(-1 * var(--spacing-md));
-  padding-left: var(--spacing-md);
-  padding-right: var(--spacing-md);
+  width: calc(100% + var(--spacing-md));
 }
 
 .layout-1__sidebar {
