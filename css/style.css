@@ -571,13 +571,13 @@ a.card--grant {
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
   position: relative;
 }
 
 .card-ur:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
+  background-color: var(--color-navy);
+  color: var(--color-white);
 }
 
 /* Card icon container */
@@ -589,6 +589,11 @@ a.card--grant {
   justify-content: center;
   margin-bottom: var(--spacing-lg);
   color: var(--color-navy);
+  transition: color 0.3s ease;
+}
+
+.card-ur:hover .card-ur__icon {
+  color: var(--color-white);
 }
 
 .card-ur__icon svg {
@@ -603,17 +608,6 @@ a.card--grant {
   opacity: 1;
 }
 
-/* Category label */
-.card-ur__label {
-  font-size: var(--font-size-label);
-  font-weight: 600;
-  color: var(--color-dark-gray);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: var(--spacing-xs);
-  margin-top: 0;
-}
-
 /* Card title */
 .card-ur__title {
   font-size: 1.5rem;
@@ -621,6 +615,11 @@ a.card--grant {
   color: var(--color-navy);
   margin: 0 0 var(--spacing-md) 0;
   font-family: var(--font-serif);
+  transition: color 0.3s ease;
+}
+
+.card-ur:hover .card-ur__title {
+  color: var(--color-white);
 }
 
 /* Card description */
@@ -630,23 +629,23 @@ a.card--grant {
   line-height: 1.6;
   margin: 0 0 var(--spacing-lg) 0;
   flex-grow: 1;
+  transition: color 0.3s ease;
 }
 
-/* Call-to-action */
+.card-ur:hover .card-ur__description {
+  color: var(--color-white);
+}
+
+/* Call-to-action (underline only) */
 .card-ur__cta {
-  font-weight: 600;
-  color: var(--color-meliora-blue);
-  text-decoration: none;
-  font-size: var(--font-size-body);
-  border-bottom: 2px solid var(--color-meliora-blue);
-  padding-bottom: 2px;
-  display: inline-block;
-  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  height: 2px;
+  background-color: var(--color-meliora-blue);
+  display: block;
+  transition: background-color 0.3s ease;
 }
 
 .card-ur:hover .card-ur__cta {
-  color: var(--color-navy);
-  border-bottom-color: var(--color-navy);
+  background-color: var(--color-white);
 }
 
 /* Responsive: 2 columns on tablet, 3 on desktop */
