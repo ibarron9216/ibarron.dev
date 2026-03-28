@@ -80,19 +80,19 @@
           </div>
 
           <!-- Sidebar navigation (visible >= 768px) -->
-          <nav class="layout-1__sidebar" aria-label="Topic navigation">
+          <nav class="layout-1__sidebar" aria-label="Topic navigation" role="tablist">
             <ul role="list" class="sidebar-nav__list">
               <li>
-                <button type="button" class="sidebar-nav__item" aria-selected="true" data-controls="layout1-get-started">Get Started</button>
+                <button type="button" class="sidebar-nav__item" role="tab" id="tab-get-started" aria-selected="true" data-controls="layout1-get-started">Get Started</button>
               </li>
               <li>
-                <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-collaboration">Collaboration</button>
+                <button type="button" class="sidebar-nav__item" role="tab" id="tab-collaboration" aria-selected="false" data-controls="layout1-collaboration">Collaboration</button>
               </li>
               <li>
-                <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-recommendations">Professional Recommendations</button>
+                <button type="button" class="sidebar-nav__item" role="tab" id="tab-recommendations" aria-selected="false" data-controls="layout1-recommendations">Professional Recommendations</button>
               </li>
               <li>
-                <button type="button" class="sidebar-nav__item" aria-selected="false" data-controls="layout1-outcomes">Student Impact &amp; Outcomes</button>
+                <button type="button" class="sidebar-nav__item" role="tab" id="tab-outcomes" aria-selected="false" data-controls="layout1-outcomes">Student Impact &amp; Outcomes</button>
               </li>
             </ul>
           </nav>
@@ -101,7 +101,7 @@
           <div class="layout-1__content">
 
             <!-- Panel: Get Started -->
-            <div id="layout1-get-started" class="layout-1__panel">
+            <div id="layout1-get-started" class="layout-1__panel" role="tabpanel" aria-labelledby="tab-get-started">
 
               <h2>Get Started</h2>
 
@@ -131,7 +131,7 @@
             </div>
 
             <!-- Panel: Collaboration -->
-            <div id="layout1-collaboration" class="layout-1__panel" hidden>
+            <div id="layout1-collaboration" class="layout-1__panel" role="tabpanel" aria-labelledby="tab-collaboration" hidden>
 
               <h2>Collaboration</h2>
 
@@ -149,7 +149,7 @@
             </div>
 
             <!-- Panel: Professional Recommendations -->
-            <div id="layout1-recommendations" class="layout-1__panel" hidden>
+            <div id="layout1-recommendations" class="layout-1__panel" role="tabpanel" aria-labelledby="tab-recommendations" hidden>
 
               <h2>Professional Recommendations</h2>
 
@@ -170,7 +170,7 @@
             </div>
 
             <!-- Panel: Student Impact & Outcomes -->
-            <div id="layout1-outcomes" class="layout-1__panel" hidden>
+            <div id="layout1-outcomes" class="layout-1__panel" role="tabpanel" aria-labelledby="tab-outcomes" hidden>
 
               <h2>Student Impact &amp; Outcomes</h2>
 
