@@ -1577,6 +1577,7 @@ a.card--grant {
 .layout-1__sidebar {
   position: sticky;
   top: calc(64px + var(--spacing-lg));
+  overflow: hidden;
 }
 
 .sidebar-nav__list {
