@@ -567,8 +567,8 @@ p {
 }
 
 .publication__pdf-download:hover {
-  background-color: var(--color-navy);
-  color: var(--color-white);
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
 }
 
 /* Grant card — same pattern as publication card */
