@@ -1631,6 +1631,8 @@ a.card--grant {
 /* Layout 1 panels (one visible at a time) */
 .layout-1__panel {
   /* Panels are shown/hidden via hidden attribute in JS */
+  margin: 0;
+  padding: 0;
 }
 
 .layout-1__panel h2 {
