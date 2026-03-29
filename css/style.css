@@ -1721,3 +1721,101 @@ a.card--grant {
 }
 
 
+/* =============================================================================
+   20. Phase 06.5 — Impact & Outcomes Accordion
+   ============================================================================= */
+
+.outcomes-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.outcomes-accordion__item {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.outcomes-accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: 0;
+  border: none;
+  background-color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.outcomes-accordion__header:hover {
+  background-color: rgba(0, 30, 95, 0.05);
+}
+
+.outcomes-accordion__header:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: -2px;
+}
+
+.outcomes-accordion__header::after {
+  content: '▼';
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--color-navy);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: var(--spacing-md);
+}
+
+.outcomes-accordion__header[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.outcomes-accordion__content {
+  display: none;
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  background-color: rgba(255, 253, 240, 0.5);
+}
+
+.outcomes-accordion__header[aria-expanded="true"] + .outcomes-accordion__content {
+  display: block;
+  animation: slideDown 0.2s ease;
+}
+
+.outcomes-accordion__content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .outcomes-accordion__header {
+    transition: none;
+  }
+  .outcomes-accordion__header::after {
+    transition: none;
+  }
+  .outcomes-accordion__header[aria-expanded="true"] + .outcomes-accordion__content {
+    animation: none;
+  }
+}
+
+
