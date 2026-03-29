@@ -225,11 +225,36 @@ function initSidebarNav() {
 }
 
 // ==============================
-// 5. INITIALIZE ALL
+// 5. ACCORDION (Impact & Outcomes)
+// ==============================
+function initAccordion() {
+  const headers = document.querySelectorAll('.outcomes-accordion__header');
+  if (headers.length === 0) return;
+
+  headers.forEach(header => {
+    // Click handler
+    header.addEventListener('click', () => {
+      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+      header.setAttribute('aria-expanded', String(!isExpanded));
+    });
+
+    // Keyboard handler (Enter/Space)
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        header.click();
+      }
+    });
+  });
+}
+
+// ==============================
+// 6. INITIALIZE ALL
 // ==============================
 document.addEventListener('DOMContentLoaded', () => {
   initNavToggle();
   initFooterYear();
   initTabs();
   initSidebarNav();
+  initAccordion();
 });

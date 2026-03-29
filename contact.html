@@ -9,9 +9,6 @@
 </head>
 <body>
 
-  <!-- Skip to main content (accessibility) -->
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
   <!-- HEADER / NAVIGATION -->
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
@@ -51,12 +48,20 @@
   <!-- MAIN CONTENT -->
   <main class="main-content" id="main-content">
 
-    <!-- PAGE HEADER SECTION: navy background with white text -->
+    <!-- PAGE HEADER SECTION: navy background with white text and IB placeholder -->
     <section class="section section--navy" style="min-height: 35vh;">
       <div class="container">
         <div class="page-header__grid">
+          <!-- Text column -->
           <div class="page-header__text animate-on-load">
-            <h1>Contact</h1>
+            <h1>Contact Me</h1>
+          </div>
+
+          <!-- Decorative icon column — IB profile placeholder -->
+          <div class="page-header__icon animate-on-load">
+            <div class="profile-placeholder" role="img" aria-label="Profile photo placeholder for Dr. Irving Barron">
+              <span class="profile-placeholder__initials" aria-hidden="true">IB</span>
+            </div>
           </div>
         </div>
       </div>
@@ -65,13 +70,13 @@
     <!-- CONTACT DETAILS SECTION (CONT-02 through CONT-08) -->
     <section class="section">
       <div class="container">
-        <div class="grid-2">
+        <div class="card-grid--ur-contact">
 
-          <!-- Left Column: Get in Touch -->
-          <div class="card card--highlighted animate-on-load">
-            <h2 style="text-align: center;">Get in Touch</h2>
-            <p style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md);">
-              I welcome inquiries from students, collaborators, and colleagues. The best way to reach me is by email.
+          <!-- Get in Touch Card -->
+          <div class="card-ur card-ur--no-hover animate-on-load">
+            <h3 class="card-ur__title">Get in Touch</h3>
+            <p class="card-ur__description">
+              I welcome inquiries from everyone. The best way to reach me is by email.
             </p>
 
             <dl class="contact-details">
@@ -79,24 +84,21 @@
               <dd><a href="mailto:ibarron@ur.rochester.edu">ibarron@ur.rochester.edu</a></dd>
 
               <dt>Office</dt>
-              <dd>Hopeman Engineering Building, Room 203</dd>
+              <dd>Computer Studies Building, Room 419</dd>
 
               <dt>Address</dt>
               <dd>University of Rochester, Rochester, NY 14627</dd>
-
-              <dt>Office Hours</dt>
-              <dd>By appointment, email to schedule</dd>
             </dl>
 
             <p class="contact-note">No contact form. Please reach out directly by email.</p>
           </div>
 
-          <!-- Right Column: Profiles & Links -->
-          <div class="card card--highlighted animate-on-load">
-            <h2 style="text-align: center;">Profiles &amp; Links</h2>
+          <!-- Profiles & Links Card -->
+          <div class="card-ur card-ur--no-hover animate-on-load">
+            <h3 class="card-ur__title">Profiles &amp; Links</h3>
             <ul class="profile-links">
               <li><a href="https://www.hajim.rochester.edu/ece/" target="_blank">University of Rochester ECE Department</a></li>
-              <li><a href="https://www.linkedin.com/in/irvingbarron/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/irving-ricardo-barron-martinez-6043992aa" target="_blank">LinkedIn</a></li>
             </ul>
           </div>
 
