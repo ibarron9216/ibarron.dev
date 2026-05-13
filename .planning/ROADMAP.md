@@ -15,8 +15,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - CSS design system, shared nav/footer, JS utilities, asset setup (completed 2026-03-26)
 - [x] **Phase 2: Home Page** - Complete index.html establishing the page template pattern (completed 2026-03-26)
 - [x] **Phase 3: Content Pages** - Research, Teaching, and Contact pages (informational, minimal JS) (completed 2026-03-27)
-- [ ] **Phase 4: Students Hub** - Students page with full ARIA tab interface and JS tab switching
-- [ ] **Phase 5: Polish & Verification** - Cross-cutting accessibility audit, link verification, browser testing, performance check
+- [x] **Phase 4: Students Hub** - Students page with full ARIA tab interface and JS tab switching (completed 2026-03-27)
+- [x] **Phase 5: Polish & Verification** - Cross-cutting accessibility audit, link verification, browser testing, performance check (completed 2026-03-27)
 
 ## Phase Details
 
@@ -74,9 +74,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. The Prior Students tab shows a Stay in Touch section and a Recommendation Letters card with bulleted requirements
   5. The Prospective Students tab shows an Undergraduate Research card with application requirements and a Graduate Admissions link
 **Plans**: 3 plans
-- [ ] 04-01-PLAN.md — CSS tab interface styling and students.html page structure with header and three tab panels
-- [ ] 04-02-PLAN.md — Enhanced initTabs() JavaScript with tabindex management, fade animations, and full keyboard navigation
-- [ ] 04-03-PLAN.md — Visual verification checkpoint (tab interface styling, interaction, accessibility, responsiveness)
+- [x] 04-01-PLAN.md — CSS tab interface styling and students.html page structure with header and three tab panels
+- [x] 04-02-PLAN.md — Enhanced initTabs() JavaScript with tabindex management, fade animations, and full keyboard navigation
+- [x] 04-03-PLAN.md — Visual verification checkpoint (tab interface styling, interaction, accessibility, responsiveness)
 
 ### Phase 04.1: Students Hub Restructure: Build dual layout options (Relationship Pathways vs. Two-Column) with toggle for comparison before final selection (INSERTED)
 
@@ -92,10 +92,11 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 5/5 plans complete
 
 Plans:
-- [ ] 04.1-01-PLAN.md — CSS Section 19: layout toggle, Layout 1 sidebar, Layout 2 accordion styles
-- [ ] 04.1-02-PLAN.md — Complete students.html rewrite with dual-layout HTML structure and all content
-- [ ] 04.1-03-PLAN.md — JavaScript: initLayoutToggle, initSidebarNav, initExpandableCards functions
-- [ ] 04.1-04-PLAN.md — Automated validation and visual verification checkpoint
+- [x] 04.1-01-PLAN.md — CSS Section 19: layout toggle, Layout 1 sidebar, Layout 2 accordion styles
+- [x] 04.1-02-PLAN.md — Complete students.html rewrite with dual-layout HTML structure and all content
+- [x] 04.1-03-PLAN.md — JavaScript: initLayoutToggle, initSidebarNav, initExpandableCards functions
+- [x] 04.1-04-PLAN.md — Automated validation and visual verification checkpoint
+- [x] 04.1-04.1-PLAN.md — Finalize selected sidebar layout and simplify dual-layout experiment
 
 ### Phase 5: Polish & Verification
 **Goal**: Every page passes WCAG AA accessibility, all links work, the site is fully responsive from 320px to desktop, and it runs correctly in all modern browsers with no external dependencies
@@ -129,35 +130,38 @@ Plans:
 
 **Execution Order:** Mini-phases (6.1 → 6.2 → 6.3 → 6.4 → 6.5) execute in numeric order, each polishing one page. Students Hub (6.5) is last due to complexity.
 
+**Plans**: 1 coordination plan
+- [x] 06-01-PLAN.md — Split content polish into page-specific mini-phases
+
 #### Phase 6.1: Home Page Content Polish
 **Goal**: Home page contains real biography, institution details, and imagery
 **Depends on**: Phase 5
 **Plans**: 1 plan
-- [ ] 06.1-01-PLAN.md — Update index.html with real bio, institution details, images
+- [x] 06.1-01-PLAN.md — Update index.html with real bio, institution details, images
 
 #### Phase 6.2: Research Page Content Polish
 **Goal**: Research page contains real research descriptions, publications, and project details
 **Depends on**: Phase 6.1
 **Plans**: 1 plan
-- [ ] 06.2-01-PLAN.md — Update research.html with real publications, NSF project info, research descriptions, images
+- [x] 06.2-01-PLAN.md — Update research.html with real publications, NSF project info, research descriptions, images
 
 #### Phase 6.3: Teaching Page Content Polish
 **Goal**: Teaching page contains real teaching philosophy and course information
 **Depends on**: Phase 6.2
 **Plans**: 1 plan
-- [ ] 06.3-01-PLAN.md — Update teaching.html with philosophy statement, course details, images
+- [x] 06.3-01-PLAN.md — Update teaching.html with philosophy statement, course details, images
 
 #### Phase 6.4: Contact Page Content Polish
 **Goal**: Contact page contains real contact information and profile links
 **Depends on**: Phase 6.3
 **Plans**: 1 plan
-- [ ] 06.4-01-PLAN.md — Update contact.html with real contact details and external links
+- [x] 06.4-01-PLAN.md — Update contact.html with real contact details and external links
 
 #### Phase 6.5: Students Hub Content Polish
 **Goal**: Students page contains detailed resources, office hours, and complete student guidance (most complex)
 **Depends on**: Phase 6.4
 **Plans**: 1 plan
-- [ ] 06.5-01-PLAN.md — Update students.html with real office hours, resource details, student information
+- [ ] 06.5-01-PLAN.md — Populate Impact & Outcomes accordion content and verify students page behavior
 
 ## Progress
 
@@ -172,8 +176,9 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5 → 6.1 → 6
 | 4. Students Hub | 3/3 | Complete   | 2026-03-27 |
 | 4.1. Students Hub Restructure | 4/4 | Complete   | 2026-03-27 |
 | 5. Polish & Verification | 4/4 | Complete   | 2026-03-27 |
+| 6. Content Polish Coordination | 1/1 | Complete   | 2026-03-27 |
 | 6.1. Home Content Polish | 1/1 | Complete   | 2026-03-28 |
-| 6.2. Research Content Polish | 0/1 | Pending   |  |
-| 6.3. Teaching Content Polish | 0/1 | Pending   |  |
-| 6.4. Contact Content Polish | 0/1 | Pending   |  |
-| 6.5. Students Hub Content Polish | 0/1 | Pending   |  |
+| 6.2. Research Content Polish | 1/1 | Complete   | 2026-03-28 |
+| 6.3. Teaching Content Polish | 1/1 | Complete   | 2026-03-28 |
+| 6.4. Contact Content Polish | 1/1 | Complete   | 2026-03-28 |
+| 6.5. Students Hub Content Polish | 0/1 | In Progress   |  |
