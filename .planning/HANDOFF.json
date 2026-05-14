@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "timestamp": "2026-05-14T01:20:36.663Z",
+  "timestamp": "2026-05-14T02:01:02.370Z",
   "phase": "06.5",
   "phase_name": "Whole-Site Content Polish",
   "phase_dir": ".planning/phases/06.5-students-hub-content-polish",
@@ -20,13 +20,20 @@
       "name": "Implement Students Hub Impact & Outcomes accordion structure",
       "status": "done",
       "commit": "13528b4"
+    },
+    {
+      "id": 1,
+      "name": "Replace Home page What I Do placeholder graphics with refined generated images",
+      "status": "done",
+      "commit": "pending pause-work WIP commit"
     }
   ],
   "remaining_tasks": [
     {
       "id": 1,
-      "name": "Run final whole-site content polish pass",
-      "status": "not_started"
+      "name": "Continue final whole-site content polish pass",
+      "status": "in_progress",
+      "progress": "Home page What I Do card imagery is complete; remaining page copy polish still needs review."
     },
     {
       "id": 2,
@@ -56,13 +63,23 @@
   ],
   "decisions": [
     {
-      "decision": "Phase 6.5 now covers whole-site content polish, not only Students Hub content polish.",
-      "rationale": "The whole website needs a final content pass, but Students Hub remains the largest and highest-priority area.",
+      "decision": "Use generated bitmap images for the Home page What I Do cards instead of inline SVG placeholders.",
+      "rationale": "The user wanted richer visual assets for Research, Teaching, and Students cards.",
       "phase": "06.5"
     },
     {
-      "decision": "Keep the existing single-plan structure for Phase 6.5.",
-      "rationale": "The expanded scope is a bounded final polish pass with Students Hub emphasis, not a new milestone or phase split.",
+      "decision": "Use a minimal symbolic approach for the Research card.",
+      "rationale": "Digital image processing, blockchain, and digital forensics are easy to over-render into AI-looking visual clutter; a restrained symbolic image reads better at card size.",
+      "phase": "06.5"
+    },
+    {
+      "decision": "Use a clean classroom whiteboard scene for the Teaching card and a clean student-at-whiteboard scene for the Students card.",
+      "rationale": "The user liked the blue/yellow classroom direction but wanted less clutter and fewer distracting objects.",
+      "phase": "06.5"
+    },
+    {
+      "decision": "Leave assets/images/IMG_0086.jpeg untouched.",
+      "rationale": "The user explicitly exempted their photo from cleanup; it was used only as a loose identity reference for the teaching image.",
       "phase": "06.5"
     },
     {
@@ -73,8 +90,9 @@
   ],
   "uncommitted_files": [
     ".DS_Store",
-    ".planning/.DS_Store"
+    ".planning/.DS_Store",
+    "assets/.DS_Store"
   ],
-  "next_action": "Read the Phase 6.5 plan and this handoff, then ask for or ingest student outcome materials before editing Students Hub outcome copy. If materials are still unavailable, perform the bounded whole-site polish pass first and leave unsupported outcome specifics out.",
-  "context_notes": "The planning scope has been updated to Whole-Site Content Polish with Students Hub emphasis. Implementation files were not edited in this session. The Students Hub accordion exists in students.html around the Impact & Outcomes section and still needs real or approved content."
+  "next_action": "Open or preview index.html and visually check the three What I Do card images at desktop and mobile widths, then continue the Phase 06.5 whole-site polish pass. Do not edit Students Hub outcome specifics until real or approved interim content is supplied.",
+  "context_notes": "This session focused on the Home page What I Do cards. First generated images were too busy and AI-looking. The accepted refined set is cleaner: Research is a minimal symbolic graphic for digital image processing, blockchain, and forensics; Teaching is a clean whiteboard classroom scene using IMG_0086.jpeg only as a loose reference; Students shows students watching another student work at a whiteboard with clutter removed. HTML references remain assets/images/what-i-do-research.jpg, assets/images/what-i-do-teaching.jpg, and assets/images/what-i-do-students.jpg."
 }

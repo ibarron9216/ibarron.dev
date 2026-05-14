@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 06.5 accordion structure complete; awaiting student outcome materials
-last_updated: "2026-05-14T01:18:21.336Z"
-last_activity: 2026-03-29 — Phase 06.5 paused after accordion structure completed
+stopped_at: Phase 06.5 paused after Home page What I Do generated images were accepted
+last_updated: "2026-05-14T02:01:02.370Z"
+last_activity: 2026-05-14 — Phase 06.5 paused after replacing Home page What I Do card placeholders with refined generated images
 progress:
   total_phases: 12
   completed_phases: 11
@@ -29,11 +29,12 @@ Phase: 06.5 of 06.5 (Whole-Site Content Polish)
 Plan: 1 of 1 in current phase (06.5-01 IN PROGRESS)
 Status: Executing — content population and final verification remain
 
-Last activity: 2026-03-29 — Phase 06.5 paused after accordion structure completed
+Last activity: 2026-05-14 — Phase 06.5 paused after Home page What I Do card imagery was accepted
 
 - Collaboration and Professional Recommendations tabs are polished
 - Impact & Outcomes accordion structure is implemented and committed
-- Remaining work is content population for student outcomes/testimonials plus final mobile/accessibility verification
+- Home page What I Do placeholders have been replaced with refined generated images
+- Remaining work is content population for student outcomes/testimonials plus final content, mobile, and accessibility verification
 
 Progress: 26/27 tracked plans executed; Phase 06.5 remains open
 
@@ -138,6 +139,7 @@ Recent decisions affecting current work:
 - [Phase 06.3-teaching-page-content-polish]: Teaching page follows the same "less is more" content approach with real course information and concise descriptions
 - [Phase 06.4-contact-page-content-polish]: Contact cards use `card-ur--no-hover` so contact information remains consistently readable
 - [Phase 06.5-students-hub-content-polish]: Impact & Outcomes uses five accordion sections: Graduate Programs & Scholarships, Career Placements, Research, Other, What Students Say
+- [Phase 06.5-students-hub-content-polish]: Home page What I Do cards use generated bitmap images instead of inline SVG placeholders; accepted direction is minimal symbolic Research, clean Teaching whiteboard scene, and clean Students whiteboard collaboration scene
 
 ### Roadmap Evolution
 
@@ -147,6 +149,7 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 - [ ] Populate Phase 06.5 Impact & Outcomes accordion with real or approved interim content
+- [ ] Verify Home page What I Do generated images at responsive breakpoints
 - [ ] Verify Students Hub accordion behavior and responsiveness after content population
 
 ### Blockers/Concerns
@@ -155,6 +158,6 @@ Content dependency only: Phase 06.5 needs real student outcome materials or appr
 
 ## Session Continuity
 
-Last session: 2026-03-29T01:22:11.741Z
-Stopped at: Phase 06.5 accordion structure complete; awaiting student outcome materials
-Next: Execute Phase 06.5 Plan 01 or provide student outcome/testimonial content
+Last session: 2026-05-14T02:01:02.370Z
+Stopped at: Phase 06.5 paused after Home page What I Do generated images were accepted
+Next: Preview `index.html` card imagery across responsive breakpoints, then continue Phase 06.5 Plan 01 or provide student outcome/testimonial content
