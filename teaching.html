@@ -49,56 +49,20 @@
   <main class="main-content" id="main-content">
 
     <!-- PAGE HEADER SECTION (TEACH-01, TEACH-02) -->
-    <section class="section section--navy" style="min-height: 35vh;">
+    <section class="section section--navy visual-hero">
       <div class="container">
-        <div class="page-header__grid">
+        <h1 class="visual-hero__title animate-on-load">What I Teach</h1>
 
-          <!-- Text column -->
-          <div class="page-header__text animate-on-load">
-            <h1>What I Teach</h1>
-          </div>
-
-          <!-- Decorative icon column — open book line art -->
-          <div class="page-header__icon animate-on-load">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <!-- Book spine / center binding -->
-              <line x1="100" y1="50" x2="100" y2="160" />
-              <!-- Left page top edge -->
-              <path d="M100 50 Q70 45 40 55" />
-              <!-- Left page bottom edge -->
-              <path d="M100 160 Q70 165 40 155" />
-              <!-- Left page left edge -->
-              <line x1="40" y1="55" x2="40" y2="155" />
-              <!-- Right page top edge -->
-              <path d="M100 50 Q130 45 160 55" />
-              <!-- Right page bottom edge -->
-              <path d="M100 160 Q130 165 160 155" />
-              <!-- Right page right edge -->
-              <line x1="160" y1="55" x2="160" y2="155" />
-              <!-- Left page lines (text indication) -->
-              <line x1="55" y1="85" x2="90" y2="83" />
-              <line x1="55" y1="98" x2="90" y2="96" />
-              <line x1="55" y1="111" x2="90" y2="109" />
-              <line x1="55" y1="124" x2="90" y2="122" />
-              <!-- Right page lines (text indication) -->
-              <line x1="110" y1="83" x2="145" y2="85" />
-              <line x1="110" y1="96" x2="145" y2="98" />
-              <line x1="110" y1="109" x2="145" y2="111" />
-              <line x1="110" y1="122" x2="145" y2="124" />
-              <!-- Book bottom / cover curve -->
-              <path d="M40 155 Q100 170 160 155" />
-            </svg>
-          </div>
-
-        </div>
+        <img
+          src="assets/images/what-i-do-teaching.jpg"
+          alt="Instructor standing beside a clean classroom whiteboard"
+          class="visual-hero__image animate-on-load"
+          width="1200"
+          height="675"
+        >
 
         <!-- Navigation buttons -->
-        <nav class="research-nav animate-on-load" style="margin-top: var(--spacing-2xl);">
+        <nav class="research-nav research-nav--centered animate-on-load" aria-label="Teaching page sections">
           <a href="#how-i-teach" class="btn btn--primary--inverse">Overview</a>
           <a href="#courses" class="btn btn--primary--inverse">Courses</a>
         </nav>
@@ -123,11 +87,7 @@
         <!-- Course 1: ECE 241 -->
         <div class="course-media-card animate-on-load" style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-lg);">
           <div class="course-media-card__media">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <rect x="30" y="40" width="140" height="120" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <circle cx="100" cy="100" r="20" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <polygon points="100,80 120,110 80,110" fill="#001E5F"/>
-            </svg>
+            <img src="assets/images/course-signals-systems.png" alt="Rectangular pulse entering an FT box and exiting as a sinc signal" class="course-diagram">
           </div>
           <div class="course-media-card__content">
             <h3>ECE 241: Signals and Systems</h3>
@@ -145,11 +105,7 @@
         <!-- Course 2: ECE 245/445 -->
         <div class="course-media-card animate-on-load" style="margin-bottom: var(--spacing-lg);">
           <div class="course-media-card__media">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <rect x="30" y="40" width="140" height="120" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <circle cx="100" cy="100" r="20" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <polygon points="100,80 120,110 80,110" fill="#001E5F"/>
-            </svg>
+            <img src="assets/images/course-wireless-communications.svg" alt="Wireless antenna transmitting signals between devices" class="course-diagram">
           </div>
           <div class="course-media-card__content">
             <h3>ECE 245/445: Wireless Communications</h3>
@@ -167,11 +123,7 @@
         <!-- Course 3: ECE 287/487 -->
         <div class="course-media-card animate-on-load" style="margin-bottom: var(--spacing-lg);">
           <div class="course-media-card__media">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <rect x="30" y="40" width="140" height="120" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <circle cx="100" cy="100" r="20" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <polygon points="100,80 120,110 80,110" fill="#001E5F"/>
-            </svg>
+            <img src="assets/images/course-entrepreneurship-innovation.png" alt="Light bulb containing a gear and circuit trace pattern" class="course-diagram">
           </div>
           <div class="course-media-card__content">
             <h3>ECE 287/487: Strategic Entrepreneurship & Innovation for Engineers</h3>
@@ -190,11 +142,7 @@
         <!-- Course 4: ECE 348 -->
         <div class="course-media-card animate-on-load" style="margin-bottom: var(--spacing-lg);">
           <div class="course-media-card__media">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <rect x="30" y="40" width="140" height="120" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <circle cx="100" cy="100" r="20" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <polygon points="100,80 120,110 80,110" fill="#001E5F"/>
-            </svg>
+            <img src="assets/images/course-design-seminar.png" alt="Clean circuit drawing with connected blocks and grid traces" class="course-diagram">
           </div>
           <div class="course-media-card__content">
             <h3>ECE 348: Design Seminar</h3>
@@ -212,11 +160,7 @@
         <!-- Course 5: ECE 349 -->
         <div class="course-media-card animate-on-load" style="margin-bottom: var(--spacing-lg);">
           <div class="course-media-card__media">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <rect x="30" y="40" width="140" height="120" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <circle cx="100" cy="100" r="20" fill="none" stroke="#001E5F" stroke-width="2"/>
-              <polygon points="100,80 120,110 80,110" fill="#001E5F"/>
-            </svg>
+            <img src="assets/images/course-design-capstone.png" alt="Finished circuit drawing presented on a podium" class="course-diagram">
           </div>
           <div class="course-media-card__content">
             <h3>ECE 349: Design Capstone</h3>

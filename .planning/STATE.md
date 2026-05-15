@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 06.5 paused after Home page What I Do generated images were accepted
-last_updated: "2026-05-14T02:01:02.370Z"
-last_activity: 2026-05-14 — Phase 06.5 paused after replacing Home page What I Do card placeholders with refined generated images
+stopped_at: Phase 06.5 paused after cross-page hero/profile and course image polish
+last_updated: "2026-05-15T00:42:17.026Z"
+last_activity: 2026-05-14 — Cross-page hero/profile placeholders and Teaching course images updated; final responsive verification remains
 progress:
   total_phases: 12
   completed_phases: 11
@@ -29,11 +29,15 @@ Phase: 06.5 of 06.5 (Whole-Site Content Polish)
 Plan: 1 of 1 in current phase (06.5-01 IN PROGRESS)
 Status: Executing — content population and final verification remain
 
-Last activity: 2026-05-14 — Phase 06.5 paused after Home page What I Do card imagery was accepted
+Last activity: 2026-05-14 — Cross-page hero/profile placeholders and Teaching course images updated; final responsive verification remains
 
 - Collaboration and Professional Recommendations tabs are polished
 - Impact & Outcomes accordion structure is implemented and committed
 - Home page What I Do placeholders have been replaced with refined generated images
+- Home page hero placeholder has been replaced with the personal photo asset at `assets/images/dr-irving-barron-profile.jpeg`
+- Research and Teaching heroes now use the centered visual-hero image layout
+- Teaching course placeholders have been replaced with course-specific generated assets; ECE 349 includes the `Design Day` podium plaque
+- Contact uses the personal photo in its original right-side placeholder position; Students Hub uses the Students card image on the right of the header
 - Remaining work is content population for student outcomes/testimonials plus final content, mobile, and accessibility verification
 
 Progress: 26/27 tracked plans executed; Phase 06.5 remains open
@@ -158,6 +162,7 @@ Content dependency only: Phase 06.5 needs real student outcome materials or appr
 
 ## Session Continuity
 
-Last session: 2026-05-14T02:01:02.370Z
-Stopped at: Phase 06.5 paused after Home page What I Do generated images were accepted
-Next: Preview `index.html` card imagery across responsive breakpoints, then continue Phase 06.5 Plan 01 or provide student outcome/testimonial content
+Last session: 2026-05-15T00:42:17.026Z
+Stopped at: Phase 06.5 paused after cross-page hero/profile and Teaching course image polish
+Resume file: `.planning/phases/06.5-students-hub-content-polish/.continue-here.md`
+Next: Browser-preview edited pages across responsive breakpoints, verify Students Hub accordion behavior, then continue Phase 06.5 Plan 01 or provide student outcome/testimonial content

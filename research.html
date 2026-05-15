@@ -48,54 +48,20 @@
   <!-- MAIN CONTENT -->
   <main class="main-content" id="main-content">
 
-    <!-- PAGE HEADER SECTION: navy, no eyebrow, no yellow text -->
-    <section class="section section--navy" style="min-height: 35vh;">
+    <!-- PAGE HEADER SECTION -->
+    <section class="section section--navy visual-hero">
       <div class="container">
-        <div class="page-header__grid">
+        <h1 class="visual-hero__title animate-on-load">My Research Work</h1>
 
-          <!-- Text column: h1 only, white -->
-          <div class="page-header__text animate-on-load">
-            <h1>My Research Work</h1>
-          </div>
+        <img
+          src="assets/images/what-i-do-research.jpg"
+          alt="Symbolic digital image processing, blockchain, and forensic verification graphic"
+          class="visual-hero__image animate-on-load"
+          width="1200"
+          height="675"
+        >
 
-          <!-- Decorative icon column: microscope line art -->
-          <div class="page-header__icon animate-on-load">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <!-- Microscope eyepiece -->
-              <rect x="82" y="20" width="36" height="22" rx="4" />
-              <!-- Ocular tube -->
-              <rect x="90" y="42" width="20" height="28" rx="2" />
-              <!-- Arm connecting to body -->
-              <path d="M100 70 L100 110" />
-              <!-- Objective lens body -->
-              <rect x="80" y="94" width="40" height="32" rx="4" />
-              <!-- Objective lens tip -->
-              <circle cx="100" cy="135" r="8" />
-              <!-- Stage platform -->
-              <rect x="62" y="144" width="76" height="8" rx="2" />
-              <!-- Left leg -->
-              <line x1="72" y1="152" x2="58" y2="172" />
-              <!-- Right leg -->
-              <line x1="128" y1="152" x2="142" y2="172" />
-              <!-- Base -->
-              <line x1="50" y1="172" x2="150" y2="172" />
-              <!-- Light beam / condenser indicator -->
-              <line x1="100" y1="142" x2="100" y2="152" stroke-dasharray="3,3" />
-              <!-- Coarse focus knob -->
-              <circle cx="68" cy="102" r="8" />
-              <line x1="60" y1="102" x2="76" y2="102" />
-            </svg>
-          </div>
-
-        </div>
-
-        <!-- Navigation buttons for page sections -->
-        <nav class="research-nav animate-on-load" style="margin-top: var(--spacing-2xl);">
+        <nav class="research-nav research-nav--centered animate-on-load" aria-label="Research page sections">
           <a href="#overview" class="btn btn--primary--inverse">Overview</a>
           <a href="#publications" class="btn btn--primary--inverse">Publications</a>
           <a href="#grants" class="btn btn--primary--inverse">Grants</a>
@@ -109,13 +75,13 @@
       <div class="container animate-on-load">
         <h2>Overview</h2>
         <p style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg); max-width: 720px;">
-          I work at the intersection of security, authentication, and emerging technologies. My research explores how clever encoding, blockchain, and signal processing can solve real-world trust and verification problems. Rather than building new systems from scratch, I leverage existing platforms—QR codes, barcodes, image forensics—and enhance them with security properties that matter in practice.
+          My research focuses on signal processing methods for security, privacy, and authentication. Much of this work asks how familiar visual systems, especially QR codes and barcodes, can carry information in ways that are useful to people while still limiting what an unintended viewer can recover.
         </p>
         <p style="margin-bottom: var(--spacing-lg); max-width: 720px;">
-          A key focus is proximity-based security: embedding private information in visual codes that decode only at close range, enabling secure public communication without extra infrastructure. I've also explored blockchain-based authentication for digital provenance, from verifying fine art paintings to detecting tampered QR codes. The common goal across this work is bridging the gap between theoretical security and practical deployment—creating solutions that are both secure and usable.
+          My publications on dual-modulated QR codes and specialized barcodes study proximity-based communication: visual codes that can be read normally from a distance, but reveal protected information only at close range. Recent work extends that line into self-authenticating QR codes designed to help defend against QR phishing attacks.
         </p>
         <p style="margin-bottom: 0; max-width: 720px;">
-          More recently, I'm exploring how artificial intelligence can enhance these security systems and accelerate the path from research to real-world impact. I'm interested in the entrepreneurial side of security research: how to take innovations in authentication and privacy and translate them into products and services that solve problems for real users.
+          I have also worked on digital provenance, including a blockchain and image-forensics approach for authenticating and tracking fine art paintings. Across these projects, the goal is practical trust: making authentication and privacy tools that can operate in real settings, not only in controlled demonstrations.
         </p>
       </div>
     </section>

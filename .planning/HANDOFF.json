@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "timestamp": "2026-05-14T02:01:02.370Z",
+  "timestamp": "2026-05-15T00:42:17.026Z",
   "phase": "06.5",
   "phase_name": "Whole-Site Content Polish",
   "phase_dir": ".planning/phases/06.5-students-hub-content-polish",
@@ -10,36 +10,48 @@
   "status": "paused",
   "completed_tasks": [
     {
-      "id": 0,
-      "name": "Expand Phase 6.5 scope from Students Hub-only polish to whole-site content polish with Students Hub emphasis",
-      "status": "done",
-      "commit": "pause-work WIP commit"
-    },
-    {
-      "id": 0,
-      "name": "Implement Students Hub Impact & Outcomes accordion structure",
-      "status": "done",
-      "commit": "13528b4"
+      "id": 1,
+      "name": "Advance final whole-site visual/content polish across Home, Research, Teaching, Contact, and Students Hub",
+      "status": "in_progress",
+      "progress": "Hero/card image replacements and copy cleanup are implemented; final browser and responsive verification still remains."
     },
     {
       "id": 1,
-      "name": "Replace Home page What I Do placeholder graphics with refined generated images",
+      "name": "Replace Home page hero placeholder with personal image",
       "status": "done",
-      "commit": "pending pause-work WIP commit"
+      "commit": "pending WIP commit"
+    },
+    {
+      "id": 1,
+      "name": "Update Research and Teaching hero layouts to centered visual-hero pattern",
+      "status": "done",
+      "commit": "pending WIP commit"
+    },
+    {
+      "id": 1,
+      "name": "Replace Teaching course placeholders with course-specific assets",
+      "status": "done",
+      "commit": "pending WIP commit"
+    },
+    {
+      "id": 1,
+      "name": "Replace Contact page profile placeholder and add Students Hub header image",
+      "status": "done",
+      "commit": "pending WIP commit"
     }
   ],
   "remaining_tasks": [
     {
       "id": 1,
-      "name": "Continue final whole-site content polish pass",
+      "name": "Complete final whole-site content and visual polish pass",
       "status": "in_progress",
-      "progress": "Home page What I Do card imagery is complete; remaining page copy polish still needs review."
+      "progress": "Review all edited pages in browser; verify image sizing, cropping, layout, and copy tone."
     },
     {
       "id": 2,
       "name": "Prioritize Students Hub Impact & Outcomes content",
       "status": "blocked",
-      "blocker": "Needs real or approved interim student outcome materials"
+      "blocker": "Needs real or explicitly approved interim student outcome/testimonial materials."
     },
     {
       "id": 3,
@@ -59,40 +71,41 @@
       "action": "Provide real or approved interim student outcome content.",
       "context": "Needed for Graduate Programs & Scholarships, Career Placements, Research, Other, and What Students Say accordion sections.",
       "blocking": true
+    },
+    {
+      "action": "Review generated course images visually.",
+      "context": "ECE 241, ECE 287/487, ECE 348, and ECE 349 were generated with imagegen after user correction. ECE 245/445 remains SVG Wi-Fi symbol.",
+      "blocking": false
     }
   ],
   "decisions": [
     {
-      "decision": "Use generated bitmap images for the Home page What I Do cards instead of inline SVG placeholders.",
-      "rationale": "The user wanted richer visual assets for Research, Teaching, and Students cards.",
+      "decision": "Use the personal photo asset `assets/images/dr-irving-barron-profile.jpeg` for Home and Contact profile imagery.",
+      "rationale": "The user requested replacing profile placeholders with their image while preserving existing page layout positions.",
       "phase": "06.5"
     },
     {
-      "decision": "Use a minimal symbolic approach for the Research card.",
-      "rationale": "Digital image processing, blockchain, and digital forensics are easy to over-render into AI-looking visual clutter; a restrained symbolic image reads better at card size.",
+      "decision": "Use a shared `visual-hero` pattern for Research and Teaching hero sections.",
+      "rationale": "Both pages now follow the user-requested order: centered title, centered card image, centered navigation buttons.",
       "phase": "06.5"
     },
     {
-      "decision": "Use a clean classroom whiteboard scene for the Teaching card and a clean student-at-whiteboard scene for the Students card.",
-      "rationale": "The user liked the blue/yellow classroom direction but wanted less clutter and fewer distracting objects.",
+      "decision": "Use imagegen-created PNGs for ECE 241, ECE 287/487, ECE 348, and ECE 349 course diagrams.",
+      "rationale": "The user explicitly wanted Image Gen for course assets. ECE 245/445 was approved to stay as the simple Wi-Fi SVG.",
       "phase": "06.5"
     },
     {
-      "decision": "Leave assets/images/IMG_0086.jpeg untouched.",
-      "rationale": "The user explicitly exempted their photo from cleanup; it was used only as a loose identity reference for the teaching image.",
-      "phase": "06.5"
-    },
-    {
-      "decision": "Do not add unsupported student outcomes or testimonials.",
-      "rationale": "Students Hub content must not overclaim specific outcomes without supplied or approved source material.",
+      "decision": "ECE 349 capstone image includes the exact `Design Day` legend on the podium plaque.",
+      "rationale": "The user requested a clearer podium and that specific legend text.",
       "phase": "06.5"
     }
   ],
   "uncommitted_files": [
     ".DS_Store",
     ".planning/.DS_Store",
-    "assets/.DS_Store"
+    "assets/.DS_Store",
+    "assets/images/SCDP_ECE_241_Poster_2026.jpeg"
   ],
-  "next_action": "Open or preview index.html and visually check the three What I Do card images at desktop and mobile widths, then continue the Phase 06.5 whole-site polish pass. Do not edit Students Hub outcome specifics until real or approved interim content is supplied.",
-  "context_notes": "This session focused on the Home page What I Do cards. First generated images were too busy and AI-looking. The accepted refined set is cleaner: Research is a minimal symbolic graphic for digital image processing, blockchain, and forensics; Teaching is a clean whiteboard classroom scene using IMG_0086.jpeg only as a loose reference; Students shows students watching another student work at a whiteboard with clutter removed. HTML references remain assets/images/what-i-do-research.jpg, assets/images/what-i-do-teaching.jpg, and assets/images/what-i-do-students.jpg."
+  "next_action": "Start by opening the edited pages in a browser or static preview and checking Home, Research, Teaching, Contact, and Students Hub at 320px, 375px, 768px, and 1024px. Pay special attention to hero image sizing/cropping, course image quality, and Students Hub accordion behavior. Do not populate outcome specifics without real or approved content.",
+  "context_notes": "This session focused on replacing remaining placeholders and improving visual assets. There was one important correction: the first course diagram replacement used hand-authored SVGs, but the user expected the Image Gen skill. The corrected state uses generated PNGs for ECE 241, ECE 287/487, ECE 348, and ECE 349, with ECE 245/445 left as a simple Wi-Fi SVG. The user liked the final ECE 349 direction after adding a better podium and `Design Day` plaque."
 }

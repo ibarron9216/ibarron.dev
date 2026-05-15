@@ -816,8 +816,29 @@ a.card--grant {
 
 
 /* =============================================================================
-   12. Profile Photo Placeholder (CSS-only, ASSET-04)
+   12. Profile Photo
    ============================================================================= */
+
+.profile-photo {
+  width: clamp(120px, 30vw, 280px);
+  height: clamp(120px, 30vw, 280px);
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--color-yellow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  object-fit: cover;
+  object-position: center;
+  transition: filter 0.2s ease;
+}
+
+.profile-photo:hover,
+.profile-photo:focus {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
 
 .profile-placeholder {
   width: clamp(120px, 30vw, 280px);
@@ -1277,6 +1298,36 @@ a.card--grant {
   stroke-width: 1.5;
 }
 
+.page-header__image {
+  width: min(100%, 320px);
+  height: auto;
+  border: 2px solid var(--color-yellow);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.visual-hero {
+  min-height: 35vh;
+}
+
+.visual-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  text-align: center;
+}
+
+.visual-hero__title {
+  margin: 0;
+}
+
+.visual-hero__image {
+  width: min(100%, 260px);
+  height: auto;
+  border: 2px solid var(--color-yellow);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
 
 /* --- 18b. Publication Card Sub-classes --- */
 
@@ -1391,6 +1442,12 @@ a.card--grant {
   object-fit: contain;
 }
 
+.course-media-card__media img.course-diagram {
+  width: min(82%, 420px);
+  height: auto;
+  object-fit: contain;
+}
+
 /* Content container — right side, yellow background */
 .course-media-card__content {
   flex: 1;
@@ -1487,6 +1544,10 @@ a.card--grant {
   flex-wrap: wrap;
   gap: var(--spacing-md);
   margin: 0;
+}
+
+.research-nav--centered {
+  justify-content: center;
 }
 
 .research-interests {
@@ -1839,4 +1900,3 @@ a.card--grant {
     animation: none;
   }
 }
-

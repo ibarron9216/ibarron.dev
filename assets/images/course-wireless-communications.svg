@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Wi-Fi symbol</title>
+  <desc id="desc">A traditional Wi-Fi symbol in University of Rochester colors.</desc>
+  <rect width="1200" height="675" fill="#fffaf0"/>
+  <path d="M300 265 C470 115 730 115 900 265" fill="none" stroke="#001e5f" stroke-width="42" stroke-linecap="round"/>
+  <path d="M390 355 C505 255 695 255 810 355" fill="none" stroke="#001e5f" stroke-width="42" stroke-linecap="round"/>
+  <path d="M480 445 C545 390 655 390 720 445" fill="none" stroke="#ffd82b" stroke-width="42" stroke-linecap="round"/>
+  <circle cx="600" cy="525" r="45" fill="#001e5f"/>
+</svg>
