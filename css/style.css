@@ -1877,6 +1877,58 @@ a.card--grant {
   line-height: 1.6;
 }
 
+.outcomes-list {
+  margin: var(--spacing-md) 0 0;
+  padding-left: var(--spacing-lg);
+}
+
+.outcomes-list li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.outcomes-media-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.outcomes-media-card {
+  margin: var(--spacing-lg) 0 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.outcomes-media-grid .outcomes-media-card {
+  margin-top: 0;
+}
+
+.outcomes-media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.outcomes-media-card figcaption {
+  padding: var(--spacing-md);
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.outcomes-media-card--wide {
+  max-width: 760px;
+}
+
+@media (min-width: 900px) {
+  .outcomes-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;
