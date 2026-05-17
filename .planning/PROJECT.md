@@ -1,8 +1,14 @@
 # ibarron.dev — Faculty Webpage
 
+## Current State
+
+**Shipped version:** v1.0 MVP on 2026-05-17
+
+Personal faculty webpage for Dr. Irving Ricardo Barron Martinez, Assistant Professor of Instruction in Electrical and Computer Engineering at the University of Rochester. The shipped site is a static, zero-dependency HTML/CSS/JS website with five pages: Home, Research, Teaching, Students, and Contact.
+
 ## What This Is
 
-Personal faculty webpage for Dr. Irving Ricardo Barron Martinez, Assistant Professor of Instruction in Electrical and Computer Engineering at the University of Rochester. Plain HTML/CSS/JS only — no frameworks, build tools, or dependencies. Five pages (Home, Research, Teaching, Students, Contact) with consistent navigation, University of Rochester brand guidelines, and responsive design from mobile to desktop.
+A professional faculty website that presents Dr. Barron's identity, research, teaching, student resources, and contact information in a responsive University of Rochester-aligned design. The site works directly from static files and does not require a framework, build step, server, database, or external runtime dependency.
 
 ## Core Value
 
@@ -12,84 +18,83 @@ A professional, accessible, visually coherent faculty presence that showcases re
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Semantic HTML structure for all five pages — v1.0
+- ✓ University of Rochester color system and typography — v1.0
+- ✓ Responsive layout across mobile, tablet, and desktop breakpoints — v1.0
+- ✓ Sticky navigation with mobile hamburger behavior — v1.0
+- ✓ Responsive footer with dynamic year generation — v1.0
+- ✓ Home page with hero, biography, CV link, and section cards — v1.0
+- ✓ Research page with publications, project highlights, research content, and external links — v1.0
+- ✓ Teaching page with philosophy and course information — v1.0
+- ✓ Students Hub with accessible topic navigation and student resources — v1.0
+- ✓ Contact page with contact details and external profiles — v1.0
+- ✓ WCAG AA accessibility, heading hierarchy, focus indicators, link integrity, responsive behavior, and cross-browser/offline verification — v1.0
 
 ### Active
 
-- [ ] Build semantic HTML structure for all 5 pages with proper metadata
-- [ ] Implement University of Rochester color system and typography (Inter sans-serif, Georgia serif)
-- [ ] Create responsive layout system for mobile (<640px), tablet (640-1024px), desktop (>1024px)
-- [ ] Build sticky navigation bar with hamburger menu toggle for mobile
-- [ ] Implement responsive footer with dynamic year generation
-- [ ] Create home page with hero, about section, and three highlight cards
-- [ ] Create research page with overview, research interests tags, NSF project card, and publications
-- [ ] Create teaching page with philosophy and three course cards
-- [ ] Create students page with tabbed interface (Current/Prior/Prospective) and student resources
-- [ ] Create contact page with two-column contact details and links
-- [ ] Implement smooth fade-in animations on page load (CSS only, respects prefers-reduced-motion)
-- [ ] Ensure all internal links work correctly (relative hrefs)
-- [ ] Build profile photo placeholder (CSS-based navy rectangle with yellow "IB" initials)
-- [ ] Hamburger menu implementation (vanilla JS, no external libraries)
-- [ ] Ensure WCAG color contrast on all text (white/yellow on navy, dark text on light backgrounds)
+(None yet — define the next milestone with `$gsd-new-milestone`.)
 
 ### Out of Scope
 
 - Build tools, npm, or external dependencies
-- CMS or dynamic content management (manual HTML edit only)
-- Official University of Rochester logos, wordmarks, or photography
+- CMS or dynamic content management
+- Official University of Rochester logos, wordmarks, or photography unless explicitly supplied
 - Mobile app version
 - Real-time updates or databases
 - Server-side functionality
+- Contact form backend
+- Blog, comments, authentication, or e-commerce
+
+## Next Milestone Goals
+
+Potential v1.1/v2.0 directions to consider during `$gsd-new-milestone`:
+
+- Replace the CSS profile placeholder with a real optimized profile photo.
+- Add sitemap/robots metadata and deployment-oriented SEO polish.
+- Add print-friendly CV/page styling.
+- Expand publications or course updates as content changes.
+- Consider analytics only if privacy and maintenance tradeoffs are acceptable.
 
 ## Context
 
 **Design System:**
-- Official University of Rochester brand palette: navy (#001E5F), Dandelion Yellow (#FFD82B), accent blues, and grays
-- Typography: Inter Variable (sans-serif) for body/UI, Georgia serif for H1/H2 headings
-- Component library: buttons (primary/outline), cards with yellow accent borders, tag pills
-- Animations: CSS fade-in + translate on page load, 0.2s transitions on hover
-- Breakpoints: 640px (mobile→tablet), 1024px (tablet→desktop), max content width 1100px
+
+- Official University of Rochester palette centered on navy (#001E5F) and Dandelion Yellow (#FFD82B)
+- Inter Variable for body/UI text and Georgia for major headings
+- Reusable static components: buttons, cards, tag pills, page headers, sidebar navigation, accordions, and contact/profile link lists
+- Breakpoints: mobile-first styles with tablet/desktop expansions
 
 **Page Structure:**
-- index.html — Hero, about, three highlight cards
-- research.html — Overview, research interests tags, NSF project, publications
-- teaching.html — Philosophy, three course cards
-- students.html — Tab-based interface with three student resource sections
-- contact.html — Two-column contact details and external links
-- css/style.css — All styling (no CSS frameworks)
-- assets/cv.pdf — Placeholder for CV upload
 
-**Content:**
-- Profile photo: CSS placeholder (navy bg, yellow "IB" initials) until user replaces with real image
-- Publications: Four academic papers with authorship highlighting and venue details
-- Courses: ECE 241 (Signals & Systems), ECE 245/445 (Wireless Communications), ECE 487 (Senior Design)
-- Bio: First-person narrative about background, research focus, and academic journey
-
-**User Interaction:**
-- Hamburger menu on mobile devices (<768px)
-- Tab navigation on students page (Current/Prior/Prospective with JS toggle)
-- Outbound links to Blackboard, ResearchGate, University ECE department
-- No form submissions — email-only contact
+- `index.html` — hero, biography, and section cards
+- `research.html` — research work, publications, project/podcast/media links
+- `teaching.html` — teaching philosophy and courses
+- `students.html` — student resource hub with topic navigation and impact/outcomes content
+- `contact.html` — email, office, address, office hours, and profile links
+- `css/style.css` — all styling
+- `js/main.js` — navigation, footer year, tab/sidebar behavior
 
 ## Constraints
 
-- **Technology**: Plain HTML5, CSS3, vanilla JavaScript only — no frameworks, build tools, or npm dependencies
-- **Brand**: Must follow University of Rochester brand guidelines for color contrast and typography
-- **Accessibility**: WCAG AA minimum — especially color contrast and semantic HTML
-- **Content management**: Manual HTML editing — no database or CMS
-- **Performance**: All assets served statically, single CSS file, minimal JS
-- **Maintenance**: User will manually update publications, courses, and content as they change
+- **Technology:** Plain HTML5, CSS3, vanilla JavaScript only
+- **Brand:** University of Rochester color and typography alignment
+- **Accessibility:** WCAG AA minimum
+- **Content management:** Manual HTML editing
+- **Performance:** Static assets, self-hosted font, minimal JavaScript
+- **Maintenance:** Content should remain easy to update without tooling
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Plain HTML/CSS/JS only | Simplicity, no maintenance overhead, instant loading, no dependencies | ✓ Approved |
-| University of Rochester brand colors | Official faculty presence, institutional credibility | ✓ Approved |
-| CSS-based profile photo placeholder | No asset needed until photo is ready, maintains design fidelity | ✓ Approved |
-| Vanilla JS hamburger menu | No external libraries, clear implementation, maintainable | ✓ Approved |
-| Tab interface on students page | Organize content without page navigation, cleaner UX | ✓ Approved |
-| All five pages in v1 | Complete faculty presence from launch | ✓ Approved |
+| Plain HTML/CSS/JS only | Simplicity, no maintenance overhead, instant loading, no dependency churn | ✓ Good |
+| Self-host Inter Variable font | Offline functionality and privacy; no Google Fonts dependency | ✓ Good |
+| University of Rochester brand colors | Institutional credibility and visual consistency | ✓ Good |
+| CSS-based profile placeholder | Allowed launch without waiting on photography | ✓ Revisit when real photo is available |
+| Copy-pasted nav/footer per page | Avoids JS-injected navigation and keeps pages static-file friendly | ✓ Good |
+| Vanilla JS hamburger/sidebar interactions | Clear, maintainable behavior without libraries | ✓ Good |
+| Sidebar/select Students Hub | Better information architecture than the initial tab-only structure | ✓ Good |
+| Phase 5 as final cross-page verification authority | Later polish fixed stale Phase 3 verification gaps | ✓ Good |
 
 ---
-*Last updated: 2026-03-25 after initialization*
+*Last updated: 2026-05-17 after v1.0 milestone*
