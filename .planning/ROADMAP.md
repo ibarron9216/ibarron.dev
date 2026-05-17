@@ -161,7 +161,7 @@ Plans:
 **Goal**: The whole website receives a final content polish pass, with particular emphasis on the Students Hub because it needs the most detailed content and interaction refinement
 **Depends on**: Phase 6.4
 **Plans**: 1 plan
-- [ ] 06.5-01-PLAN.md — Polish content across the whole website, prioritize the Students Hub Impact & Outcomes content, and verify affected page behavior
+- [x] 06.5-01-PLAN.md — Polish content across the whole website, prioritize the Students Hub Impact & Outcomes content, and verify affected page behavior (COMPLETE 2026-05-17)
 
 ## Progress
 
@@ -181,4 +181,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 5 → 6.1 → 6
 | 6.2. Research Content Polish | 1/1 | Complete   | 2026-03-28 |
 | 6.3. Teaching Content Polish | 1/1 | Complete   | 2026-03-28 |
 | 6.4. Contact Content Polish | 1/1 | Complete   | 2026-03-28 |
-| 6.5. Whole-Site Content Polish | 0/1 | In Progress   |  |
+| 6.5. Whole-Site Content Polish | 1/1 | Complete   | 2026-05-17 |
