@@ -46,8 +46,13 @@ function initTabs() {
   const tablist = document.querySelector('[role="tablist"]');
   if (!tablist) return;
 
-  const tabs = tablist.querySelectorAll('[role="tab"]');
+  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
   const panels = document.querySelectorAll('[role="tabpanel"]');
+  const selectEl = document.querySelector('.layout-1__select');
+
+  function getPanelId(tab) {
+    return tab.getAttribute('aria-controls') || tab.getAttribute('data-controls');
+  }
 
   // ---- Helper: check reduced motion preference ----
   function prefersReducedMotion() {
@@ -101,11 +106,14 @@ function initTabs() {
   }
 
   // ---- Helper: switch to tab at targetIndex ----
-  function switchTab(targetIndex) {
+  function switchTab(targetIndex, shouldFocus = true) {
     const currentTab = tablist.querySelector('[aria-selected="true"]');
-    const currentPanel = document.getElementById(currentTab.getAttribute('aria-controls'));
     const targetTab = tabs[targetIndex];
-    const targetPanel = document.getElementById(targetTab.getAttribute('aria-controls'));
+    if (!currentTab || !targetTab) return;
+
+    const currentPanel = document.getElementById(getPanelId(currentTab));
+    const targetPanel = document.getElementById(getPanelId(targetTab));
+    if (!currentPanel || !targetPanel) return;
 
     // Do nothing if already on this tab
     if (currentTab === targetTab) return;
@@ -130,13 +138,24 @@ function initTabs() {
       tab.setAttribute('tabindex', idx === targetIndex ? '0' : '-1');
     });
 
-    // Move keyboard focus to the newly active tab
-    targetTab.focus();
+    if (selectEl) {
+      selectEl.value = getPanelId(targetTab).replace('layout1-', '');
+    }
+
+    if (shouldFocus) {
+      targetTab.focus();
+    }
   }
 
   // ---- Step 1: Initialize tabindex values ----
   tabs.forEach((tab) => {
     const isActive = tab.getAttribute('aria-selected') === 'true';
+    const panelId = getPanelId(tab);
+
+    if (panelId && !tab.hasAttribute('aria-controls')) {
+      tab.setAttribute('aria-controls', panelId);
+    }
+
     tab.setAttribute('tabindex', isActive ? '0' : '-1');
   });
 
@@ -153,6 +172,13 @@ function initTabs() {
       switchTab(index);
     });
   });
+
+  if (selectEl) {
+    selectEl.addEventListener('change', () => {
+      const targetIndex = tabs.findIndex((tab) => getPanelId(tab) === 'layout1-' + selectEl.value);
+      switchTab(targetIndex, false);
+    });
+  }
 
   // ---- Step 4: Arrow key handlers (left/right with wrapping) ----
   tabs.forEach((tab, index) => {
@@ -178,50 +204,8 @@ function initTabs() {
 // 4. SIDEBAR NAVIGATION (Students Hub)
 // ==============================
 function initSidebarNav() {
-  const sidebar = document.querySelector('.layout-1__sidebar');
-  const selectEl = document.querySelector('.layout-1__select');
-  if (!sidebar && !selectEl) return;
-
-  const sidebarBtns = sidebar ? sidebar.querySelectorAll('.sidebar-nav__item') : [];
-  const panels = document.querySelectorAll('.layout-1__panel');
-
-  function showTopic(topicId) {
-    // Hide all panels
-    panels.forEach(function(panel) { panel.hidden = true; });
-
-    // Deactivate all sidebar buttons
-    sidebarBtns.forEach(function(btn) {
-      btn.setAttribute('aria-selected', 'false');
-    });
-
-    // Show selected panel
-    var target = document.getElementById('layout1-' + topicId);
-    if (target) target.hidden = false;
-
-    // Activate sidebar button
-    if (sidebar) {
-      var activeBtn = sidebar.querySelector('[data-controls="layout1-' + topicId + '"]');
-      if (activeBtn) activeBtn.setAttribute('aria-selected', 'true');
-    }
-
-    // Sync mobile select
-    if (selectEl) selectEl.value = topicId;
-  }
-
-  // Sidebar button click handlers
-  sidebarBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var topicId = btn.getAttribute('data-controls').replace('layout1-', '');
-      showTopic(topicId);
-    });
-  });
-
-  // Mobile select change handler
-  if (selectEl) {
-    selectEl.addEventListener('change', function() {
-      showTopic(selectEl.value);
-    });
-  }
+  // Student topic navigation is handled by initTabs so ARIA tabs,
+  // panels, and the mobile select stay in a single state path.
 }
 
 // ==============================
@@ -235,16 +219,12 @@ function initAccordion() {
     // Click handler
     header.addEventListener('click', () => {
       const isExpanded = header.getAttribute('aria-expanded') === 'true';
+      const content = document.getElementById(header.getAttribute('aria-controls'));
+
       header.setAttribute('aria-expanded', String(!isExpanded));
+      if (content) content.hidden = isExpanded;
     });
 
-    // Keyboard handler (Enter/Space)
-    header.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        header.click();
-      }
-    });
   });
 }
 

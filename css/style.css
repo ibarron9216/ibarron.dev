@@ -1299,7 +1299,8 @@ a.card--grant {
 }
 
 .page-header__image {
-  width: min(100%, 320px);
+  width: clamp(624px, 54vw, 810px);
+  max-width: 100%;
   height: auto;
   border: 2px solid var(--color-yellow);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
@@ -1322,7 +1323,8 @@ a.card--grant {
 }
 
 .visual-hero__image {
-  width: min(100%, 260px);
+  width: clamp(510px, 54vw, 780px);
+  max-width: 100%;
   height: auto;
   border: 2px solid var(--color-yellow);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
