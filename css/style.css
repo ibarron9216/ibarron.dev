@@ -119,6 +119,26 @@ button {
    4. Skip Link (accessibility — first element on page)
    ============================================================================= */
 
+.skip-link {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  z-index: 1000;
+  transform: translateY(calc(-100% - var(--spacing-md)));
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+  font-weight: 700;
+  line-height: 1.4;
+  border: 2px solid var(--color-navy);
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 /* =============================================================================
    5. Typography Base Styles
    ============================================================================= */
