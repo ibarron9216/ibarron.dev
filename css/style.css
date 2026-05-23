@@ -729,16 +729,33 @@ a.card--grant {
   color: var(--color-white);
 }
 
-/* Call-to-action (underline only) */
+/* Card call-to-action */
 .card-ur__cta {
-  height: 2px;
-  background-color: var(--color-meliora-blue);
-  display: block;
-  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: fit-content;
+  color: var(--color-meliora-blue);
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
+}
+
+.card-ur__cta::after {
+  content: "→";
+  line-height: 1;
+  transition: transform 0.3s ease;
 }
 
 .card-ur:hover .card-ur__cta {
-  background-color: var(--color-white);
+  color: var(--color-yellow);
+}
+
+.card-ur:hover .card-ur__cta::after {
+  transform: translateX(2px);
 }
 
 /* Contact card variant — no hover effect */
@@ -764,19 +781,13 @@ a.card--grant {
 }
 
 .card-ur--no-hover:hover .card-ur__cta {
-  background-color: var(--color-meliora-blue) !important;
+  color: var(--color-meliora-blue) !important;
 }
 
-/* Responsive: 2 columns on tablet, 3 on desktop */
+/* Responsive: 2 columns on tablet and desktop */
 @media (min-width: 768px) {
   .card-grid--ur {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  .card-grid--ur {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
