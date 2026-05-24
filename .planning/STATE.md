@@ -4,8 +4,8 @@ milestone: v1.0
 milestone_name: MVP
 status: Awaiting next milestone
 stopped_at: v1.0 milestone archived; ready for new milestone planning
-last_updated: "2026-05-17T21:40:00Z"
-last_activity: 2026-05-17 — Milestone v1.0 completed and archived
+last_updated: "2026-05-24T15:36:00Z"
+last_activity: 2026-05-24 — Favicon update (I→IB, PNG fallback), heading hierarchy fix, tab scroll reset
 progress:
   total_phases: 12
   completed_phases: 12
@@ -25,10 +25,10 @@ See: `.planning/PROJECT.md` (updated 2026-05-17)
 
 ## Current Position
 
-Phase: Milestone v1.0 complete
+Phase: Post-v1.0 maintenance
 Plan: —
-Status: Awaiting next milestone
-Last activity: 2026-05-17 — Milestone v1.0 completed and archived
+Status: Active development
+Last activity: 2026-05-24 — Favicon update (I→IB, PNG fallback), heading hierarchy fix, tab scroll reset
 
 ## Completed Milestone
 

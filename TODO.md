@@ -2,7 +2,15 @@
 
 ## Completed
 
-### 1. Add favicon and Open Graph / Twitter Card meta tags
+### 1. Favicon update (I→IB), heading hierarchy fix, tab scroll reset
+- Updated `assets/images/favicon.svg` from "I" to "IB" with navy/yellow colors
+- Created `assets/images/favicon.png` (32x32 PNG, Georgia Bold) for Safari compatibility
+- Added PNG favicon link before SVG link in all 5 pages
+- Fixed heading hierarchy in `students.html`: 3 h3→h2 changes (Teaching Assistant Opportunities, Other Opportunities, Job Application References)
+- Added scroll reset on tab switch in `js/main.js` — scrolls `.layout-1__wrapper` into view
+- Added `scroll-margin-top` to `.layout-1__wrapper` in `css/style.css` for sticky header offset
+
+### 2. Add favicon and Open Graph / Twitter Card meta tags
 - Created `assets/images/favicon.svg` (navy "I" on yellow background)
 - Added `<link rel="icon">` to all 5 pages
 - Added 5 OG meta tags (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`) to each page
@@ -10,21 +18,21 @@
 - Each page has unique `og:title`, `twitter:title`, and descriptions
 - Social preview image points to profile photo WebP
 
-### 2. Fix skip-link accessibility
+### 3. Fix skip-link accessibility
 - Added `tabindex="-1"` to `<main id="main-content">` on all 5 pages
 
-### 3. Remove broken "Learn more →" links
+### 4. Remove broken "Learn more →" links
 - Removed 5 `<a href="#" class="course-media-card__cta">Learn more →</a>` elements from `teaching.html`
 - Removed `.course-media-card__cta` and `.course-media-card__cta:hover` CSS rules from `style.css`
 
-### 4. Delete dead CSS (~235 lines removed)
+### 5. Delete dead CSS (~235 lines removed)
 - Removed unused selectors: `card--clickable`, `card--highlighted`, `card-ur__icon`, `card--funded`, `profile-placeholder`, `tabs`, `tabs__list`, `tabs__tab`, `tabs__panel`, `page-header__grid`, `page-header__icon`, `page-header__image`, `course__header`, `course__title`, `course__description`, `research-interests__wrapper`, `research-interests__label`, `tag-pill--highlight`, `tag-pill--outline`, `tag-pill--primary`
 - Removed `.course__header` reference from mobile media query
 - Removed empty comment-only CSS reference block (`.btn, .card, .nav__link, .nav__brand, .tabs__tab`)
 - Added missing `--color-light-gray: #F5F5F5` CSS variable to `:root`
 - CSS file: 1987 → 1752 lines
 
-### 5. Fix heading hierarchy
+### 6. Fix heading hierarchy
 - **contact.html**: Changed `<h3>` to `<h2>` for "Get in Touch" and "Profiles & Links" card titles
 - **students.html**: Changed first heading in each tab panel to `<h2>` (previously h1→h3 skip), added `<h2>Impact & Outcomes</h2>` to 4th panel
 

@@ -1451,6 +1451,7 @@ a.card--grant {
 .layout-1__wrapper {
   display: grid;
   grid-template-columns: 300px 1fr;
+  scroll-margin-top: calc(64px + var(--spacing-md));
   gap: var(--spacing-2xl);
   align-items: start;
   margin-left: calc(-1 * var(--spacing-md));

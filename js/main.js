@@ -145,6 +145,12 @@ function initTabs() {
     if (shouldFocus) {
       targetTab.focus();
     }
+
+    // Scroll content area into view when switching tabs
+    const wrapper = document.querySelector('.layout-1__wrapper');
+    if (wrapper) {
+      wrapper.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }
   }
 
   // ---- Step 1: Initialize tabindex values ----
