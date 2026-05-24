@@ -201,15 +201,7 @@ function initTabs() {
 }
 
 // ==============================
-// 4. SIDEBAR NAVIGATION (Students Hub)
-// ==============================
-function initSidebarNav() {
-  // Student topic navigation is handled by initTabs so ARIA tabs,
-  // panels, and the mobile select stay in a single state path.
-}
-
-// ==============================
-// 5. ACCORDION (Impact & Outcomes)
+// 4. ACCORDION (Impact & Outcomes)
 // ==============================
 function initAccordion() {
   const headers = document.querySelectorAll('.outcomes-accordion__header');
@@ -229,12 +221,11 @@ function initAccordion() {
 }
 
 // ==============================
-// 6. INITIALIZE ALL
+// 5. INITIALIZE ALL
 // ==============================
 document.addEventListener('DOMContentLoaded', () => {
   initNavToggle();
   initFooterYear();
   initTabs();
-  initSidebarNav();
   initAccordion();
 });
