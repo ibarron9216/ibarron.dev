@@ -1,13 +1,8 @@
-# macOS
 .DS_Store
 **/.DS_Store
 
 # Internal development files — not for production
-CLAUDE.md
-TODO.md
-.planning/
 docs/
-.claude/
 
 # Unused original assets
 assets/images/dr-irving-barron-profile.jpeg
