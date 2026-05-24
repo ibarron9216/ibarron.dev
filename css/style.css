@@ -1354,7 +1354,7 @@ a.card--grant {
 }
 
 .visual-hero__image {
-  width: clamp(510px, 54vw, 780px);
+  width: clamp(430px, 46vw, 660px);
   max-width: 100%;
   height: auto;
   border: 2px solid var(--color-yellow);
