@@ -13,6 +13,7 @@ PUBLIC_FILES=(
   css/
   js/
   assets/
+  CNAME
   robots.txt
   sitemap.xml
   LICENSE
