@@ -1,8 +1,5 @@
 .DS_Store
 **/.DS_Store
 
-# Internal development files — not for production
-docs/
-
 # Unused original assets
 assets/images/dr-irving-barron-profile.jpeg
