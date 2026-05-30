@@ -1,0 +1,1753 @@
+/* =============================================================================
+   ibarron.dev — Design System
+   css/style.css
+   Single file. No frameworks. No build step.
+   University of Rochester brand: navy #001E5F · yellow #FFD82B
+   ============================================================================= */
+
+
+/* =============================================================================
+   1. Font Face — Inter Variable (self-hosted)
+   ============================================================================= */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/inter-variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =============================================================================
+   2. Custom Properties — Design Tokens in :root
+   ============================================================================= */
+
+:root {
+  /* --- Colors --- */
+  --color-navy: #001E5F;
+  --color-yellow: #FFD82B;
+  --color-bright-lemon: #FFF601;
+  --color-meliora-blue: #0045A0;
+  --color-white: #FFFFFF;
+  --color-dark-gray: #707070;
+  --color-border: #E8E8E8;
+  --color-butter: #FFFBF0;
+  --color-light-gray: #F5F5F5;
+
+  /* --- Spacing (multiples of 4px) --- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* --- Typography — 4 size tokens, 2 weights (400 regular, 700 bold) --- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-size-heading: clamp(1.5rem, 3vw, 3.5rem);
+  --font-size-subheading: clamp(1.125rem, 2vw, 1.5rem);
+  --font-size-body: clamp(1rem, 2vw, 1.125rem);
+  --font-size-label: 0.875rem;
+
+  /* --- Breakpoints (reference values — not usable in var() for @media) --- */
+  --breakpoint-mobile: 640px;
+  --breakpoint-nav: 768px;
+  --breakpoint-desktop: 1024px;
+}
+
+
+/* =============================================================================
+   3. CSS Reset / Base Styles
+   ============================================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+/* =============================================================================
+   4. Skip Link (accessibility — first element on page)
+   ============================================================================= */
+
+.skip-link {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  z-index: 1000;
+  transform: translateY(calc(-100% - var(--spacing-md)));
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+  font-weight: 700;
+  line-height: 1.4;
+  border: 2px solid var(--color-navy);
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* =============================================================================
+   5. Typography Base Styles
+   ============================================================================= */
+
+/* H1 and H2 — Georgia serif, bold, fluid heading size */
+h1,
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--font-size-heading);
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+/* H3, H4, H5 — Inter sans-serif, bold, fluid subheading size */
+h3,
+h4,
+h5 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-subheading);
+  line-height: 1.3;
+  color: var(--color-navy);
+}
+
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-label);
+  line-height: 1.4;
+  color: var(--color-navy);
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--font-size-body);
+  line-height: 1.7;
+  color: inherit;
+}
+
+/* Eyebrow label — section headings, muted uppercase */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-dark-gray);
+  line-height: 1.4;
+  margin-bottom: var(--spacing-sm);
+}
+
+
+/* =============================================================================
+   6. Layout Utilities
+   ============================================================================= */
+
+/* Centered container with consistent max-width and horizontal padding */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Two-column grid (desktop) */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+/* Three-column grid (desktop) */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* Section vertical rhythm */
+.section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+/* Section with butter background */
+.section--butter {
+  background-color: var(--color-butter);
+}
+
+/* Section with navy background */
+.section--navy {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* Section with navy background — override heading/paragraph colors */
+.section--navy h1,
+.section--navy h2,
+.section--navy h3,
+.section--navy h4,
+.section--navy h5,
+.section--navy p {
+  color: var(--color-white);
+}
+
+/* Eyebrow on navy background — yellow for visual hierarchy */
+.section--navy .eyebrow {
+  color: var(--color-yellow);
+}
+
+/* Spacious section — increased vertical padding for home page */
+.section--spacious {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Spacing utilities (margin-top) */
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+/* Spacing utilities (margin-bottom) */
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+/* Text block — constrained width for readable paragraphs */
+.text-block {
+  max-width: 720px;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Callout — blue banner for emphasized notes */
+.callout {
+  margin-top: var(--spacing-lg);
+  margin-bottom: 0;
+  padding: var(--spacing-md);
+  background-color: var(--color-meliora-blue);
+  color: var(--color-yellow);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Tall hero variant for home page */
+.hero--tall {
+  min-height: 60vh;
+}
+
+
+/* =============================================================================
+    7. Navigation Component
+   ============================================================================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+/* Brand / site name */
+.nav__brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--font-size-subheading);
+  color: var(--color-navy);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__brand:hover {
+  color: var(--color-meliora-blue);
+  transition: color 0.2s ease;
+}
+
+/* Nav links list (desktop) */
+.nav__menu {
+  display: flex;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-navy);
+  text-decoration: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--color-meliora-blue);
+}
+
+/* Active page indicator */
+.nav__link[aria-current="page"] {
+  color: var(--color-navy);
+  background-color: var(--color-yellow);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Hamburger button — hidden on desktop, shown on mobile */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-navy);
+}
+
+.nav__hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-navy);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hamburger open state — becomes × */
+.nav--open .nav__hamburger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.nav--open .nav__hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav--open .nav__hamburger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* =============================================================================
+   8. Footer Component
+   ============================================================================= */
+
+.footer {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--spacing-xl) 0;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+.footer__text {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.7;
+}
+
+.footer__year {
+  /* Populated by JS: new Date().getFullYear() */
+}
+
+.footer a {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--color-yellow);
+}
+
+
+/* =============================================================================
+   9. Button Components
+   ============================================================================= */
+
+/* Base button — shared styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-body);
+  padding: 0.75rem 1.75rem; /* 12px 28px — TYP-05 */
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 44px; /* RESP-06 touch target */
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Primary button — navy fill */
+.btn--primary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-meliora-blue);
+  border-color: var(--color-meliora-blue);
+}
+
+/* Outline button — navy border on light background */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+/* Outline white button — white border on navy background */
+.btn--outline--white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn--outline--white:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  border-color: var(--color-white);
+}
+
+/* Inverse primary button — yellow fill, navy text (for use on navy backgrounds) */
+.btn--primary--inverse {
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+  border-color: var(--color-yellow);
+}
+
+.btn--primary--inverse:hover {
+  background-color: #e6c200;
+  border-color: #e6c200;
+  color: var(--color-navy);
+}
+
+
+/* =============================================================================
+   10. Card Components
+   ============================================================================= */
+
+/* Base card */
+.card {
+  background-color: #B7D3FF; /* Wondrous Sky — UofR brand light blue */
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-lg); /* 24px — TYP-08: 1.5rem */
+  transition: box-shadow 0.2s ease, border-top-color 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card links — visible underline so they don't blend with paragraph text */
+.card a {
+  color: var(--color-navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.card a:hover {
+  color: var(--color-meliora-blue);
+}
+
+/* Publication card — flex container with two zones (content + PDF download) */
+.card--publication {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 0; /* Override base .card padding for flex layout */
+  display: flex;
+  transition: box-shadow 0.2s ease;
+}
+
+.card--publication:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Publication info link — 75% of card width */
+.publication__link {
+  flex: 3;
+  padding: var(--spacing-lg);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.publication__link:hover {
+  background-color: #B7D3FF; /* Wondrous Sky — UofR brand light blue */
+}
+
+/* PDF download button — 25% of card width */
+.publication__pdf-download {
+  flex: 1;
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-navy);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.publication__pdf-download svg {
+  width: 80px;
+  height: 80px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.publication__pdf-download:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+/* Grant card — same pattern as publication card */
+.card--grant {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card--grant:hover {
+  background-color: #B7D3FF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+a.card--grant {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* UR-inspired Card Grid and Cards */
+.card-grid--ur {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* Contact page card grid — centered with max-width */
+.card-grid--ur-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+  .card-grid--ur-contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* UR-inspired Card */
+.card-ur {
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: var(--spacing-lg);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.card-ur:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* Card icon container */
+.card-ur__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--color-light-gray);
+}
+
+.card-ur__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-ur:hover .card-ur__media img {
+  transform: scale(1.03);
+  filter: saturate(1.05);
+}
+
+/* Card title */
+.card-ur__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0 0 var(--spacing-md) 0;
+  font-family: var(--font-serif);
+  transition: color 0.3s ease;
+}
+
+.card-ur:hover .card-ur__title {
+  color: var(--color-white);
+}
+
+/* Card description */
+.card-ur__description {
+  font-size: var(--font-size-body);
+  color: var(--color-navy);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-lg) 0;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+.card-ur:hover .card-ur__description {
+  color: var(--color-white);
+}
+
+/* Card call-to-action */
+.card-ur__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: fit-content;
+  color: var(--color-meliora-blue);
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
+}
+
+.card-ur__cta::after {
+  content: "→";
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.card-ur:hover .card-ur__cta {
+  color: var(--color-yellow);
+}
+
+.card-ur:hover .card-ur__cta::after {
+  transform: translateX(2px);
+}
+
+/* Contact card variant — no hover effect */
+.card-ur--no-hover:hover {
+  background-color: #f5f5f5 !important;
+  color: inherit !important;
+}
+
+.card-ur--no-hover:hover .card-ur__title {
+  color: var(--color-navy) !important;
+}
+
+.card-ur--no-hover:hover .card-ur__description {
+  color: var(--color-navy) !important;
+}
+
+.card-ur--no-hover:hover .card-ur__cta {
+  color: var(--color-meliora-blue) !important;
+}
+
+/* Responsive: 2 columns on tablet and desktop */
+@media (min-width: 768px) {
+  .card-grid--ur {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =============================================================================
+    11. Tag Pills and Badges
+    ============================================================================= */
+
+/* Research interest tag */
+.tag-pill {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: 100px;
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 16px */
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Year badge (compact) */
+.badge--year {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: 100px;
+  padding: var(--spacing-xs) var(--spacing-md); /* 4px 12px */
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Semester badge (same as year) */
+.badge--semester {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: 100px;
+  padding: var(--spacing-xs) var(--spacing-md); /* 4px 12px */
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+/* =============================================================================
+   12. Profile Photo
+   ============================================================================= */
+
+.profile-photo {
+  width: clamp(120px, 30vw, 280px);
+  height: clamp(120px, 30vw, 280px);
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--color-yellow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  object-fit: cover;
+  object-position: center;
+  transition: filter 0.2s ease;
+}
+
+.profile-photo:hover,
+.profile-photo:focus {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
+/* =============================================================================
+    13. Tab Component (Phase 4 — Students Hub ARIA tab pattern, pill buttons)
+    ============================================================================= */
+
+/* --- ARIA role-based tab selectors (pill button style, STU-03, RESP-06) --- */
+
+/* Tablist row — pill buttons, no underline separator */
+[role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-lg) 0;
+  border-bottom: none;
+}
+
+/* Base tab button — pill shape, Inter bold, 44px min touch target */
+[role="tab"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  padding: 0.75rem 1.75rem; /* consistent with .btn sizing */
+  min-height: 44px;         /* RESP-06: touch target accessibility */
+  background-color: transparent;
+  color: var(--color-navy);
+  border: 2px solid transparent;
+  border-radius: 20px;      /* pill shape */
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-label);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Inactive tab hover — Meliora Blue text + matching border outline */
+[role="tab"]:hover {
+  color: var(--color-meliora-blue);
+  border-color: var(--color-meliora-blue);
+}
+
+/* Active tab — navy fill, white text, pill shape */
+[role="tab"][aria-selected="true"] {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+/* Active tab hover — don't change active tab on hover */
+[role="tab"][aria-selected="true"]:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+/* Focus state — visible outline (overrides global :focus-visible for tabs) */
+[role="tab"]:focus-visible {
+  outline: 2px solid var(--color-meliora-blue);
+  outline-offset: 2px;
+}
+
+/* Tab panel — white background, generous vertical padding */
+[role="tabpanel"] {
+  background-color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+}
+
+/* Hidden panels removed from view (managed by hidden attribute + JS) */
+[role="tabpanel"][hidden] {
+  display: none;
+}
+
+/* --- Panel fade animation (used by Plan 02 JS tab switching) --- */
+
+@media (prefers-reduced-motion: no-preference) {
+  [role="tabpanel"][data-fade="out"] {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  [role="tabpanel"][data-fade="in"] {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+  }
+}
+
+/* --- Students Hub panel content spacing --- */
+
+/* Heading inside panel */
+[role="tabpanel"] h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Paragraph spacing inside panels */
+[role="tabpanel"] p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* List styling inside panels */
+[role="tabpanel"] ul {
+  list-style: disc;
+  padding-left: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+[role="tabpanel"] ul li {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Card spacing inside panels */
+[role="tabpanel"] .card {
+  margin-bottom: var(--spacing-xl);
+}
+
+
+/* =============================================================================
+   14. Focus Indicators (A11Y-01, NAV-05)
+   ============================================================================= */
+
+/* Global focus indicator — yellow outline */
+:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+}
+
+/* Focus on dark/navy backgrounds — white outline instead */
+.nav__hamburger:focus-visible,
+.footer :focus-visible,
+.section--navy :focus-visible,
+.btn--primary:focus-visible,
+.btn--primary--inverse:focus-visible,
+.btn--outline--white:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+
+/* =============================================================================
+   15. Animation Keyframes (ANIM-01, ANIM-02)
+   All animations MUST be wrapped in prefers-reduced-motion
+   ============================================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Page-load fade-in + slide up */
+  .animate-on-load {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  /* Stagger delays per nth-child */
+  .animate-on-load:nth-child(1) { animation-delay: 0s; }
+  .animate-on-load:nth-child(2) { animation-delay: 0.1s; }
+  .animate-on-load:nth-child(3) { animation-delay: 0.2s; }
+  .animate-on-load:nth-child(4) { animation-delay: 0.3s; }
+  .animate-on-load:nth-child(5) { animation-delay: 0.4s; }
+  .animate-on-load:nth-child(6) { animation-delay: 0.5s; }
+}
+
+/* =============================================================================
+    16. Responsive Breakpoints
+   Mobile-first: starts single-column, expands at each breakpoint.
+   Organized by breakpoint (not by component).
+   ============================================================================= */
+
+/* --- Mobile overrides: < 640px --- */
+@media (max-width: 639px) {
+  /* Hamburger nav visible on mobile */
+  .nav__hamburger {
+    display: flex;
+  }
+
+  /* Mobile menu hidden by default */
+  .nav__menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    z-index: 99;
+  }
+
+  /* Mobile menu open state (toggled by JS via .nav--open on .nav) */
+  .nav--open .nav__menu {
+    display: block;
+  }
+
+  .nav--open .nav__links {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  /* Stack all grids on mobile */
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Narrower section padding on mobile */
+  .section {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  /* Hero buttons stack on mobile */
+  .hero__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Spacious sections reduce padding on mobile */
+  .section--spacious {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
+
+  /* Contact details — single column on mobile */
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+  }
+
+}
+
+/* --- Tablet: 640px and above --- */
+@media (min-width: 640px) {
+  /* Two-column grid activates */
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer becomes two-column */
+  .footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Nav breakpoint: 768px and above --- */
+@media (min-width: 768px) {
+  /* Show nav links, hide hamburger */
+  .nav__menu {
+    display: flex;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  /* Reset nav links direction */
+  .nav__links {
+    flex-direction: row;
+  }
+}
+
+/* =============================================================================
+   17. Hero Component (Phase 2 — Home Page)
+   ============================================================================= */
+
+/* Hero grid — single column mobile/tablet, two-column at 1024px desktop */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* --- Desktop: 1024px and above --- */
+@media (min-width: 1024px) {
+  /* Three-column grid activates */
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Container padding increase */
+  .container {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+
+  /* Hero grid becomes two-column on desktop */
+  .hero__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Hero text column */
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Hero lead paragraph — slightly larger */
+.hero__lead {
+  font-size: var(--font-size-subheading);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Hero button row — side-by-side desktop, stacked mobile */
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* Hero photo column — centers the placeholder */
+.hero__photo-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =============================================================================
+   18. Phase 3 — Content Page Components
+   ============================================================================= */
+
+.visual-hero {
+  min-height: 35vh;
+}
+
+.visual-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  text-align: center;
+}
+
+.visual-hero__title {
+  margin: 0;
+}
+
+.visual-hero__image {
+  width: clamp(430px, 46vw, 660px);
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--color-yellow);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+
+/* --- 18b. Publication Card Sub-classes --- */
+
+.publication__authors {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+}
+
+.author-highlight {
+  font-weight: 700;
+  background-color: #f5f5f5;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.publication__title {
+  margin-bottom: var(--spacing-sm);
+  font-weight: 700;
+}
+
+.publication__details {
+  margin: 0;
+  font-size: var(--font-size-body);
+  color: var(--color-dark-gray);
+}
+
+.publication__details em {
+  font-style: italic;
+}
+
+
+/* --- 18c. Course Card --- */
+
+.course__badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+.badge--level {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: 100px;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* --- 18d. Course Media Card (side-by-side with media + yellow content) --- */
+
+.course-media-card {
+  display: flex;
+  gap: 0;
+  background-color: var(--color-white);
+  border-radius: 0;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.course-media-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Media container — left side, holds image/video or SVG placeholder */
+.course-media-card__media {
+  flex: 1;
+  min-height: 300px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.course-media-card__media img,
+.course-media-card__media video,
+.course-media-card__media svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-media-card__media svg {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+.course-media-card__media img.course-diagram {
+  width: min(82%, 420px);
+  height: auto;
+  object-fit: contain;
+}
+
+/* Content container — right side, yellow background */
+.course-media-card__content {
+  flex: 1;
+  background-color: var(--color-yellow);
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.course-media-card__content h3 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: var(--font-size-subheading);
+}
+
+.course-media-card__content p {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: var(--font-size-body);
+}
+
+/* Responsive: stack vertically on tablet and below */
+@media (max-width: 1023px) {
+  .course-media-card {
+    flex-direction: column;
+  }
+
+  .course-media-card__media {
+    min-height: 250px;
+  }
+
+  .course-media-card__content {
+    padding: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 767px) {
+  .course-media-card__media {
+    min-height: 200px;
+  }
+
+  .course-media-card__content {
+    padding: var(--spacing-lg);
+  }
+}
+
+
+/* Research page navigation — buttons to jump to sections */
+.research-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin: 0;
+}
+
+.research-nav--centered {
+  justify-content: center;
+}
+
+.research-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin: 0;
+}
+
+/* --- 18e. Contact Details --- */
+
+.contact-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.contact-details dt {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.contact-details dd {
+  margin: 0;
+  color: var(--color-navy);
+}
+
+.contact-details a {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.contact-details a:hover {
+  color: var(--color-meliora-blue);
+}
+
+.contact-note {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 2px solid var(--color-navy);
+  font-size: var(--font-size-body);
+  color: var(--color-navy);
+}
+
+.profile-links {
+  list-style: none;
+  margin: var(--spacing-lg) 0 0 0;
+  padding: 0;
+}
+
+.profile-links li {
+  margin-bottom: var(--spacing-md);
+}
+
+.profile-links li::before {
+  content: '\25AA\00A0';
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.profile-links a {
+  color: var(--color-navy);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.profile-links a:hover {
+  color: var(--color-meliora-blue);
+  text-decoration: underline;
+}
+
+
+/* =============================================================================
+   19. Phase 04.1 — Students Hub Sidebar Layout
+   ============================================================================= */
+
+/* --- 19c. Sidebar Navigation --- */
+.layout-1__wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  scroll-margin-top: calc(64px + var(--spacing-md));
+  gap: var(--spacing-2xl);
+  align-items: start;
+  margin-left: calc(-1 * var(--spacing-md));
+  width: calc(100% + var(--spacing-md));
+  padding-left: 0;
+}
+
+.layout-1__sidebar {
+  position: sticky;
+  top: calc(64px + var(--spacing-lg));
+  overflow: hidden;
+}
+
+.sidebar-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.sidebar-nav__item {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-xs);
+  margin-left: 0;
+  border: none;
+  border-left: 3px solid transparent;
+  background: none;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-navy);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+.sidebar-nav__item:hover {
+  background-color: rgba(0, 30, 95, 0.05);
+}
+
+.sidebar-nav__item[aria-selected="true"] {
+  font-weight: 700;
+  border-left-color: transparent;
+  background-color: var(--color-bright-lemon);
+  color: var(--color-meliora-blue);
+  margin-left: -4px;
+  padding-left: calc(var(--spacing-xs) + 4px);
+}
+
+.sidebar-nav__item:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: -2px;
+}
+
+/* Layout 1 panels (one visible at a time) */
+.layout-1__panel {
+  /* Panels are shown/hidden via hidden attribute in JS */
+  margin: 0;
+  padding: 0;
+}
+
+.layout-1__panel h2 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-heading);
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.layout-1__panel h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-subheading);
+  color: var(--color-navy);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.layout-1__panel h3:first-of-type {
+  margin-top: 0;
+}
+
+.layout-1__panel p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.layout-1__panel ul {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-xl);
+}
+
+.layout-1__panel li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+
+/* --- 19d. Layout 1 — Mobile select --- */
+.layout-1__mobile-select-wrapper {
+  display: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+.layout-1__select-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-xs);
+}
+
+.layout-1__select {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
+  border-radius: 4px;
+  background-color: var(--color-white, #fff);
+  cursor: pointer;
+}
+
+.layout-1__select:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .layout-1__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .layout-1__sidebar {
+    display: none;
+  }
+  .layout-1__mobile-select-wrapper {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .layout-1__mobile-select-wrapper {
+    display: none;
+  }
+}
+
+
+/* =============================================================================
+   20. Phase 06.5 — Impact & Outcomes Accordion
+   ============================================================================= */
+
+.outcomes-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.outcomes-accordion__item {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.outcomes-accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: 0;
+  border: none;
+  background-color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.outcomes-accordion__header:hover {
+  background-color: rgba(0, 30, 95, 0.05);
+}
+
+.outcomes-accordion__header:focus-visible {
+  outline: 3px solid var(--color-meliora-blue);
+  outline-offset: -2px;
+}
+
+.outcomes-accordion__header::after {
+  content: '▼';
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--color-navy);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: var(--spacing-md);
+}
+
+.outcomes-accordion__header[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.outcomes-accordion__content {
+  display: none;
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  background-color: rgba(255, 253, 240, 0.5);
+}
+
+.outcomes-accordion__header[aria-expanded="true"] + .outcomes-accordion__content {
+  display: block;
+  animation: slideDown 0.2s ease;
+}
+
+.outcomes-accordion__content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.outcomes-list {
+  margin: var(--spacing-md) 0 0;
+  padding-left: var(--spacing-lg);
+}
+
+.outcomes-list li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.outcomes-media-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.outcomes-media-card {
+  margin: var(--spacing-lg) 0 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.outcomes-media-grid .outcomes-media-card {
+  margin-top: 0;
+}
+
+.outcomes-media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.outcomes-media-card figcaption {
+  padding: var(--spacing-md);
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.outcomes-media-card--wide {
+  max-width: 760px;
+}
+
+@media (min-width: 900px) {
+  .outcomes-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .outcomes-accordion__header {
+    transition: none;
+  }
+  .outcomes-accordion__header::after {
+    transition: none;
+  }
+  .outcomes-accordion__header[aria-expanded="true"] + .outcomes-accordion__content {
+    animation: none;
+  }
+}
